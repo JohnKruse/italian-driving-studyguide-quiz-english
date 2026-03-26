@@ -29,8 +29,20 @@ function SplashPage({ onStartQuiz }) {
                     This free toolkit helps English speakers study for the Italian driving theory
                     exam. Choose the <strong>Study Guide</strong> to learn road signs, traffic rules,
                     and the Italian driving philosophy — or jump straight into the{' '}
-                    <strong>Practice Quiz</strong> to test yourself against real exam questions with
-                    English translations.
+                    <strong>Practice Quiz</strong> to drill real exam questions.
+                </Text>
+                <Text className='splash-description' fontSize='sm' mt={0}>
+                    Quiz questions are in Italian, just like the real exam. For side-by-side English
+                    translations, we recommend the free{' '}
+                    <a
+                        href='https://immersivetranslate.com/'
+                        target='_blank'
+                        rel='noreferrer'
+                        style={{ color: '#319795', textDecoration: 'underline' }}
+                    >
+                        Immersive Translate
+                    </a>{' '}
+                    browser extension — it lets you toggle translations on and off while you study.
                 </Text>
                 <Stack className='splash-actions' direction={{ base: 'column', sm: 'row' }} spacing={4}>
                     <Button
