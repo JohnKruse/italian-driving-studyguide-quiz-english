@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Box,
     Button,
     ChakraProvider,
     Flex,
     Heading,
+    Image,
     Stack,
     Text,
     theme,
@@ -12,7 +13,65 @@ import {
 import QuizPage from './components/QuizPage.jsx';
 import './App.css';
 
+function SplashPage({ onStartQuiz }) {
+    return (
+        <Flex className='splash' align='center' justify='center' direction='column'>
+            <Box className='splash-card'>
+                <Image
+                    src='/LogoLarge.png'
+                    alt='Italian Drivers License — Quiz and Study Guide for English Speakers'
+                    className='splash-logo'
+                />
+                <Heading as='h2' size='lg' mt={6} mb={3} textAlign='center'>
+                    Prepare for the Italian Patente A &amp; B Exam
+                </Heading>
+                <Text className='splash-description'>
+                    This free toolkit helps English speakers study for the Italian driving theory
+                    exam. Choose the <strong>Study Guide</strong> to learn road signs, traffic rules,
+                    and the Italian driving philosophy — or jump straight into the{' '}
+                    <strong>Practice Quiz</strong> to test yourself against real exam questions with
+                    English translations.
+                </Text>
+                <Stack className='splash-actions' direction={{ base: 'column', sm: 'row' }} spacing={4}>
+                    <Button
+                        as='a'
+                        href='/docs/italian-drivers-license-study-guide.html'
+                        target='_blank'
+                        rel='noreferrer'
+                        colorScheme='teal'
+                        size='lg'
+                        variant='outline'
+                        className='splash-btn'
+                    >
+                        Study Guide ↗
+                    </Button>
+                    <Button
+                        colorScheme='teal'
+                        size='lg'
+                        className='splash-btn'
+                        onClick={onStartQuiz}
+                    >
+                        Practice Quiz
+                    </Button>
+                </Stack>
+                <Text className='splash-hint'>
+                    You can also{' '}
+                    <a
+                        href='/docs/italian-drivers-license-study-guide.html'
+                        download='italian-drivers-license-study-guide.html'
+                    >
+                        download the study guide
+                    </a>{' '}
+                    as a single HTML file for offline use.
+                </Text>
+            </Box>
+        </Flex>
+    );
+}
+
 function App() {
+    const [view, setView] = useState('splash');
+
     return (
         <ChakraProvider theme={theme}>
             <Flex className='app-shell' direction='column'>
@@ -24,14 +83,18 @@ function App() {
                     gap={4}
                     wrap='wrap'
                 >
-                    <Box>
-                        <Heading as='h1' size='lg'>
-                            Quiz Patente AB
-                        </Heading>
-                        <Text color='gray.600' fontSize='sm'>
-                            Practice mode and study guide for the Italian driving exam.
-                        </Text>
-                    </Box>
+                    <Flex
+                        align='center'
+                        gap={3}
+                        cursor='pointer'
+                        onClick={() => setView('splash')}
+                    >
+                        <Image
+                            src='/LogoSmall.png'
+                            alt='Italian Drivers License'
+                            className='header-logo'
+                        />
+                    </Flex>
                     <Stack direction='row' spacing={3}>
                         <Button
                             as='a'
@@ -40,6 +103,7 @@ function App() {
                             rel='noreferrer'
                             colorScheme='teal'
                             variant='outline'
+                            size='sm'
                         >
                             Study Guide ↗
                         </Button>
@@ -49,13 +113,18 @@ function App() {
                             download='italian-drivers-license-study-guide.html'
                             colorScheme='teal'
                             variant='solid'
+                            size='sm'
                         >
                             Download Guide
                         </Button>
                     </Stack>
                 </Flex>
                 <Box as='main' className='app-main'>
-                    <QuizPage />
+                    {view === 'splash' ? (
+                        <SplashPage onStartQuiz={() => setView('quiz')} />
+                    ) : (
+                        <QuizPage />
+                    )}
                 </Box>
             </Flex>
         </ChakraProvider>
