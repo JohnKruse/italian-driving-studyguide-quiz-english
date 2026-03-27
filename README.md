@@ -1,65 +1,96 @@
-# AB Driving License Quiz
-- It is possible to run this by just using Netlify.
-[![Netlify Status](https://api.netlify.com/api/v1/badges/34ee311d-07e0-4c82-8032-e1a53e1ae203/deploy-status)](https://app.netlify.com/sites/quiz-patente/deploys)
+# Italian Driving License Study Guide and Quiz (English)
 
-## What is this?
-- A single page practice tool built for the Italian AB driving theory exam.
-- Works entirely offline once built: questions, hints, and traffic sign images are bundled with the app.
-- Topic selector shows each chapter in Italian followed by the English translation, including a full mock test mode.
+A study resource for English speakers preparing for the Italian Patente A/B driving theory exam. Built on top of the official 7,165-question database used in Italian driving schools.
 
-## English Translations
-- To see English translations of questions and hints, it is suggested that you install the **Immersive Translate** browser extension. It allows one to easily turn on/off the translations and pick different translation enginges (e.g., Google Translate, Microsoft Translator).
+---
 
-## Quick start (new users)
-1. **Install Node.js** – Version 18 or newer is recommended. The easiest path is to download it from [nodejs.org](https://nodejs.org/).
-2. **Clone the project**
-   ```bash
-   git clone https://github.com/<your-account>/quiz-patente-ab.git
-   cd quiz-patente-ab
-   ```
-3. **Install dependencies**
-   ```bash
-   npm install
-   ```
-   Yarn also works (`yarn install`), but the repo ships with an `npm` lockfile.
-4. **Run the app locally**
-   ```bash
-   npm run dev
-   ```
-   Then open the printed URL (by default `http://localhost:5173`) in your browser.
+## Standalone Study Guide
 
-### Everyday commands
-- `npm run dev` – start the Vite dev server with hot reload.
-- `npm run build` – create the production bundle inside `dist/`.
-- `npm run preview` – serve the production build locally.
-- `npm run mock:test` – smoke-check the mock test configuration.
+The most useful thing in this repository is a **comprehensive, self-contained study guide** that you can read in any web browser -- no installation or coding required.
 
-## Using the quiz
-- **Practice mode:** choose any chapter from the dropdown to drill random questions from that area.
-- **Mock test:** pick the “Prova d'esame simulata — Mock test” option for a 30-question exam (one per chapter plus five weighted towards tricky topics). Scores and restart controls appear once the run finishes.
-- **Hints:** the lightbulb button opens a modal with theory explanations when available.
-- **Images:** traffic-sign questions display a picture when the dataset specifies one.
+**[Download the Study Guide (HTML)](docs/italian-drivers-license-study-guide.html)**
 
-## Feature highlights
-- Chakra UI for responsive, accessible layout with light/dark mode.
-- Randomized question selection with on-screen counters for total attempts and mistakes.
-- Local datasets (`questions.json`, `chapters.json`, `hints.json`, `public/images`) so the app never depends on live APIs during use.
-- Optional Node scripts under `private/` to refresh datasets from the upstream source (not required for daily development).
+What it covers:
 
-## Under the hood
-- **Tech stack:** Vite + React 18 (StrictMode), Chakra UI, and a pure-function data layer.
-- **Key files:**
-  - `src/App.jsx` – orchestrates modes, question state, scoring, and mock exams.
-  - `src/components/ArgomentoPicker.jsx` – bilingual topic dropdown with mock test entry.
-  - `src/components/Domanda/Domanda.jsx` – renders the question, answer buttons, and feedback.
-  - `src/services/*` – utilities for loading and normalizing questions, looking up chapters, and composing mock tests.
-- **State flow:** questions are picked via `pickDomanda` (practice) or `buildMockTest` (exam). Answers update the total counter and track incorrect IDs to avoid duplicate penalties.
+- All 25 exam chapters, from road definitions and traffic signs to insurance, environmental rules, and first aid.
+- 196 official traffic sign images embedded directly in the guide.
+- Italian terminology paired with English translations throughout (e.g., *carreggiata* = carriageway, *corsia* = lane).
+- Exam strategy tips based on the patterns found across all 7,165 official questions.
+- Sample true/false questions with explanations for each chapter.
 
-## Deploy notes
-- Netlify automatically builds and deploys from `main` (see badge above). You can also push the `dist/` folder to any static host.
-- If you refresh datasets or assets, rebuild the production bundle (`npm run build`) before deploying so the changes ship together.
+To use it, download the `.html` file (or clone this repository) and open it in your browser. Everything is self-contained -- images, styles, and content are all in the single file.
 
-## Roadmap ideas
-- Persist answer history (e.g., `localStorage`) to track progress over time.
-- Add chapter-level stats, timed exam mode, and printable results.
-- Expand localization and accessibility (screen-reader optimisations, keyboard shortcuts).
+---
+
+## Interactive Quiz App
+
+For active practice, this repository also includes a browser-based quiz application that lets you drill questions from the official database.
+
+### Features
+
+- **Practice mode** -- Select any of the 25 chapters to get randomized questions from that topic.
+- **Mock exam mode** -- Take a simulated 30-question exam (one question per chapter plus five weighted toward commonly-missed topics). Scores and restart controls appear when finished.
+- **Hints** -- A lightbulb button opens theory explanations when available for a question.
+- **Traffic sign images** -- Questions display the relevant sign image when one exists in the dataset.
+- **Bilingual topic labels** -- The chapter selector shows each topic in Italian with its English translation.
+- **Light and dark mode** -- Responsive layout via Chakra UI.
+- On-screen counters track your total attempts and mistakes per session.
+
+### Tip: Real-Time English Translation of Quiz Questions
+
+The quiz questions are in Italian. For inline English translations, install the **Immersive Translate** browser extension. It lets you toggle translations on and off and choose between translation engines (Google Translate, Microsoft Translator, and others). This is the recommended way to study the questions in both languages simultaneously.
+
+---
+
+## Quick Start (Running the Quiz Locally)
+
+Requires **Node.js 18+**. Download it from [nodejs.org](https://nodejs.org/) if needed.
+
+```bash
+git clone https://github.com/JohnKruse/italian-driving-studyguide-quiz-english.git
+cd italian-driving-studyguide-quiz-english
+npm install
+npm run dev
+```
+
+Open the URL printed in the terminal (default: `http://localhost:5173`).
+
+### Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the Vite dev server with hot reload |
+| `npm run build` | Create the production bundle in `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run build:guide` | Regenerate the standalone HTML study guide |
+| `npm run mock:test` | Smoke-check the mock test configuration |
+
+---
+
+## Building the Study Guide
+
+The standalone HTML study guide can be regenerated from its Markdown source:
+
+```bash
+npm run build:guide
+```
+
+This converts `docs/italian-drivers-license-study-guide.md` into a single self-contained `.html` file with all images and styles embedded. Run this after making any edits to the Markdown source.
+
+---
+
+## Deployment
+
+The quiz app can be deployed to any static hosting provider. Build the production bundle with `npm run build` and upload the contents of the `dist/` directory. Netlify, Vercel, GitHub Pages, and similar services all work.
+
+---
+
+## Credits
+
+The quiz engine and official question database are from [avalla/quiz-patente-ab](https://github.com/avalla/quiz-patente-ab). This fork adds the English-language study guide, bilingual chapter labels, mock exam mode, and other enhancements for English-speaking learners.
+
+---
+
+## License
+
+See the original repository for license terms governing the quiz engine and question data.

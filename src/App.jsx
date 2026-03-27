@@ -1,176 +1,144 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
-    ChakraProvider,
-    Spinner,
     Box,
-    Grid,
-    Flex,
-    Spacer,
     Button,
+    ChakraProvider,
+    Flex,
+    Heading,
+    Image,
     Stack,
     Text,
-    useToast,
     theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher.jsx';
-import Domanda from './components/Domanda';
-import pickDomanda from './services/pick-domanda';
-import ArgomentoPicker from './components/ArgomentoPicker';
-import buildMockTest from './services/build-mock-test';
-import { MOCK_TEST_VALUE } from './constants/mock-test';
+import QuizPage from './components/QuizPage.jsx';
+import './App.css';
+
+function SplashPage({ onStartQuiz }) {
+    return (
+        <Flex className='splash' align='center' justify='center' direction='column'>
+            <Box className='splash-card'>
+                <Image
+                    src='/LogoLarge.png'
+                    alt='Italian Drivers License — Quiz and Study Guide for English Speakers'
+                    className='splash-logo'
+                />
+                <Heading as='h2' size='lg' mt={6} mb={3} textAlign='center'>
+                    Prepare for the Italian Patente A &amp; B Exam
+                </Heading>
+                <Text className='splash-description'>
+                    This free toolkit helps English speakers study for the Italian driving theory
+                    exam. Choose the <strong>Study Guide</strong> to learn road signs, traffic rules,
+                    and the Italian driving philosophy — or jump straight into the{' '}
+                    <strong>Practice Quiz</strong> to drill real exam questions.
+                </Text>
+                <Text className='splash-description' fontSize='sm' mt={0}>
+                    Quiz questions are in Italian, just like the real exam. For side-by-side English
+                    translations, we recommend the free{' '}
+                    <a
+                        href='https://immersivetranslate.com/'
+                        target='_blank'
+                        rel='noreferrer'
+                        style={{ color: '#319795', textDecoration: 'underline' }}
+                    >
+                        Immersive Translate
+                    </a>{' '}
+                    browser extension — it lets you toggle translations on and off while you study.
+                </Text>
+                <Stack className='splash-actions' direction={{ base: 'column', sm: 'row' }} spacing={4}>
+                    <Button
+                        as='a'
+                        href='/docs/italian-drivers-license-study-guide.html'
+                        target='_blank'
+                        rel='noreferrer'
+                        colorScheme='teal'
+                        size='lg'
+                        variant='outline'
+                        className='splash-btn'
+                    >
+                        Study Guide ↗
+                    </Button>
+                    <Button
+                        colorScheme='teal'
+                        size='lg'
+                        className='splash-btn'
+                        onClick={onStartQuiz}
+                    >
+                        Practice Quiz
+                    </Button>
+                </Stack>
+                <Text className='splash-hint'>
+                    You can also{' '}
+                    <a
+                        href='/docs/italian-drivers-license-study-guide.html'
+                        download='italian-drivers-license-study-guide.html'
+                    >
+                        download the study guide
+                    </a>{' '}
+                    as a single HTML file for offline use.
+                </Text>
+            </Box>
+        </Flex>
+    );
+}
 
 function App() {
-    const toast = useToast();
-    const [selectedChapter, setSelectedChapter] = useState(null);
-    const [mode, setMode] = useState('practice');
-    const [domanda, setDomanda] = useState(null);
-    const [mockQueue, setMockQueue] = useState([]);
-    const [mockIndex, setMockIndex] = useState(0);
-    const [errate, setErrate] = useState([]);
-    const [totali, setTotali] = useState(0);
-    const [isLoading, setIsLoading] = useState(false);
-
-    useEffect(() => {
-        setDomanda(pickDomanda());
-    }, []);
-
-    function resetTracking() {
-        setErrate([]);
-        setTotali(0);
-    }
-
-    function getNewDomanda() {
-        setTotali((current) => current + 1);
-        if (mode === 'mock') {
-            const nextIndex = mockIndex + 1;
-            setMockIndex(nextIndex);
-            if (nextIndex < mockQueue.length) {
-                setDomanda(mockQueue[nextIndex]);
-            } else {
-                setDomanda(null);
-            }
-        } else {
-            setDomanda(pickDomanda(selectedChapter));
-        }
-    }
-
-    function addErrate(id) {
-        if (errate.indexOf(id) >= 0) {
-            return;
-        }
-        setErrate([...errate, id]);
-    }
-
-    function exitMockTest() {
-        setMode('practice');
-        setMockQueue([]);
-        setMockIndex(0);
-        setSelectedChapter(null);
-        resetTracking();
-        setDomanda(pickDomanda());
-    }
-
-    function startMockTest() {
-        setIsLoading(true);
-        try {
-            const questions = buildMockTest();
-            if (!questions.length) {
-                throw new Error('No questions available for the mock test.');
-            }
-            setMode('mock');
-            setMockQueue(questions);
-            setMockIndex(0);
-            resetTracking();
-            setSelectedChapter(null);
-            setDomanda(questions[0]);
-        } catch (error) {
-            toast({
-                title: 'Unable to start mock test',
-                description: error.message,
-                status: 'error',
-                duration: 4000,
-                isClosable: true,
-            });
-            exitMockTest();
-        } finally {
-            setIsLoading(false);
-        }
-    }
-
-    function onChangeArgomento(value) {
-        if (value === MOCK_TEST_VALUE) {
-            startMockTest();
-            return;
-        }
-
-        const chapterId = value === '' ? null : Number(value);
-        setMode('practice');
-        setMockQueue([]);
-        setMockIndex(0);
-        setSelectedChapter(chapterId);
-        resetTracking();
-        setDomanda(pickDomanda(chapterId));
-    }
-
-    const mockCompleted = mode === 'mock' && mockQueue.length > 0 && mockIndex >= mockQueue.length;
-    const selectValue = mode === 'mock' ? MOCK_TEST_VALUE : (selectedChapter ?? '');
-    const progress = mode === 'mock' && !mockCompleted && mockQueue.length > 0
-        ? { current: mockIndex + 1, total: mockQueue.length }
-        : null;
-    const displayedTotali = mode === 'mock' ? mockIndex : totali;
+    const [view, setView] = useState('splash');
 
     return (
         <ChakraProvider theme={theme}>
-            <Flex p={2}>
-                <Box>
-                    <ArgomentoPicker
-                        onChange={onChangeArgomento}
-                        value={selectValue}
-                        includeMockOption
-                    />
-                </Box>
-                <Spacer />
-                <Box>
-                    <ColorModeSwitcher justifySelf='flex-end' />
+            <Flex className='app-shell' direction='column'>
+                <Flex
+                    as='header'
+                    className='app-header'
+                    align='center'
+                    justify='space-between'
+                    gap={4}
+                    wrap='wrap'
+                >
+                    <Flex
+                        align='center'
+                        gap={3}
+                        cursor='pointer'
+                        onClick={() => setView('splash')}
+                    >
+                        <Image
+                            src='/LogoSmall.png'
+                            alt='Italian Drivers License'
+                            className='header-logo'
+                        />
+                    </Flex>
+                    <Stack direction='row' spacing={3}>
+                        <Button
+                            as='a'
+                            href='/docs/italian-drivers-license-study-guide.html'
+                            target='_blank'
+                            rel='noreferrer'
+                            colorScheme='teal'
+                            variant='outline'
+                            size='sm'
+                        >
+                            Study Guide ↗
+                        </Button>
+                        <Button
+                            as='a'
+                            href='/docs/italian-drivers-license-study-guide.html'
+                            download='italian-drivers-license-study-guide.html'
+                            colorScheme='teal'
+                            variant='solid'
+                            size='sm'
+                        >
+                            Download Guide
+                        </Button>
+                    </Stack>
+                </Flex>
+                <Box as='main' className='app-main'>
+                    {view === 'splash' ? (
+                        <SplashPage onStartQuiz={() => setView('quiz')} />
+                    ) : (
+                        <QuizPage />
+                    )}
                 </Box>
             </Flex>
-            <Box textAlign='center' fontSize='xl'>
-                <Grid minH={500} p={3}>
-                    {isLoading && <Spinner />}
-                    {!isLoading && mockCompleted && (
-                        <Stack spacing={4} align='center'>
-                            <Text fontSize='2xl' fontWeight='bold'>
-                                Mock test completed!
-                            </Text>
-                            <Text fontSize='lg'>
-                                Correct answers: {mockQueue.length - errate.length} / {mockQueue.length}
-                            </Text>
-                            <Text fontSize='lg'>
-                                Incorrect questions: {errate.length}
-                            </Text>
-                            <Stack direction='row' spacing={4}>
-                                <Button colorScheme='teal' onClick={startMockTest}>
-                                    Restart mock test
-                                </Button>
-                                <Button variant='outline' onClick={exitMockTest}>
-                                    Return to practice
-                                </Button>
-                            </Stack>
-                        </Stack>
-                    )}
-                    {!isLoading && !mockCompleted && domanda ?
-                        <Domanda
-                            totali={displayedTotali}
-                            errate={errate.length}
-                            progress={progress}
-                            {...domanda}
-                            onSuccess={getNewDomanda}
-                            onError={addErrate}
-                        /> :
-                        !isLoading && !mockCompleted && <Spinner />
-                    }
-                </Grid>
-            </Box>
         </ChakraProvider>
     );
 }
