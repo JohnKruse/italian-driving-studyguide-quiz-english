@@ -22,38 +22,6 @@ Before memorizing rules, it helps to understand the logic behind them. Italian t
 
 **Gradualness.** When the exam asks about responses to hazards — skidding, fog, rain, ice — the correct answer is nearly always the gradual one. Gradual braking, gradual steering, gradual deceleration. Sudden actions are treated as wrong. This reflects a culture where smooth, predictable driving is valued over reactive, aggressive responses.
 
-## Table Of Contents
-
-- [Introduction](#introduction)
-- [How To Use This Guide](#how-to-use-this-guide)
-- [Quick Reference](#quick-reference)
-- [Exam Tips](#exam-tips)
-- [Chapter 1: Road & Traffic Definitions](#chapter-1-road--traffic-definitions)
-- [Chapter 2: Danger Signs](#chapter-2-danger-signs)
-- [Chapter 3: Prohibition Signs](#chapter-3-prohibition-signs)
-- [Chapter 4: Mandatory Signs](#chapter-4-mandatory-signs)
-- [Chapter 5: Priority / Right-Of-Way Signs](#chapter-5-priority--right-of-way-signs)
-- [Chapter 6: Road Markings](#chapter-6-road-markings)
-- [Chapter 7: Traffic Lights And Signals](#chapter-7-traffic-lights-and-signals)
-- [Chapter 8: Information Signs](#chapter-8-information-signs)
-- [Chapter 9: Supplementary Signs](#chapter-9-supplementary-signs)
-- [Chapter 10: Supplementary Panels](#chapter-10-supplementary-panels)
-- [Chapter 11: Speed Limits](#chapter-11-speed-limits)
-- [Chapter 12: Safe Following Distance](#chapter-12-safe-following-distance)
-- [Chapter 13: Vehicle Traffic Rules](#chapter-13-vehicle-traffic-rules)
-- [Chapter 14: Right-Of-Way Examples At Intersections](#chapter-14-right-of-way-examples-at-intersections)
-- [Chapter 15: Overtaking Rules](#chapter-15-overtaking-rules)
-- [Chapter 16: Stopping, Parking, Emergency Stop, And Starting Off](#chapter-16-stopping-parking-emergency-stop-and-starting-off)
-- [Chapter 17: Road Obstruction, Loads, Trailers, And Emergencies](#chapter-17-road-obstruction-loads-trailers-and-emergencies)
-- [Chapter 18: Use Of Lights](#chapter-18-use-of-lights)
-- [Chapter 19: Equipment And Safety Devices](#chapter-19-equipment-and-safety-devices)
-- [Chapter 20: Driver's Licenses](#chapter-20-drivers-licenses)
-- [Chapter 21: Behaviors To Prevent Road Accidents](#chapter-21-behaviors-to-prevent-road-accidents)
-- [Chapter 22: Driving, Physical And Mental Fitness, And First Aid](#chapter-22-driving-physical-and-mental-fitness-and-first-aid)
-- [Chapter 23: Civil, Criminal, And Administrative Liability](#chapter-23-civil-criminal-and-administrative-liability)
-- [Chapter 24: Fuel Economy, Pollution, And Eco-Driving](#chapter-24-fuel-economy-pollution-and-eco-driving)
-- [Chapter 25: Vehicle Components Important For Safety](#chapter-25-vehicle-components-important-for-safety)
-
 ## How To Use This Guide
 
 Work in layers:
@@ -104,6 +72,24 @@ For exam purposes, the safest rule is simple: if there is any doubt about alcoho
 - Minimum tread depth for car tires: 1.6 mm
 - Minimum distance behind an operating snowplow or salt spreader: 20 m
 - On some extra-urban roads, certain goods vehicles over 3.5 t under an overtaking ban must keep at least 100 m apart
+
+## Recent Legal Updates (2024-2026)
+
+These are the substantive changes most worth folding into 2026 study prep. Some are already starting to shape theory wording, while others matter more as real-world legal context than as classic true/false quiz staples.
+
+- `Drugs and driving:` the law is materially stricter. In practical terms, a positive drug test can now be enough to trigger sanctions without the old need to prove a separate psychophysical impairment at the wheel.
+- `Alcohol and alcolock:` BAC thresholds did not change, but serious and repeat alcohol violations now carry harsher consequences. For some recidivists, an `alcolock` can be required, together with a period of absolute zero alcohol before driving.
+- `Revocation consequences:` where the legal consequence is license revocation, the driver cannot obtain a new license for `3 years` from the revocation measure. This is more precise than saying every alcohol- or drug-related case creates a blanket three-year ban.
+- `Phone use while driving:` sanctions are significantly tougher. Improper use of a phone or similar device while driving now brings a heavier fine and suspension of the license, with longer suspension for repeat offenders.
+- `Short automatic suspension:` a new `sospensione breve` applies to certain listed violations when the driver has fewer than `20` license points. The basic durations are `7` or `15` days, and they increase if an accident occurs.
+- `Novice drivers:` the restriction on more powerful cars for `neopatentati` now lasts `3 years` instead of `1`. The updated limit is `75 kW/t`, with an additional cap of `105 kW` for M1 passenger cars.
+- `Patente B training:` the certified practical training requirement has risen from `6` to `8` hours: `2` hours on vehicle controls and safety, `3` urban, `2` extra-urban or motorway, and `1` night-driving hour. The current framework also expressly mentions ADAS familiarity, emergency handling, and newer urban cycle infrastructure.
+- `Micromobility:` e-scooter rules are much tighter. Helmet use, insurance, and an identification `contrassegno` are now central points to remember.
+- `Cyclists:` when overtaking a bicycle, motor vehicles must keep at least `1.5 m` where road conditions allow. For exam purposes, that qualification matters.
+- `ZTL and remote enforcement:` the reform also rationalized repeated penalties for the same very short ZTL episode, so entering and then exiting the same restricted area a few minutes later should not automatically mean multiple sanctions for the same conduct.
+- `Autovelox:` speed-camera placement rules were tightened by ministerial decree. For explanatory study notes, the two useful headline ideas are the `1 km` spacing rule outside built-up areas and the general ban on placing devices on extra-urban roads where the imposed limit is more than `20 km/h` below the ordinary limit for that road type.
+
+Two items are intentionally not taught here as settled rules: the supposed one-hour non-cumulation rule for speeding fines, and the claimed general opening of highways to all `125 cc` motorcycles. Both need a cleaner primary-source confirmation before they belong in a study guide.
 
 ## Exam Tips
 
@@ -950,6 +936,8 @@ Exam trap:
 - General limits for ordinary cars and motorcycles are 50 km/h in built-up areas, 90 km/h on secondary extra-urban roads, 110 km/h on main extra-urban roads, and 130 km/h on motorways.
 - In built-up areas with appropriate signage and suitable road characteristics, the limit may be raised to 70 km/h.
 - In rain or snow, the maximum is 90 km/h on main extra-urban roads and 110 km/h on motorways.
+- Outside built-up areas, the current autovelox framework generally requires at least 1 km between the speed-limit sign and the device itself.
+- On extra-urban roads, speed cameras generally should not be used where the imposed limit is more than 20 km/h below the ordinary limit for that road type.
 - Some vehicle categories have lower special limits than ordinary cars, and these are often what the rear speed discs summarize.
 - Speed must always be adjusted to visibility, grip, traffic, vehicle condition, and the driver's physical and mental state.
 - You must reduce speed in curves, near intersections, in poor visibility, near pedestrians, near schools, and whenever crossing with other vehicles is difficult.
@@ -1154,6 +1142,7 @@ A key Italian concept: **overtaking does not exempt you from speed limits.** You
 - Before overtaking, you must check visibility, available space, road width, signs, oncoming traffic, and whether vehicles ahead or behind have already started a similar maneuver.
 - The intention to overtake must be signaled with the left indicator.
 - Overtaking does not allow exceeding the speed limit.
+- When overtaking a bicycle, you should think in terms of at least 1.5 m of lateral clearance where road conditions allow.
 - Overtaking on the right is permitted in some specific cases, especially when the vehicle ahead is signaling or beginning a left turn.
 - Passing a tram or trolleybus on the right while it is stopped for passengers is allowed only when there is a refuge island or equivalent safe arrangement.
 - Overtaking is forbidden when it would require crossing a continuous white line.
@@ -1453,7 +1442,12 @@ Four different administrative consequences can hit your license, and the exam tr
 - Ordinary license validity is 10 years up to age 50, 5 years from 50 to 70, 3 years from 70 to 80, and 2 years over 80.
 - A driving license must never be used after expiry.
 - The points-based license starts with 20 points, but not every traffic violation causes a deduction.
+- For the first 3 years after obtaining the license, `neopatentati` face both lower speed limits and stricter limits on the power of the cars they may drive.
+- The current novice-driver vehicle limit is `75 kW/t`, with an additional cap of `105 kW` for M1 passenger cars.
+- The mandatory certified practical training for patente B now totals `8` hours, not `6`, and includes urban driving, extra-urban or motorway driving, night driving, vehicle controls, ADAS familiarity, and emergency handling.
+- The new `sospensione breve` can apply to certain violations when the driver has fewer than 20 points, typically for 7 or 15 days, with longer consequences if an accident occurs.
 - License revision may be ordered after serious doubts about fitness or competence, including driving under alcohol or drug influence.
+- Where the legal consequence is revocation, obtaining a new license is blocked for 3 years from the revocation measure.
 - Driving a vehicle without mandatory third-party insurance is forbidden on public roads.
 - Revision, suspension, withdrawal, and revocation are different legal measures and should not be mentally merged into one idea.
 
@@ -1539,7 +1533,7 @@ The exam's pattern in this chapter is consistent: whenever it offers a "bold" re
 
 This chapter has two halves that share a theme: **your fitness to drive, and your duty to help when things go wrong.**
 
-On fitness: the Italian system takes a zero-tolerance approach for new drivers (0.0 g/L blood alcohol), and a low-tolerance approach for everyone else (0.5 g/L). But the exam goes beyond alcohol — it tests whether you understand that sedative medications, emotional distress, extreme fatigue, and even strong emotions can make you unfit to drive. The Italian view is that driving is a *privilege conditioned on your state*, not a right you exercise regardless of how you feel.
+On fitness: the Italian system takes a zero-tolerance approach for new drivers (0.0 g/L blood alcohol), and a low-tolerance approach for everyone else (0.5 g/L). But the current framework is harsher in effect than the old one. For alcohol, the thresholds stay the same while consequences for serious and repeat offenders are tougher, including `alcolock` obligations in some cases. For drugs, the practical legal point is now stricter too: a positive test can be enough for sanctions, rather than requiring proof of a separate state of psychophysical impairment. The exam still goes beyond alcohol and drugs — it tests whether you understand that sedative medications, emotional distress, extreme fatigue, and even strong emotions can make you unfit to drive. The Italian view is that driving is a *privilege conditioned on your state*, not a right you exercise regardless of how you feel.
 
 On first aid: Italian law imposes a legal duty to assist — *omissione di soccorso* (failure to render aid) is a criminal offense. You don't need to be a doctor; you need to help without making things worse. The exam tests basic principles: compress bleeding, extinguish flames before treating burns, don't move spinal-injury victims unnecessarily, call emergency services, keep shock victims warm with legs elevated.
 
@@ -1547,6 +1541,8 @@ On first aid: Italian law imposes a legal duty to assist — *omissione di socco
 
 - Driving fitness may be compromised by alcohol, drugs, sedatives, antidepressants, fatigue, and emotional disturbance.
 - After excessive alcohol consumption, several hours may be needed before fitness to drive returns.
+- For some repeat alcohol offenders, an `alcolock` may be imposed; it prevents the vehicle from starting if alcohol above zero is detected.
+- Under the stricter current drug-driving framework, testing positive for drugs is itself central to the sanctioning mechanism.
 - If your license requires glasses or contact lenses, you must use them while driving.
 - Helping an injured road user is a legal and moral duty, not just for medical personnel.
 - Severe external bleeding should be compressed or tamponaded while emergency help is called.
@@ -1603,7 +1599,9 @@ The practical centerpiece is *R.C.A.* (Responsabilità Civile Auto) — compulso
 - Civil liability involves compensation for damage caused to persons, things, or animals.
 - Criminal liability is personal and may arise in cases such as negligent homicide or serious injury.
 - Administrative liability covers measures like fines, points, suspension, withdrawal, or other traffic penalties.
-- Distracted driving behaviors, including improper phone or navigator use, increase legal and safety risk.
+- Distracted driving behaviors, including improper phone or navigator use, increase legal and safety risk and now carry materially harsher sanctions, including license suspension.
+- Repeated phone use while driving can lead to longer suspension periods.
+- Abandoning an animal on or near the road can now lead to dramatically harsher criminal consequences if it causes a fatal crash.
 - Optional policies such as theft, fire, vandalism, natural events, or kasko are separate from compulsory R.C.A.
 
 ### Sample Questions
