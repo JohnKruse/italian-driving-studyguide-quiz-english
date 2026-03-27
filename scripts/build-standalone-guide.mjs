@@ -28,19 +28,50 @@ let md = readFileSync(MD_PATH, 'utf-8');
 let inlinedCount = 0;
 let missingImages = [];
 
+function getMimeType(filePath) {
+  const lower = filePath.toLowerCase();
+  if (lower.endsWith('.png')) {
+    return 'image/png';
+  }
+  if (lower.endsWith('.gif')) {
+    return 'image/gif';
+  }
+  if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) {
+    return 'image/jpeg';
+  }
+  if (lower.endsWith('.webp')) {
+    return 'image/webp';
+  }
+  return null;
+}
+
+function resolveImagePath(relPath) {
+  if (relPath.startsWith('assets/')) {
+    return join(DOCS_DIR, relPath);
+  }
+
+  if (relPath.startsWith('../public/')) {
+    return join(ROOT, relPath.slice('../'.length));
+  }
+
+  return null;
+}
+
 md = md.replace(
-  /!\[([^\]]*)\]\((assets\/[^)]+\.png)\)/g,
+  /!\[([^\]]*)\]\(((?:assets\/|\.\.\/public\/)[^)]+\.(?:png|gif|jpe?g|webp))\)/g,
   (_match, alt, relPath) => {
-    const absPath = join(DOCS_DIR, relPath);
-    if (existsSync(absPath)) {
+    const absPath = resolveImagePath(relPath);
+    const mimeType = getMimeType(relPath);
+
+    if (absPath && mimeType && existsSync(absPath)) {
       const buf = readFileSync(absPath);
       const b64 = buf.toString('base64');
       inlinedCount++;
-      return `![${alt}](data:image/png;base64,${b64})`;
-    } else {
-      missingImages.push(relPath);
-      return `![${alt}](${relPath})`; // leave as-is
+      return `![${alt}](data:${mimeType};base64,${b64})`;
     }
+
+    missingImages.push(relPath);
+    return `![${alt}](${relPath})`; // leave as-is
   }
 );
 
