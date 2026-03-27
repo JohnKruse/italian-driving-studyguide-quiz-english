@@ -6,7 +6,7 @@ A study resource for English speakers preparing for the Italian Patente A/B driv
 
 ## Standalone Study Guide
 
-The most useful thing in this repository is a **comprehensive, self-contained study guide** that you can read in any web browser -- no installation or coding required.
+One especially useful addition in this fork is a **comprehensive, self-contained study guide** that you can read in any web browser. That is particularly helpful because there are not many solid English-language study resources for the Italian theory exam, while the original quiz app remains highly valuable for active practice.
 
 **[Download the Study Guide (HTML)](docs/italian-drivers-license-study-guide.html)**
 
@@ -38,7 +38,7 @@ For active practice, this repository also includes a browser-based quiz applicat
 
 ### Tip: Real-Time English Translation of Quiz Questions
 
-The quiz questions are in Italian. For inline English translations, install the **Immersive Translate** browser extension. It lets you toggle translations on and off and choose between translation engines (Google Translate, Microsoft Translator, and others). This is the recommended way to study the questions in both languages simultaneously.
+The quiz questions are in Italian. For inline English translations, install the [**Immersive Translate** browser extension](https://immersivetranslate.com/). It lets you toggle translations on and off and choose between translation engines (Google Translate, Microsoft Translator, and others). This is the recommended way to study the questions in both languages simultaneously.
 
 ---
 
