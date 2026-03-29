@@ -7,7 +7,7 @@
  * with all images inlined as base64 data URIs.
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
@@ -19,7 +19,10 @@ const ROOT = resolve(__dirname, '..');
 // ---------- paths ----------
 const MD_PATH = join(ROOT, 'docs', 'italian-drivers-license-study-guide.md');
 const DOCS_DIR = join(ROOT, 'docs');
-const OUT_PATH = join(ROOT, 'docs', 'italian-drivers-license-study-guide.html');
+const OUT_PATHS = [
+  join(ROOT, 'docs', 'italian-drivers-license-study-guide.html'),
+  join(ROOT, 'public', 'docs', 'italian-drivers-license-study-guide.html'),
+];
 
 // ---------- read markdown ----------
 let md = readFileSync(MD_PATH, 'utf-8');
@@ -608,7 +611,10 @@ ${html}
 </html>`;
 
 // ---------- write output ----------
-writeFileSync(OUT_PATH, fullHtml, 'utf-8');
+for (const outPath of OUT_PATHS) {
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(outPath, fullHtml, 'utf-8');
+}
 
 // ---------- report ----------
 const sizeBytes = Buffer.byteLength(fullHtml, 'utf-8');
@@ -621,6 +627,9 @@ if (missingImages.length > 0) {
   console.log(`  Missing images : ${missingImages.length}`);
   missingImages.forEach((p) => console.log(`    - ${p}`));
 }
-console.log(`  Output file    : ${OUT_PATH}`);
+OUT_PATHS.forEach((outPath, index) => {
+  const label = index === 0 ? '  Output file    ' : '  Output copy    ';
+  console.log(`${label}: ${outPath}`);
+});
 console.log(`  File size      : ${sizeMB} MB (${sizeBytes.toLocaleString()} bytes)`);
 console.log('');

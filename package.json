@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/build-standalone-guide.mjs && vite build",
     "preview": "vite preview",
     "mock:test": "node scripts/mock-test-check.js",
     "build:guide": "node scripts/build-standalone-guide.mjs"

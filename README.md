@@ -8,7 +8,7 @@ A study resource for English speakers preparing for the Italian Patente A/B driv
 
 One especially useful addition in this fork is a **comprehensive, self-contained study guide** that you can read in any web browser. That is particularly helpful because there are not many solid English-language study resources for the Italian theory exam, while the original quiz app remains highly valuable for active practice.
 
-**[Download the Study Guide (HTML)](docs/italian-drivers-license-study-guide.html)**
+**[Download the Study Guide (HTML)](https://raw.githubusercontent.com/JohnKruse/italian-driving-studyguide-quiz-english/main/docs/italian-drivers-license-study-guide.html)**
 
 What it covers:
 
