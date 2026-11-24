@@ -26,25 +26,27 @@ function SplashPage({ onStartQuiz }) {
                     Prepare for the Italian Patente A &amp; B Exam
                 </Heading>
                 <Text className='splash-description'>
-                    This free toolkit helps English speakers study for the Italian driving theory
-                    exam. Choose the <strong>Study Guide</strong> to learn road signs, traffic rules,
-                    and the Italian driving philosophy — or jump straight into the{' '}
-                    <strong>Practice Quiz</strong> to drill real exam questions.
+                    This free toolkit helps English speakers master the Italian driving theory
+                    exam. Explore the <strong>Study Guide</strong>, the{' '}
+                    <strong>Trick Heuristics Playbook</strong>, and the{' '}
+                    <strong>Bilingual Glossary</strong> — or jump straight into the{' '}
+                    <strong>Practice Quiz</strong> to drill all 6,963 official questions.
                 </Text>
                 <Text className='splash-description' fontSize='sm' mt={0}>
-                    Quiz questions are in Italian, just like the real exam. For side-by-side English
-                    translations, we recommend the free{' '}
-                    <a
-                        href='https://immersivetranslate.com/'
-                        target='_blank'
-                        rel='noreferrer'
-                        style={{ color: '#319795', textDecoration: 'underline' }}
-                    >
-                        Immersive Translate
-                    </a>{' '}
-                    browser extension — it lets you toggle translations on and off while you study.
+                    Built-in domain-verified English translations (Peek / IT + EN), bilingual
+                    theory hints, optional spoiler-free <strong>Trap</strong> indicators, and
+                    post-answer rule heuristics are included directly inside the quiz — no
+                    translation extension required.
                 </Text>
-                <Stack className='splash-actions' direction={{ base: 'column', sm: 'row' }} spacing={4}>
+                <Stack className='splash-actions' direction={{ base: 'column', sm: 'row' }} spacing={3} wrap='wrap'>
+                    <Button
+                        colorScheme='teal'
+                        size='lg'
+                        className='splash-btn'
+                        onClick={onStartQuiz}
+                    >
+                        Practice Quiz
+                    </Button>
                     <Button
                         as='a'
                         href='/docs/italian-drivers-license-study-guide.html'
@@ -58,23 +60,52 @@ function SplashPage({ onStartQuiz }) {
                         Study Guide ↗
                     </Button>
                     <Button
+                        as='a'
+                        href='/docs/patente-heuristics-playbook.html'
+                        target='_blank'
+                        rel='noreferrer'
+                        colorScheme='orange'
+                        size='lg'
+                        variant='outline'
+                        className='splash-btn'
+                    >
+                        Trap Playbook ↗
+                    </Button>
+                    <Button
+                        as='a'
+                        href='/docs/patente-glossary.html'
+                        target='_blank'
+                        rel='noreferrer'
                         colorScheme='teal'
                         size='lg'
+                        variant='ghost'
                         className='splash-btn'
-                        onClick={onStartQuiz}
                     >
-                        Practice Quiz
+                        Glossary ↗
                     </Button>
                 </Stack>
                 <Text className='splash-hint'>
-                    You can also{' '}
+                    Download offline HTML:{' '}
                     <a
                         href='/docs/italian-drivers-license-study-guide.html'
                         download='italian-drivers-license-study-guide.html'
                     >
-                        download the study guide
-                    </a>{' '}
-                    as a single HTML file for offline use.
+                        Study Guide
+                    </a>
+                    {' · '}
+                    <a
+                        href='/docs/patente-heuristics-playbook.html'
+                        download='patente-heuristics-playbook.html'
+                    >
+                        Trap Playbook
+                    </a>
+                    {' · '}
+                    <a
+                        href='/docs/patente-glossary.html'
+                        download='patente-glossary.html'
+                    >
+                        Glossary
+                    </a>
                 </Text>
             </Box>
         </Flex>
@@ -107,7 +138,7 @@ function App() {
                             className='header-logo'
                         />
                     </Flex>
-                    <Stack direction='row' spacing={3}>
+                    <Stack direction='row' spacing={2} wrap='wrap'>
                         <Button
                             as='a'
                             href='/docs/italian-drivers-license-study-guide.html'
@@ -118,6 +149,28 @@ function App() {
                             size='sm'
                         >
                             Study Guide ↗
+                        </Button>
+                        <Button
+                            as='a'
+                            href='/docs/patente-heuristics-playbook.html'
+                            target='_blank'
+                            rel='noreferrer'
+                            colorScheme='orange'
+                            variant='outline'
+                            size='sm'
+                        >
+                            Trap Playbook ↗
+                        </Button>
+                        <Button
+                            as='a'
+                            href='/docs/patente-glossary.html'
+                            target='_blank'
+                            rel='noreferrer'
+                            colorScheme='teal'
+                            variant='outline'
+                            size='sm'
+                        >
+                            Glossary ↗
                         </Button>
                         <Button
                             as='a'

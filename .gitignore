@@ -38,3 +38,7 @@ dist-ssr
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Override global *.json ignore for committed app analytics assets
+!src/services/*.json
+!public/analytics/*.json

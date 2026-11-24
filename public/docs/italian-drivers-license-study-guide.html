@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Italian Driver's License (Patente A &amp; B) Study Guide</title>
+<title>Italian Driver's License (Patente A & B) Study Guide</title>
 <style>
-/* ===== Reset & Base ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -37,13 +36,11 @@ body {
   background: var(--gray-50);
 }
 
-/* ===== Layout ===== */
 .page-wrapper {
   display: flex;
   min-height: 100vh;
 }
 
-/* ===== TOC Sidebar ===== */
 #toc {
   position: sticky;
   top: 0;
@@ -120,7 +117,6 @@ body {
   color: var(--teal-light);
 }
 
-/* ===== Main Content ===== */
 .content {
   flex: 1;
   max-width: 900px;
@@ -128,7 +124,6 @@ body {
   padding: 2rem 2.5rem 4rem;
 }
 
-/* ===== Header ===== */
 .guide-header {
   text-align: center;
   padding: 2.5rem 1.5rem 2rem;
@@ -149,11 +144,10 @@ body {
 .guide-header p {
   font-size: 1rem;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
-/* ===== Typography ===== */
 h1 { font-size: 2rem; font-weight: 800; color: var(--gray-900); margin: 2rem 0 1rem; }
 h2 {
   font-size: 1.5rem; font-weight: 700; color: var(--teal-dark);
@@ -166,28 +160,15 @@ h4 { font-size: 1.05rem; font-weight: 600; color: var(--gray-600); margin: 1.4re
 h5, h6 { font-size: 0.95rem; font-weight: 600; color: var(--gray-500); margin: 1.2rem 0 0.5rem; }
 
 p { margin: 0 0 1rem; }
-
 a { color: var(--teal); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
 strong { font-weight: 600; color: var(--gray-900); }
 em { font-style: italic; }
 
-/* ===== Lists ===== */
-ul, ol {
-  margin: 0 0 1rem 1.5rem;
-}
+ul, ol { margin: 0 0 1rem 1.5rem; }
+li { margin-bottom: 0.35rem; }
+li > ul, li > ol { margin-top: 0.35rem; margin-bottom: 0; }
 
-li {
-  margin-bottom: 0.35rem;
-}
-
-li > ul, li > ol {
-  margin-top: 0.35rem;
-  margin-bottom: 0;
-}
-
-/* ===== Tables ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -206,7 +187,6 @@ thead th {
   text-align: left;
   padding: 0.6rem 0.75rem;
   font-size: 0.85rem;
-  text-transform: none;
 }
 
 tbody td {
@@ -218,7 +198,6 @@ tbody td {
 tbody tr:nth-child(even) { background: var(--gray-50); }
 tbody tr:hover { background: var(--teal-bg); }
 
-/* Sign image tables */
 td img {
   width: 80px;
   height: auto;
@@ -227,10 +206,8 @@ td img {
   border-radius: 4px;
 }
 
-/* Empty cells in sign tables */
 td:empty { background: transparent; }
 
-/* ===== Blockquotes ===== */
 blockquote {
   border-left: 4px solid var(--teal);
   background: var(--teal-bg);
@@ -242,7 +219,6 @@ blockquote {
 
 blockquote p:last-child { margin-bottom: 0; }
 
-/* ===== Code ===== */
 code {
   font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
   font-size: 0.88em;
@@ -263,24 +239,16 @@ pre {
   line-height: 1.5;
 }
 
-pre code {
-  background: none;
-  padding: 0;
-  color: inherit;
-}
+pre code { background: none; padding: 0; color: inherit; }
 
-/* ===== Horizontal Rule ===== */
 hr {
   border: none;
   border-top: 2px solid var(--gray-200);
   margin: 2rem 0;
 }
 
-/* ===== Mobile TOC ===== */
 @media (max-width: 960px) {
-  .page-wrapper {
-    flex-direction: column;
-  }
+  .page-wrapper { flex-direction: column; }
 
   #toc {
     position: fixed;
@@ -294,13 +262,8 @@ hr {
     z-index: 1000;
   }
 
-  #toc.open {
-    transform: translateX(0);
-  }
-
-  #toc-toggle {
-    display: block;
-  }
+  #toc.open { transform: translateX(0); }
+  #toc-toggle { display: block; }
 
   .toc-overlay {
     display: none;
@@ -310,26 +273,14 @@ hr {
     z-index: 999;
   }
 
-  .toc-overlay.visible {
-    display: block;
-  }
-
-  .mobile-toc-btn {
-    display: flex !important;
-  }
-
-  .content {
-    padding: 1rem 1.25rem 3rem;
-  }
-
+  .toc-overlay.visible { display: block; }
+  .mobile-toc-btn { display: flex !important; }
+  .content { padding: 1rem 1.25rem 3rem; }
   .guide-header h1 { font-size: 1.5rem; }
-
   td img { width: 60px; }
-
   table { font-size: 0.82rem; }
 }
 
-/* Mobile TOC button (fixed) */
 .mobile-toc-btn {
   display: none;
   position: fixed;
@@ -349,44 +300,28 @@ hr {
   justify-content: center;
 }
 
-.mobile-toc-btn:hover {
-  background: var(--teal-dark);
-}
+.mobile-toc-btn:hover { background: var(--teal-dark); }
 
-/* ===== Print ===== */
 @media print {
   #toc, .mobile-toc-btn, .toc-overlay { display: none !important; }
-
   .page-wrapper { display: block; }
-
-  .content {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
+  .content { max-width: 100%; padding: 0; margin: 0; }
   .guide-header {
     background: none !important;
     color: #000 !important;
     box-shadow: none;
     border: 2px solid var(--gray-300);
   }
-
   .guide-header h1 { color: #000; }
   .guide-header p { color: var(--gray-600); }
-
   body { font-size: 11pt; line-height: 1.5; }
-
   h2 { page-break-after: avoid; }
   table { page-break-inside: avoid; }
-
   td img { width: 60px; }
-
   a { color: #000; text-decoration: none; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: var(--gray-400); }
 }
 
-/* Hide the first h1 in .content since we have the header */
 .content > h1:first-child { display: none; }
 </style>
 </head>
@@ -2855,14 +2790,12 @@ hr {
   });
   overlay.addEventListener('click', closeToc);
 
-  // Close TOC when a link is clicked (mobile)
   toc.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', function () {
       if (window.innerWidth <= 960) closeToc();
     });
   });
 
-  // Highlight active TOC item on scroll
   var tocLinks = toc.querySelectorAll('.toc-list a');
   var headingEls = [];
   tocLinks.forEach(function (a) {

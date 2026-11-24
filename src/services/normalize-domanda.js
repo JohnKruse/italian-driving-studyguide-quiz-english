@@ -1,4 +1,5 @@
 import getArgomento from './get-argomento';
+import chapterTranslations from '../i18n/chapters';
 
 function padImageCode(image) {
   const numeric = Number(image);
@@ -14,11 +15,13 @@ function normalizeDomanda(domanda) {
   }
 
   const argomento = getArgomento(domanda.id_chapter) || {};
+  const verifiedChapter = chapterTranslations[Number(domanda.id_chapter)] || {};
 
   return {
     ...domanda,
     image: padImageCode(domanda.image),
-    argomento: argomento.descrizione || '',
+    argomento: verifiedChapter.it || argomento.descrizione || '',
+    argomento_en: verifiedChapter.en || '',
   };
 }
 

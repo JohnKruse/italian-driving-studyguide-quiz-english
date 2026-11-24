@@ -3,8 +3,8 @@
 /**
  * build-standalone-guide.mjs
  *
- * Converts the study guide markdown into a single self-contained HTML file
- * with all images inlined as base64 data URIs.
+ * Converts the study guide, heuristics playbook, and bilingual glossary markdown
+ * sources into self-contained offline HTML files under docs/ and public/docs/.
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -15,36 +15,50 @@ import { marked } from 'marked';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT = resolve(__dirname, '..');
-
-// ---------- paths ----------
-const MD_PATH = join(ROOT, 'docs', 'italian-drivers-license-study-guide.md');
 const DOCS_DIR = join(ROOT, 'docs');
-const OUT_PATHS = [
-  join(ROOT, 'docs', 'italian-drivers-license-study-guide.html'),
-  join(ROOT, 'public', 'docs', 'italian-drivers-license-study-guide.html'),
+const PUBLIC_DOCS_DIR = join(ROOT, 'public', 'docs');
+
+const GUIDES = [
+  {
+    sourceMd: join(DOCS_DIR, 'italian-drivers-license-study-guide.md'),
+    outFileName: 'italian-drivers-license-study-guide.html',
+    pageTitle: "Italian Driver's License (Patente A & B) Study Guide",
+    headerTitle: 'Patente A &amp; B Study Guide',
+    headerSubtitle:
+      "A comprehensive English-language guide for the Italian driver's license theory exam &mdash; covering all 25 chapters, road signs, and exam strategies.",
+    inlineImages: true,
+  },
+  {
+    sourceMd: join(DOCS_DIR, 'patente-heuristics-playbook.md'),
+    outFileName: 'patente-heuristics-playbook.html',
+    pageTitle: 'Patente A & B Trick-Question Heuristics Playbook (IT / EN)',
+    headerTitle: 'Patente A &amp; B Trick-Question Heuristics Playbook',
+    headerSubtitle:
+      'Bilingual empirical guide to high-reliability exam cues, 265 anti-heuristic exceptions, minimal-pair mutations, and Chapter danger profiles across 6,963 official questions.',
+    inlineImages: false,
+  },
+  {
+    sourceMd: join(DOCS_DIR, 'patente-glossary.md'),
+    outFileName: 'patente-glossary.html',
+    pageTitle: 'Patente A & B Bilingual Legal Glossary (IT / EN)',
+    headerTitle: 'Patente A &amp; B Bilingual Terminology Glossary',
+    headerSubtitle:
+      'Italian Codice della Strada legal vocabulary, corpus frequency counts, and critical near-synonym traps translated for English speakers.',
+    inlineImages: false,
+  },
 ];
 
-// ---------- read markdown ----------
-let md = readFileSync(MD_PATH, 'utf-8');
-
-// ---------- inline images ----------
-let inlinedCount = 0;
-let missingImages = [];
+marked.setOptions({
+  gfm: true,
+  breaks: false,
+});
 
 function getMimeType(filePath) {
   const lower = filePath.toLowerCase();
-  if (lower.endsWith('.png')) {
-    return 'image/png';
-  }
-  if (lower.endsWith('.gif')) {
-    return 'image/gif';
-  }
-  if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) {
-    return 'image/jpeg';
-  }
-  if (lower.endsWith('.webp')) {
-    return 'image/webp';
-  }
+  if (lower.endsWith('.png')) return 'image/png';
+  if (lower.endsWith('.gif')) return 'image/gif';
+  if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) return 'image/jpeg';
+  if (lower.endsWith('.webp')) return 'image/webp';
   return null;
 }
 
@@ -52,70 +66,23 @@ function resolveImagePath(relPath) {
   if (relPath.startsWith('assets/')) {
     return join(DOCS_DIR, relPath);
   }
-
   if (relPath.startsWith('../public/')) {
     return join(ROOT, relPath.slice('../'.length));
   }
-
   return null;
 }
 
-md = md.replace(
-  /!\[([^\]]*)\]\(((?:assets\/|\.\.\/public\/)[^)]+\.(?:png|gif|jpe?g|webp))\)/g,
-  (_match, alt, relPath) => {
-    const absPath = resolveImagePath(relPath);
-    const mimeType = getMimeType(relPath);
-
-    if (absPath && mimeType && existsSync(absPath)) {
-      const buf = readFileSync(absPath);
-      const b64 = buf.toString('base64');
-      inlinedCount++;
-      return `![${alt}](data:${mimeType};base64,${b64})`;
-    }
-
-    missingImages.push(relPath);
-    return `![${alt}](${relPath})`; // leave as-is
-  }
-);
-
-// ---------- configure marked ----------
-marked.setOptions({
-  gfm: true,
-  breaks: false,
-});
-
-// Custom renderer for heading IDs (for TOC linking)
-const renderer = new marked.Renderer();
-
-const slugify = (text) =>
-  text
+function slugify(text) {
+  return text
     .toLowerCase()
     .replace(/<[^>]+>/g, '')
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .trim();
+}
 
-const headings = [];
-
-renderer.heading = function ({ text, depth }) {
-  const raw = text.replace(/<[^>]+>/g, '');
-  const id = slugify(raw);
-  headings.push({ depth, text: raw, id });
-  return `<h${depth} id="${id}">${text}</h${depth}>\n`;
-};
-
-// Make images inside tables render at controlled size
-renderer.image = function ({ href, title, text }) {
-  const titleAttr = title ? ` title="${title}"` : '';
-  return `<img src="${href}" alt="${text}"${titleAttr} loading="lazy" />`;
-};
-
-const html = marked.parse(md, { renderer });
-
-// ---------- build TOC ----------
 function buildTOC(headings) {
-  // Include h2 and h3 for TOC
   const tocItems = headings.filter((h) => h.depth === 2 || h.depth === 3);
   let tocHtml = '<nav id="toc" aria-label="Table of Contents">\n';
   tocHtml += '<div class="toc-header">\n';
@@ -133,17 +100,14 @@ function buildTOC(headings) {
   return tocHtml;
 }
 
-const toc = buildTOC(headings);
-
-// ---------- HTML template ----------
-const fullHtml = `<!DOCTYPE html>
+function renderHtmlDocument({ pageTitle, headerTitle, headerSubtitle, toc, html }) {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Italian Driver's License (Patente A &amp; B) Study Guide</title>
+<title>${pageTitle}</title>
 <style>
-/* ===== Reset & Base ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -175,13 +139,11 @@ body {
   background: var(--gray-50);
 }
 
-/* ===== Layout ===== */
 .page-wrapper {
   display: flex;
   min-height: 100vh;
 }
 
-/* ===== TOC Sidebar ===== */
 #toc {
   position: sticky;
   top: 0;
@@ -258,7 +220,6 @@ body {
   color: var(--teal-light);
 }
 
-/* ===== Main Content ===== */
 .content {
   flex: 1;
   max-width: 900px;
@@ -266,7 +227,6 @@ body {
   padding: 2rem 2.5rem 4rem;
 }
 
-/* ===== Header ===== */
 .guide-header {
   text-align: center;
   padding: 2.5rem 1.5rem 2rem;
@@ -287,11 +247,10 @@ body {
 .guide-header p {
   font-size: 1rem;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
-/* ===== Typography ===== */
 h1 { font-size: 2rem; font-weight: 800; color: var(--gray-900); margin: 2rem 0 1rem; }
 h2 {
   font-size: 1.5rem; font-weight: 700; color: var(--teal-dark);
@@ -304,28 +263,15 @@ h4 { font-size: 1.05rem; font-weight: 600; color: var(--gray-600); margin: 1.4re
 h5, h6 { font-size: 0.95rem; font-weight: 600; color: var(--gray-500); margin: 1.2rem 0 0.5rem; }
 
 p { margin: 0 0 1rem; }
-
 a { color: var(--teal); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
 strong { font-weight: 600; color: var(--gray-900); }
 em { font-style: italic; }
 
-/* ===== Lists ===== */
-ul, ol {
-  margin: 0 0 1rem 1.5rem;
-}
+ul, ol { margin: 0 0 1rem 1.5rem; }
+li { margin-bottom: 0.35rem; }
+li > ul, li > ol { margin-top: 0.35rem; margin-bottom: 0; }
 
-li {
-  margin-bottom: 0.35rem;
-}
-
-li > ul, li > ol {
-  margin-top: 0.35rem;
-  margin-bottom: 0;
-}
-
-/* ===== Tables ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -344,7 +290,6 @@ thead th {
   text-align: left;
   padding: 0.6rem 0.75rem;
   font-size: 0.85rem;
-  text-transform: none;
 }
 
 tbody td {
@@ -356,7 +301,6 @@ tbody td {
 tbody tr:nth-child(even) { background: var(--gray-50); }
 tbody tr:hover { background: var(--teal-bg); }
 
-/* Sign image tables */
 td img {
   width: 80px;
   height: auto;
@@ -365,10 +309,8 @@ td img {
   border-radius: 4px;
 }
 
-/* Empty cells in sign tables */
 td:empty { background: transparent; }
 
-/* ===== Blockquotes ===== */
 blockquote {
   border-left: 4px solid var(--teal);
   background: var(--teal-bg);
@@ -380,7 +322,6 @@ blockquote {
 
 blockquote p:last-child { margin-bottom: 0; }
 
-/* ===== Code ===== */
 code {
   font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
   font-size: 0.88em;
@@ -401,24 +342,16 @@ pre {
   line-height: 1.5;
 }
 
-pre code {
-  background: none;
-  padding: 0;
-  color: inherit;
-}
+pre code { background: none; padding: 0; color: inherit; }
 
-/* ===== Horizontal Rule ===== */
 hr {
   border: none;
   border-top: 2px solid var(--gray-200);
   margin: 2rem 0;
 }
 
-/* ===== Mobile TOC ===== */
 @media (max-width: 960px) {
-  .page-wrapper {
-    flex-direction: column;
-  }
+  .page-wrapper { flex-direction: column; }
 
   #toc {
     position: fixed;
@@ -432,13 +365,8 @@ hr {
     z-index: 1000;
   }
 
-  #toc.open {
-    transform: translateX(0);
-  }
-
-  #toc-toggle {
-    display: block;
-  }
+  #toc.open { transform: translateX(0); }
+  #toc-toggle { display: block; }
 
   .toc-overlay {
     display: none;
@@ -448,26 +376,14 @@ hr {
     z-index: 999;
   }
 
-  .toc-overlay.visible {
-    display: block;
-  }
-
-  .mobile-toc-btn {
-    display: flex !important;
-  }
-
-  .content {
-    padding: 1rem 1.25rem 3rem;
-  }
-
+  .toc-overlay.visible { display: block; }
+  .mobile-toc-btn { display: flex !important; }
+  .content { padding: 1rem 1.25rem 3rem; }
   .guide-header h1 { font-size: 1.5rem; }
-
   td img { width: 60px; }
-
   table { font-size: 0.82rem; }
 }
 
-/* Mobile TOC button (fixed) */
 .mobile-toc-btn {
   display: none;
   position: fixed;
@@ -487,44 +403,28 @@ hr {
   justify-content: center;
 }
 
-.mobile-toc-btn:hover {
-  background: var(--teal-dark);
-}
+.mobile-toc-btn:hover { background: var(--teal-dark); }
 
-/* ===== Print ===== */
 @media print {
   #toc, .mobile-toc-btn, .toc-overlay { display: none !important; }
-
   .page-wrapper { display: block; }
-
-  .content {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
+  .content { max-width: 100%; padding: 0; margin: 0; }
   .guide-header {
     background: none !important;
     color: #000 !important;
     box-shadow: none;
     border: 2px solid var(--gray-300);
   }
-
   .guide-header h1 { color: #000; }
   .guide-header p { color: var(--gray-600); }
-
   body { font-size: 11pt; line-height: 1.5; }
-
   h2 { page-break-after: avoid; }
   table { page-break-inside: avoid; }
-
   td img { width: 60px; }
-
   a { color: #000; text-decoration: none; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: var(--gray-400); }
 }
 
-/* Hide the first h1 in .content since we have the header */
 .content > h1:first-child { display: none; }
 </style>
 </head>
@@ -536,8 +436,8 @@ hr {
 ${toc}
 <main class="content">
 <header class="guide-header">
-  <h1>Patente A &amp; B Study Guide</h1>
-  <p>A comprehensive English-language guide for the Italian driver's license theory exam &mdash; covering all 25 chapters, road signs, and exam strategies.</p>
+  <h1>${headerTitle}</h1>
+  <p>${headerSubtitle}</p>
 </header>
 ${html}
 </main>
@@ -569,14 +469,12 @@ ${html}
   });
   overlay.addEventListener('click', closeToc);
 
-  // Close TOC when a link is clicked (mobile)
   toc.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', function () {
       if (window.innerWidth <= 960) closeToc();
     });
   });
 
-  // Highlight active TOC item on scroll
   var tocLinks = toc.querySelectorAll('.toc-list a');
   var headingEls = [];
   tocLinks.forEach(function (a) {
@@ -609,27 +507,80 @@ ${html}
 </script>
 </body>
 </html>`;
-
-// ---------- write output ----------
-for (const outPath of OUT_PATHS) {
-  mkdirSync(dirname(outPath), { recursive: true });
-  writeFileSync(outPath, fullHtml, 'utf-8');
 }
 
-// ---------- report ----------
-const sizeBytes = Buffer.byteLength(fullHtml, 'utf-8');
-const sizeMB = (sizeBytes / (1024 * 1024)).toFixed(2);
+function buildStandaloneGuide(spec) {
+  if (!existsSync(spec.sourceMd)) {
+    throw new Error(`Missing standalone guide source: ${spec.sourceMd}`);
+  }
 
-console.log(`\n  Study Guide Build Complete`);
-console.log(`  -------------------------`);
-console.log(`  Images inlined : ${inlinedCount}`);
-if (missingImages.length > 0) {
-  console.log(`  Missing images : ${missingImages.length}`);
-  missingImages.forEach((p) => console.log(`    - ${p}`));
+  let md = readFileSync(spec.sourceMd, 'utf-8');
+  let inlinedCount = 0;
+  const missingImages = [];
+
+  if (spec.inlineImages) {
+    md = md.replace(
+      /!\[([^\]]*)\]\(((?:assets\/|\.\.\/public\/)[^)]+\.(?:png|gif|jpe?g|webp))\)/g,
+      (_match, alt, relPath) => {
+        const absPath = resolveImagePath(relPath);
+        const mimeType = getMimeType(relPath);
+
+        if (absPath && mimeType && existsSync(absPath)) {
+          const buf = readFileSync(absPath);
+          const b64 = buf.toString('base64');
+          inlinedCount++;
+          return `![${alt}](data:${mimeType};base64,${b64})`;
+        }
+
+        missingImages.push(relPath);
+        return `![${alt}](${relPath})`;
+      },
+    );
+  }
+
+  const headings = [];
+  const renderer = new marked.Renderer();
+
+  renderer.heading = function ({ text, depth }) {
+    const raw = text.replace(/<[^>]+>/g, '');
+    const id = slugify(raw);
+    headings.push({ depth, text: raw, id });
+    return `<h${depth} id="${id}">${text}</h${depth}>\n`;
+  };
+
+  renderer.image = function ({ href, title, text }) {
+    const titleAttr = title ? ` title="${title}"` : '';
+    return `<img src="${href}" alt="${text}"${titleAttr} loading="lazy" />`;
+  };
+
+  const html = marked.parse(md, { renderer });
+  const toc = buildTOC(headings);
+  const fullHtml = renderHtmlDocument({
+    pageTitle: spec.pageTitle,
+    headerTitle: spec.headerTitle,
+    headerSubtitle: spec.headerSubtitle,
+    toc,
+    html,
+  });
+
+  const outPaths = [
+    join(DOCS_DIR, spec.outFileName),
+    join(PUBLIC_DOCS_DIR, spec.outFileName),
+  ];
+
+  for (const outPath of outPaths) {
+    mkdirSync(dirname(outPath), { recursive: true });
+    writeFileSync(outPath, fullHtml, 'utf-8');
+  }
+
+  const sizeBytes = Buffer.byteLength(fullHtml, 'utf-8');
+  const sizeMB = (sizeBytes / (1024 * 1024)).toFixed(2);
+  console.log(`  Built ${spec.outFileName}: ${sizeMB} MB (${sizeBytes.toLocaleString()} bytes), images=${inlinedCount}, missing=${missingImages.length}`);
 }
-OUT_PATHS.forEach((outPath, index) => {
-  const label = index === 0 ? '  Output file    ' : '  Output copy    ';
-  console.log(`${label}: ${outPath}`);
-});
-console.log(`  File size      : ${sizeMB} MB (${sizeBytes.toLocaleString()} bytes)`);
+
+console.log('\n  Standalone Guide Builds');
+console.log('  -----------------------');
+for (const spec of GUIDES) {
+  buildStandaloneGuide(spec);
+}
 console.log('');
