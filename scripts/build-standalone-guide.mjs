@@ -31,10 +31,19 @@ const GUIDES = [
   {
     sourceMd: join(DOCS_DIR, 'patente-heuristics-playbook.md'),
     outFileName: 'patente-heuristics-playbook.html',
-    pageTitle: 'Patente A & B Trick-Question Heuristics Playbook (IT / EN)',
-    headerTitle: 'Patente A &amp; B Trick-Question Heuristics Playbook',
+    pageTitle: 'Patente A & B Trap-Question Quick Guide (IT / EN)',
+    headerTitle: 'Patente A &amp; B Trap-Question Quick Guide',
     headerSubtitle:
-      'Bilingual empirical guide to high-reliability exam cues, 265 anti-heuristic exceptions, minimal-pair mutations, and Chapter danger profiles across 6,963 official questions.',
+      'A short, practical guide to spotting how the Italian driving theory exam turns real rules into traps &mdash; with real bilingual examples.',
+    inlineImages: false,
+  },
+  {
+    sourceMd: join(DOCS_DIR, 'patente-heuristics-methodology.md'),
+    outFileName: 'patente-heuristics-methodology.html',
+    pageTitle: 'Patente A & B Trap Analysis — Research & Methodology Report',
+    headerTitle: 'Patente A &amp; B Trap Analysis: Research &amp; Methodology',
+    headerSubtitle:
+      'Full statistical analysis, validation metrics, Wilson confidence intervals, minimal-pair audit, and anti-heuristic exception catalog across 6,963 official questions.',
     inlineImages: false,
   },
   {

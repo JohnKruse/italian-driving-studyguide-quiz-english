@@ -25,10 +25,16 @@ import { loadQuestionDetails } from '../services/get-analytics';
 import ArgomentoPicker from './ArgomentoPicker';
 import buildMockTest from '../services/build-mock-test';
 import { MOCK_TEST_VALUE } from '../constants/mock-test';
+import {
+  REVIEW_MODE_ALWAYS,
+  REVIEW_MODE_WRONG_ONLY,
+  normalizeReviewMode,
+} from '../services/review-mode';
 
 const PREFS_KEYS = {
   showTrapIcon: 'patente.showTrapIcon',
   langMode: 'patente.langMode',
+  reviewMode: 'patente.reviewMode',
 };
 
 function readStoredBool(key, fallback) {
@@ -48,6 +54,14 @@ function readStoredLangMode(fallback = 'peek') {
       return val;
     }
     return fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function readStoredReviewMode(fallback = REVIEW_MODE_ALWAYS) {
+  try {
+    return normalizeReviewMode(window.localStorage.getItem(PREFS_KEYS.reviewMode), fallback);
   } catch {
     return fallback;
   }
@@ -110,6 +124,9 @@ function QuizPage() {
     readStoredBool(PREFS_KEYS.showTrapIcon, true),
   );
   const [langMode, setLangMode] = useState(() => readStoredLangMode('peek'));
+  const [reviewMode, setReviewMode] = useState(() =>
+    readStoredReviewMode(REVIEW_MODE_ALWAYS),
+  );
 
   const [domanda, setDomanda] = useState(() => pickDomanda());
   const [mockQueue, setMockQueue] = useState([]);
@@ -134,6 +151,16 @@ function QuizPage() {
     setLangMode(nextMode);
     try {
       window.localStorage.setItem(PREFS_KEYS.langMode, nextMode);
+    } catch {
+      // Ignore storage failures in restricted contexts
+    }
+  }
+
+  function updateReviewMode(nextMode) {
+    const normalized = normalizeReviewMode(nextMode, REVIEW_MODE_ALWAYS);
+    setReviewMode(normalized);
+    try {
+      window.localStorage.setItem(PREFS_KEYS.reviewMode, normalized);
     } catch {
       // Ignore storage failures in restricted contexts
     }
@@ -277,7 +304,7 @@ function QuizPage() {
         </Box>
 
         {!isMock && (
-          <Stack direction='row' spacing={3} align='center' wrap='wrap'>
+          <Flex gap={3} align='center' wrap='wrap'>
             <Button
               size='sm'
               colorScheme={trapsOnly ? 'orange' : 'gray'}
@@ -301,7 +328,27 @@ function QuizPage() {
                 onChange={(event) => updateShowTrapIcon(event.target.checked)}
               />
             </FormControl>
-          </Stack>
+
+            <Flex align='center' gap={1.5}>
+              <Text fontSize='sm' fontWeight='medium' whiteSpace='nowrap'>
+                Reasoning:
+              </Text>
+              <ButtonGroup size='sm' isAttached variant='outline' colorScheme='teal'>
+                <Button
+                  variant={reviewMode === REVIEW_MODE_WRONG_ONLY ? 'solid' : 'outline'}
+                  onClick={() => updateReviewMode(REVIEW_MODE_WRONG_ONLY)}
+                >
+                  Wrong only
+                </Button>
+                <Button
+                  variant={reviewMode === REVIEW_MODE_ALWAYS ? 'solid' : 'outline'}
+                  onClick={() => updateReviewMode(REVIEW_MODE_ALWAYS)}
+                >
+                  Always
+                </Button>
+              </ButtonGroup>
+            </Flex>
+          </Flex>
         )}
 
         <ButtonGroup size='sm' isAttached variant='outline' colorScheme='teal'>
@@ -384,6 +431,7 @@ function QuizPage() {
               isMock={isMock}
               showTrapIcon={!isMock && showTrapIcon}
               langMode={langMode}
+              reviewMode={reviewMode}
               onSuccess={getNewDomanda}
               onError={addErrate}
               onMockSubmit={handleMockSubmit}

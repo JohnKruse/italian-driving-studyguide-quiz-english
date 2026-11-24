@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Patente A & B Trick-Question Heuristics Playbook (IT / EN)</title>
+<title>Patente A & B Trap-Question Quick Guide (IT / EN)</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -336,1659 +336,322 @@ hr {
   <button id="toc-toggle" aria-label="Toggle table of contents">&#9776;</button>
 </div>
 <ul class="toc-list">
-  <li><a href="#1-panoramica-e-limiti-statistici-overview-statistical-reality-check">1. Panoramica e Limiti Statistici / Overview & Statistical Reality Check</a></li>
-  <li><a href="#2-parole-e-frasi-ad-alta-affidabilit-vero-e-falso-high-reliability-cues">2. Parole e Frasi ad Alta Affidabilità (VERO e FALSO) / High-Reliability Cues</a></li>
-  <li class="toc-sub"><a href="#segnali-falso-pi-forti-strongest-falso-cues-p-15">Segnali FALSO più forti / Strongest FALSO Cues (p = 15)</a></li>
-  <li class="toc-sub"><a href="#segnali-vero-pi-forti-strongest-vero-cues-p-15">Segnali VERO più forti / Strongest VERO Cues (p = 15)</a></li>
-  <li><a href="#3-falsi-miti-da-evitare-folklore-myths-near-5050">3. Falsi Miti da Evitare / Folklore Myths Near 50:50</a></li>
-  <li><a href="#4-struttura-e-presentazione-della-domanda-sentence-structure-presentation-patterns">4. Struttura e Presentazione della Domanda / Sentence Structure & Presentation Patterns</a></li>
-  <li><a href="#5-zona-pericolo-le-eccezioni-anti-euristica-danger-zone-anti-heuristic-exceptions">5. Zona Pericolo: Le Eccezioni Anti-Euristica / Danger Zone: Anti-Heuristic Exceptions</a></li>
-  <li class="toc-sub"><a href="#eccezioni-in-ogni-caso-vero-solitamente-falso-905-2-eccezioni">Eccezioni `in ogni caso` → **VERO** (solitamente FALSO 90.5% | 2 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-qualunque-vero-solitamente-falso-778-4-eccezioni">Eccezioni `qualunque` → **VERO** (solitamente FALSO 77.8% | 4 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-solo-vero-solitamente-falso-756-58-eccezioni">Eccezioni `solo` → **VERO** (solitamente FALSO 75.6% | 58 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-purch-vero-solitamente-falso-750-15-eccezioni">Eccezioni `purché` → **VERO** (solitamente FALSO 75.0% | 15 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-soltanto-vero-solitamente-falso-710-9-eccezioni">Eccezioni `soltanto` → **VERO** (solitamente FALSO 71.0% | 9 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-qualsiasi-vero-solitamente-falso-704-8-eccezioni">Eccezioni `qualsiasi` → **VERO** (solitamente FALSO 70.4% | 8 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-obbligatorio-vero-solitamente-falso-705-23-eccezioni">Eccezioni `è obbligatorio` → **VERO** (solitamente FALSO 70.5% | 23 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-tutti-vero-solitamente-falso-650-36-eccezioni">Eccezioni `tutti` → **VERO** (solitamente FALSO 65.0% | 36 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-sempre-vero-solitamente-falso-646-28-eccezioni">Eccezioni `sempre` → **VERO** (solitamente FALSO 64.6% | 28 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-consigliabile-falso-solitamente-vero-778-4-eccezioni">Eccezioni `consigliabile` → **FALSO** (solitamente VERO 77.8% | 4 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-salvo-falso-solitamente-vero-720-14-eccezioni">Eccezioni `salvo` → **FALSO** (solitamente VERO 72.0% | 14 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-opportuno-falso-solitamente-vero-671-28-eccezioni">Eccezioni `opportuno` → **FALSO** (solitamente VERO 67.1% | 28 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-di-norma-falso-solitamente-vero-650-21-eccezioni">Eccezioni `di norma` → **FALSO** (solitamente VERO 65.0% | 21 eccezioni)</a></li>
-  <li class="toc-sub"><a href="#eccezioni-contemporaneamente-vero-solitamente-falso-778-8-eccezioni">Eccezioni `contemporaneamente` → **VERO** (solitamente FALSO 77.8% | 8 eccezioni)</a></li>
-  <li><a href="#6-le-mutazioni-del-ministero-coppie-minime-ministry-distractor-mutations-minimal-pairs">6. Le Mutazioni del Ministero (Coppie Minime) / Ministry Distractor Mutations (Minimal Pairs)</a></li>
-  <li class="toc-sub"><a href="#top-25-mutazioni-vero-falso-pi-ricorrenti-top-25-recurring-vero-falso-mutations">Top 25 Mutazioni VERO → FALSO più ricorrenti / Top 25 Recurring VERO → FALSO Mutations</a></li>
-  <li class="toc-sub"><a href="#esempi-affiancati-per-famiglia-side-by-side-family-examples">Esempi affiancati per famiglia / Side-by-Side Family Examples</a></li>
-  <li><a href="#7-profilo-per-capitolo-e-nota-sui-titoli-chapter-by-chapter-profile-label-audit">7. Profilo per Capitolo e Nota sui Titoli / Chapter-by-Chapter Profile & Label Audit</a></li>
-  <li><a href="#8-prossimo-passo-piano-pilota-layer-3-costi-e-tempi-next-step-layer-3-llm-pilot-plan">8. Prossimo Passo: Piano Pilota Layer 3 (Costi e Tempi) / Next Step: Layer 3 LLM Pilot Plan</a></li>
+  <li><a href="#1-the-5-second-trap-checklist">1. The 5-Second Trap Checklist</a></li>
+  <li><a href="#2-the-6-classic-ministry-traps">2. The 6 Classic Ministry Traps</a></li>
+  <li class="toc-sub"><a href="#1-sign-category-swap">1. Sign-Category Swap</a></li>
+  <li class="toc-sub"><a href="#2-extreme-limiters-added">2. Extreme Limiters Added</a></li>
+  <li class="toc-sub"><a href="#3-vehicle-or-legal-term-swaps">3. Vehicle or Legal Term Swaps</a></li>
+  <li class="toc-sub"><a href="#4-flipped-direction-effect-or-obligation">4. Flipped Direction, Effect, or Obligation</a></li>
+  <li class="toc-sub"><a href="#5-sneaky-negation-flip">5. Sneaky Negation Flip</a></li>
+  <li class="toc-sub"><a href="#6-tweaked-numbers-swapped-intersection-letters">6. Tweaked Numbers & Swapped Intersection Letters</a></li>
+  <li><a href="#3-red-flag-and-green-flag-words">3. Red-Flag and Green-Flag Words</a></li>
+  <li class="toc-sub"><a href="#red-flag-words-that-usually-mean-falso">Red-Flag Words That Usually Mean FALSO</a></li>
+  <li class="toc-sub"><a href="#green-flag-words-that-usually-mean-vero">Green-Flag Words That Usually Mean VERO</a></li>
+  <li><a href="#4-popular-myths-that-do-not-work">4. Popular Myths That Do Not Work</a></li>
+  <li><a href="#5-watch-out-when-shortcuts-backfire">5. Watch Out: When Shortcuts Backfire</a></li>
+  <li class="toc-sub"><a href="#when-extreme-words-in-ogni-caso-qualsiasi-solo-sempre-are-true">When Extreme Words (`in ogni caso`, `qualsiasi`, `solo`, `sempre`) Are TRUE</a></li>
+  <li class="toc-sub"><a href="#when-cautious-words-consigliabile-opportuno-salvo-are-false">When Cautious Words (`consigliabile`, `opportuno`, `salvo`) Are FALSE</a></li>
+  <li><a href="#6-how-to-practice-traps-in-the-app">6. How to Practice Traps in the App</a></li>
 </ul>
 </nav>
 
 <main class="content">
 <header class="guide-header">
-  <h1>Patente A &amp; B Trick-Question Heuristics Playbook</h1>
-  <p>Bilingual empirical guide to high-reliability exam cues, 265 anti-heuristic exceptions, minimal-pair mutations, and Chapter danger profiles across 6,963 official questions.</p>
+  <h1>Patente A &amp; B Trap-Question Quick Guide</h1>
+  <p>A short, practical guide to spotting how the Italian driving theory exam turns real rules into traps &mdash; with real bilingual examples.</p>
 </header>
-<h1 id="manuale-bilingue-delle-euristiche-e-domande-trabocchetto-patente-ab-2026">Manuale Bilingue delle Euristiche e Domande Trabocchetto — Patente A/B 2026</h1>
-<h1 id="bilingual-heuristics-trick-question-playbook-italian-patente-ab-2026">Bilingual Heuristics & Trick-Question Playbook — Italian Patente A/B 2026</h1>
-<p><strong>IT:</strong> Questo documento analizza in modo statistico tutte le 6.963 domande ufficiali estratte in <code>questions.json</code> (3.488 VERE, 3.475 FALSE). Ogni sezione presenta prima il testo in italiano e subito dopo la traduzione in inglese, per aiutarti sia a riconoscere i meccanismi linguistici del Ministero sia ad acquisire sicurezza nella lettura dell&#39;italiano giuridico d&#39;esame.</p>
-<p><strong>EN:</strong> This document statistically analyzes all 6,963 extracted Patente A/B questions in <code>questions.json</code> (3,488 VERO / True, 3,475 FALSO / False). Every prose section presents the Italian paragraph first, immediately followed by its English translation, helping you master both Ministry wording patterns and legal Italian reading fluency.</p>
-<h2 id="1-panoramica-e-limiti-statistici-overview-statistical-reality-check">1. Panoramica e Limiti Statistici / Overview & Statistical Reality Check</h2>
-<p><strong>IT:</strong> Un classificatore lineare basato esclusivamente sul testo (TF-IDF su 1–3 grammi + regressione logistica, valutato senza dispersione di dati tra domande gemelle tramite GroupKFold a 5 blocchi) raggiunge un&#39;accuratezza fuori campione del 61.96% (± 1.54%), rispetto al 61.91% in StratifiedKFold. Ciò dimostra che il solo lessico sposta le probabilità ben oltre il 50:50 su specifici segnali, ma circa il 38% dell&#39;esame dipende dal contenuto dell&#39;immagine (3.827 domande su 6.963 hanno un&#39;immagine) e dalla conoscenza puntuale del Codice della Strada.</p>
-<p><strong>EN:</strong> A text-only linear classifier (1–3-gram TF-IDF + Logistic Regression evaluated with leakage-free 5-fold GroupKFold across sibling question blocks) achieves 61.96% (± 1.54%) out-of-sample accuracy, compared with 61.91% under StratifiedKFold. Wording cues shift odds materially above 50:50 on high-confidence items, yet roughly 38% of the gap reflects image content (3,827 of 6,963 questions include an image) and exact traffic-law facts.</p>
-<p><strong>IT:</strong> Quando il modello testuale supera una confidenza di almeno 65% (copertura sul 34.6% delle domande), l&#39;accuratezza sale al 71.4%. A confidenza &gt;= 75% (copertura 10.0%), l&#39;accuratezza raggiunge il 80.3%. Usa quindi queste euristiche come segnale di allarme e di spareggio quando sei indeciso, non come sostituto dello studio.</p>
-<p><strong>EN:</strong> When the wording-only model reaches &gt;= 65% confidence (covering 34.6% of questions), accuracy rises to 71.4%. At &gt;= 75% confidence (covering 10.0%), accuracy reaches 80.3%. Treat wording cues as tie-breakers and red flags when uncertain, never as a blind replacement for knowing the rules.</p>
+<h1 id="patente-a-b-trap-question-quick-guide">Patente A & B Trap-Question Quick Guide</h1>
+<p>A 5-minute field guide to spotting how the Italian driving theory exam turns real traffic rules into tricky <strong>FALSO</strong> statements — written for English speakers studying the 6,963 official questions.</p>
+<blockquote>
+<p><strong>The Golden Rule:</strong> Most Patente traps are not obscure trivia — they start as a <strong>true rule</strong> and flip a single word, sign category, vehicle type, or number. Treat word clues below as a <strong>yellow caution light</strong> to slow down and double-check that exact detail, never as a blind shortcut.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-5-second-trap-checklist">1. The 5-Second Trap Checklist</h2>
+<p>Before tapping <strong>Vero</strong> or <strong>Falso</strong>, scan the question in this order:</p>
+<ol>
+<li><strong>Check the picture first.</strong> Is the triangle red-bordered (<em>danger</em> / <em>pericolo</em>), a red circle (<em>prohibition</em> / <em>divieto</em>), or a blue circle (<em>mandatory</em> / <em>obbligo</em>)? On intersection diagrams, trace the arrows for every named vehicle letter (<code>A</code>, <code>R</code>, <code>C</code>...).</li>
+<li><strong>Spot extreme words.</strong> Words like <em>solo</em>, <em>soltanto</em>, <em>in ogni caso</em>, <em>sempre</em>, <em>mai</em>, or <em>tutti</em> often exaggerate a limited rule into a false blanket statement.</li>
+<li><strong>Verify the exact legal noun.</strong> Italian exam writers swap look-alike concepts: <em>fermata</em> (brief stop) vs <em>sosta</em> (parking), <em>carreggiata</em> (carriageway) vs <em>corsia</em> (lane), <em>ciclomotori</em> (mopeds) vs <em>motocicli</em> (motorcycles).</li>
+<li><strong>Check numbers, directions, and strength.</strong> Verify speed limits, point deductions, <em>destra</em> vs <em>sinistra</em>, and whether the law says <strong>mandatory (<code>è obbligatorio</code>)</strong> or merely <strong>advisable (<code>è consigliabile</code>)</strong>.</li>
+</ol>
+<hr>
+<h2 id="2-the-6-classic-ministry-traps">2. The 6 Classic Ministry Traps</h2>
+<p>Across thousands of minimal-pair questions where one <strong>VERO</strong> item has a near-identical <strong>FALSO</strong> twin, almost every trap uses one of these six edits:</p>
+<h3 id="1-sign-category-swap">1. Sign-Category Swap</h3>
+<p>The statement describes the right concept or shape, but names the wrong legal category (<em>pericolo</em>, <em>prescrizione</em>, <em>divieto</em>, <em>obbligo</em>, or <em>indicazione</em>).</p>
+<ul>
+<li><strong>VERO (<code>#1715</code>):</strong> <em>&quot;Il segnale raffigurato è un segnale di <strong>prescrizione</strong>&quot;</em> — <em>&quot;The pictured sign is a prescription sign&quot;</em></li>
+<li><strong>FALSO (<code>#1717</code>):</strong> <em>&quot;Il segnale raffigurato è un segnale di <strong>indicazione</strong>&quot;</em> — <em>&quot;The pictured sign is an indication sign&quot;</em></li>
+</ul>
+<h3 id="2-extreme-limiters-added">2. Extreme Limiters Added</h3>
+<p>Adding <strong>solo</strong>, <strong>soltanto</strong>, <strong>in ogni caso</strong>, <strong>ma non</strong>, or <strong>ma solo</strong> narrows a broader permission or turns a normal guideline into an absolute rule.</p>
+<ul>
+<li><strong>VERO (<code>#1872</code>):</strong> <em>&quot;Il segnale raffigurato indica che è consentito svoltare a destra&quot;</em> — <em>&quot;The sign shown indicates that turning right is permitted&quot;</em></li>
+<li><strong>FALSO (<code>#1866</code>):</strong> <em>&quot;Il segnale raffigurato indica che è consentito <strong>soltanto</strong> svoltare a destra&quot;</em> — <em>&quot;The sign shown indicates that <strong>only</strong> turning right is permitted&quot;</em></li>
+</ul>
+<h3 id="3-vehicle-or-legal-term-swaps">3. Vehicle or Legal Term Swaps</h3>
+<p>One vehicle class or road term is swapped for its neighbor.</p>
+<ul>
+<li><strong>VERO (<code>#1569</code>):</strong> <em>&quot;Il segnale raffigurato indica la fine del divieto di sorpasso per <strong>veicoli merci</strong> di massa a pieno carico superiore a 3,5 tonnellate&quot;</em> — <em>&quot;The sign shown indicates the end of the overtaking ban for <strong>goods vehicles</strong> of mass with a full load exceeding 3.5 tonnes&quot;</em></li>
+<li><strong>FALSO (<code>#1573</code>):</strong> <em>&quot;Il segnale raffigurato indica la fine del divieto di sorpasso per <strong>autobus</strong> di massa a pieno carico superiore a 3,5 tonnellate&quot;</em> — <em>&quot;The sign shown indicates the end of the overtaking ban for <strong>buses</strong> of mass with a full load exceeding 3.5 tonnes&quot;</em></li>
+</ul>
+<h3 id="4-flipped-direction-effect-or-obligation">4. Flipped Direction, Effect, or Obligation</h3>
+<p>A verb or adjective is inverted (<em>aumenta</em> vs <em>diminuisce</em>, <em>destra</em> vs <em>sinistra</em>, <em>massimo</em> vs <em>minimo</em>), or a legal duty is watered down to &quot;good advice.&quot;</p>
+<ul>
+<li><strong>VERO (<code>#4259</code>):</strong> <em>&quot;Lo spazio di frenatura <strong>aumenta</strong> se la strada è in discesa&quot;</em> — <em>&quot;The braking distance <strong>increases</strong> if the road is downhill&quot;</em></li>
+<li><strong>FALSO (<code>#4265</code>):</strong> <em>&quot;Lo spazio di frenatura <strong>diminuisce</strong> se la strada è in discesa&quot;</em> — <em>&quot;The braking distance <strong>decreases</strong> if the road is downhill&quot;</em></li>
+<li><strong>VERO (<code>#5427</code>) vs FALSO (<code>#5435</code>):</strong> Outside built-up areas at night when rear/hazard lights fail, placing the warning triangle is <strong>mandatory (<code>è obbligatorio</code>)</strong> — calling it merely <strong>advisable (<code>è consigliabile</code>)</strong> makes the statement <strong>FALSO</strong>.</li>
+</ul>
+<h3 id="5-sneaky-negation-flip">5. Sneaky Negation Flip</h3>
+<p>Inserting or deleting <strong>non</strong> flips the entire statement. Always look twice for <code>non</code> near the verb.</p>
+<ul>
+<li><strong>VERO (<code>#7119</code>):</strong> <em>&quot;Durante la guida, la percezione di un pericolo e la conseguente reazione del conducente <strong>sono influenzate</strong> dalle condizioni ambientali&quot;</em> — <em>&quot;While driving, the perception of a danger and the consequent reaction of the driver <strong>are influenced</strong> by environmental conditions&quot;</em></li>
+<li><strong>FALSO (<code>#7147</code>):</strong> <em>&quot;Durante la guida, la percezione di un pericolo e la conseguente reazione del conducente <strong>non sono influenzate</strong> dalle condizioni ambientali&quot;</em> — <em>&quot;While driving, the perception of a danger and the consequent reaction of the driver <strong>are not affected</strong> by environmental conditions&quot;</em></li>
+</ul>
+<h3 id="6-tweaked-numbers-swapped-intersection-letters">6. Tweaked Numbers & Swapped Intersection Letters</h3>
+<p>A speed limit, distance, license validity, or point penalty is nudged slightly off — or two vehicle letters in an intersection diagram are swapped.</p>
+<ul>
+<li><strong>VERO (<code>#5554</code>) vs FALSO (<code>#5558</code>):</strong> Improper emergency towing deducts <strong>2 points</strong> (<strong>VERO</strong>), not <strong>4 points</strong> (<strong>FALSO</strong>).</li>
+<li><strong>Chapter 14 intersections:</strong> Trace each vehicle (<code>A</code>, <code>R</code>, <code>C</code>...) on the diagram itself. False twins frequently swap two letters or wrongly claim two vehicles can cross <strong>at the same time (<code>contemporaneamente</code>)</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-red-flag-and-green-flag-words">3. Red-Flag and Green-Flag Words</h2>
+<p>Certain Italian phrases strongly signal how a question was written across the 6,963-item exam bank. Use them to spot what to inspect carefully.</p>
+<h3 id="red-flag-words-that-usually-mean-falso">Red-Flag Words That Usually Mean FALSO</h3>
 <table>
 <thead>
 <tr>
-<th align="left">Metrica / Metric</th>
-<th align="left">Valore / Value</th>
+<th align="left">Italian Phrase</th>
+<th align="left">English Meaning</th>
+<th align="left">Observed Lean</th>
+<th align="left">Why It&#39;s Usually a Trap</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">Totale domande / Total questions</td>
-<td align="left">6963 (3488 VERO / 3475 FALSO, base=50.1%)</td>
-</tr>
-<tr>
-<td align="left">StratifiedKFold 5-fold accuracy</td>
-<td align="left">61.91% (± 1.61%)</td>
-</tr>
-<tr>
-<td align="left">GroupKFold (no sibling leakage) 5-fold accuracy</td>
-<td align="left">61.96% (± 1.54%)</td>
-</tr>
-<tr>
-<td align="left">Soglia confidenza &gt;= 65% / Confidence &gt;= 0.65</td>
-<td align="left">Accuracy <strong>71.4%</strong> su <strong>34.6%</strong> del corpus</td>
-</tr>
-<tr>
-<td align="left">Soglia confidenza &gt;= 75% / Confidence &gt;= 0.75</td>
-<td align="left">Accuracy <strong>80.3%</strong> su <strong>10.0%</strong> del corpus</td>
-</tr>
-<tr>
-<td align="left">Distribuzione livelli preliminari / Preliminary tiers</td>
-<td align="left">Trap: 495, Moderate: 2852, Straightforward: 3616</td>
-</tr>
-</tbody></table>
-<h2 id="2-parole-e-frasi-ad-alta-affidabilit-vero-e-falso-high-reliability-cues">2. Parole e Frasi ad Alta Affidabilità (VERO e FALSO) / High-Reliability Cues</h2>
-<p><strong>IT:</strong> Le espressioni assolute o restrittive (&#39;in ogni caso&#39;, &#39;qualunque&#39;, &#39;solo&#39;, &#39;purché&#39;, &#39;soltanto&#39;, &#39;qualsiasi&#39;, &#39;è obbligatorio&#39;) tendono sistematicamente al FALSO perché i quiz ministeriali fabbricano divieti o condizioni arbitrarie. Al contrario, le formule di cautela, possibilità o eccezione esplicita (&#39;moderare la velocità&#39;, &#39;consigliabile&#39;, &#39;salvo&#39;, &#39;opportuno&#39;, &#39;di norma&#39;, &#39;si può trovare&#39;, &#39;invita&#39;) riflettono il tono prudente e flessibile del Codice della Strada e inclinano verso il VERO.</p>
-<p><strong>EN:</strong> Absolute or restrictive qualifiers (&#39;in ogni caso&#39;, &#39;qualunque&#39;, &#39;solo&#39;, &#39;purché&#39;, &#39;soltanto&#39;, &#39;qualsiasi&#39;, &#39;è obbligatorio&#39;) skew sharply FALSO because distractors fabricate rigid bans or fake caveats. Conversely, hedged recommendations, cautious behavior, and statutory exceptions (&#39;moderare la velocità&#39;, &#39;consigliabile&#39;, &#39;salvo&#39;, &#39;opportuno&#39;, &#39;di norma&#39;, &#39;si può trovare&#39;, &#39;invita&#39;) match official legal drafting and skew VERO.</p>
-<h3 id="segnali-falso-pi-forti-strongest-falso-cues-p-15">Segnali FALSO più forti / Strongest FALSO Cues (p < 0.01, n >= 15)</h3>
-<table>
-<thead>
-<tr>
-<th align="left">Frase / Phrase</th>
-<th align="right">Occorrenze (<code>n</code>)</th>
-<th align="right">VERO</th>
-<th align="right">FALSO</th>
-<th align="left">Bias</th>
-<th align="left">IC 95% Wilson (VERO)</th>
-<th align="right">Fisher <code>p</code></th>
-<th align="left">Esempio / Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>segnale di indicazione</code></td>
-<td align="right">16</td>
-<td align="right">1</td>
-<td align="right">15</td>
-<td align="left"><strong>FALSO 93.8%</strong></td>
-<td align="left">[0.011, 0.283]</td>
-<td align="right">2.65e-04</td>
-<td align="left">#1173: Il segnale raffigurato è un segnale di indicazione</td>
-</tr>
-<tr>
 <td align="left"><code>in ogni caso</code></td>
-<td align="right">21</td>
-<td align="right">2</td>
-<td align="right">19</td>
-<td align="left"><strong>FALSO 90.5%</strong></td>
-<td align="left">[0.026, 0.289]</td>
-<td align="right">1.16e-04</td>
-<td align="left">#1878: Il segnale raffigurato indica che in ogni caso bisogna tenersi il più possi...</td>
+<td align="left">in every case</td>
+<td align="left"><strong>~91% FALSO</strong></td>
+<td align="left">Most road rules have exceptions</td>
 </tr>
 <tr>
-<td align="left"><code>il conducente può</code></td>
-<td align="right">19</td>
-<td align="right">2</td>
-<td align="right">17</td>
-<td align="left"><strong>FALSO 89.5%</strong></td>
-<td align="left">[0.029, 0.314]</td>
-<td align="right">3.87e-04</td>
-<td align="left">#404: Il conducente può lanciare oggetti dal finestrino sulla banchina</td>
-</tr>
-<tr>
-<td align="left"><code>raffigurato indica una strada</code></td>
-<td align="right">35</td>
-<td align="right">4</td>
-<td align="right">31</td>
-<td align="left"><strong>FALSO 88.6%</strong></td>
-<td align="left">[0.045, 0.260]</td>
-<td align="right">1.77e-06</td>
-<td align="left">#1333: Il segnale raffigurato indica una strada riservata ai carri agricoli</td>
-</tr>
-<tr>
-<td align="left"><code>la velocità di</code></td>
-<td align="right">17</td>
-<td align="right">2</td>
-<td align="right">15</td>
-<td align="left"><strong>FALSO 88.2%</strong></td>
-<td align="left">[0.033, 0.343]</td>
-<td align="right">1.27e-03</td>
-<td align="left">#120: Nelle aree pedonali possono transitare i quadricicli a motore, purché non s...</td>
-</tr>
-<tr>
-<td align="left"><code>un senso</code></td>
-<td align="right">15</td>
-<td align="right">2</td>
-<td align="right">13</td>
-<td align="left"><strong>FALSO 86.7%</strong></td>
-<td align="left">[0.037, 0.379]</td>
-<td align="right">4.08e-03</td>
-<td align="left">#906: Il segnale raffigurato preannuncia un senso unico alternato con l&#39;obbligo d...</td>
-</tr>
-<tr>
-<td align="left"><code>riservata ai</code></td>
-<td align="right">21</td>
-<td align="right">3</td>
-<td align="right">18</td>
-<td align="left"><strong>FALSO 85.7%</strong></td>
-<td align="left">[0.050, 0.346]</td>
-<td align="right">8.25e-04</td>
-<td align="left">#199: La banchina è riservata ai veicoli lenti, nelle strade in salita</td>
+<td align="left"><code>esclusivamente</code> / <code>mai</code> / <code>unicamente</code></td>
+<td align="left">exclusively / never / solely</td>
+<td align="left"><strong>~92–100% FALSO</strong></td>
+<td align="left">Fabricates absolute bans or single-user claims</td>
 </tr>
 <tr>
 <td align="left"><code>rapidamente</code></td>
-<td align="right">20</td>
-<td align="right">3</td>
-<td align="right">17</td>
-<td align="left"><strong>FALSO 85.0%</strong></td>
-<td align="left">[0.052, 0.360]</td>
-<td align="right">1.44e-03</td>
-<td align="left">#452: Quando le persone anziane attraversano la carreggiata bisogna tenere presen...</td>
+<td align="left">quickly / rapidly</td>
+<td align="left"><strong>~85% FALSO</strong></td>
+<td align="left">Safe driving rarely tells you to rush</td>
 </tr>
 <tr>
-<td align="left"><code>corsia riservata</code></td>
-<td align="right">19</td>
-<td align="right">3</td>
-<td align="right">16</td>
-<td align="left"><strong>FALSO 84.2%</strong></td>
-<td align="left">[0.055, 0.376]</td>
-<td align="right">2.50e-03</td>
-<td align="left">#825: Il segnale raffigurato preannuncia una corsia riservata ai filobus</td>
+<td align="left"><code>ma non</code> / <code>ma solo</code></td>
+<td align="left">but not / but only</td>
+<td align="left"><strong>~82–84% FALSO</strong></td>
+<td align="left">Adds a false restriction onto a half-true statement</td>
 </tr>
 <tr>
-<td align="left"><code>ma non</code></td>
-<td align="right">44</td>
-<td align="right">7</td>
-<td align="right">37</td>
-<td align="left"><strong>FALSO 84.1%</strong></td>
-<td align="left">[0.079, 0.294]</td>
-<td align="right">2.81e-06</td>
-<td align="left">#36: L&#39;attraversamento pedonale è una parte della carreggiata in cui è consentit...</td>
+<td align="left"><code>riservata</code> / <code>corsia riservata</code></td>
+<td align="left">reserved for / reserved lane</td>
+<td align="left"><strong>~79–84% FALSO</strong></td>
+<td align="left">Often names the wrong vehicle class or part of the road</td>
 </tr>
 <tr>
-<td align="left"><code>divieto di transito</code></td>
-<td align="right">17</td>
-<td align="right">3</td>
-<td align="right">14</td>
-<td align="left"><strong>FALSO 82.3%</strong></td>
-<td align="left">[0.062, 0.410]</td>
-<td align="right">7.37e-03</td>
-<td align="left">#908: Il segnale raffigurato preannuncia un divieto di transito agli autobus</td>
-</tr>
-<tr>
-<td align="left"><code>sosta per</code></td>
-<td align="right">17</td>
-<td align="right">3</td>
-<td align="right">14</td>
-<td align="left"><strong>FALSO 82.3%</strong></td>
-<td align="left">[0.062, 0.410]</td>
-<td align="right">7.37e-03</td>
-<td align="left">#63: L&#39;isola di traffico è una piazzola di sosta per i veicoli</td>
-</tr>
-<tr>
-<td align="left"><code>ma solo</code></td>
-<td align="right">17</td>
-<td align="right">3</td>
-<td align="right">14</td>
-<td align="left"><strong>FALSO 82.3%</strong></td>
-<td align="left">[0.062, 0.410]</td>
-<td align="right">7.37e-03</td>
-<td align="left">#1204: Il segnale raffigurato non consente l&#39;ingresso, ma solo l&#39;uscita dalla stra...</td>
-</tr>
-<tr>
-<td align="left"><code>raffigurato indica una</code></td>
-<td align="right">79</td>
-<td align="right">14</td>
-<td align="right">65</td>
-<td align="left"><strong>FALSO 82.3%</strong></td>
-<td align="left">[0.109, 0.276]</td>
-<td align="right">2.44e-09</td>
-<td align="left">#589: Il segnale raffigurato indica una banchina cedevole</td>
-</tr>
-<tr>
-<td align="left"><code>raffigurato preannuncia la presenza</code></td>
-<td align="right">22</td>
-<td align="right">4</td>
-<td align="right">18</td>
-<td align="left"><strong>FALSO 81.8%</strong></td>
-<td align="left">[0.073, 0.385]</td>
-<td align="right">2.52e-03</td>
-<td align="left">#927: Il segnale raffigurato preannuncia la presenza di un cordolo alto per separ...</td>
-</tr>
-<tr>
-<td align="left"><code>chilometri</code></td>
-<td align="right">27</td>
-<td align="right">5</td>
-<td align="right">22</td>
-<td align="left"><strong>FALSO 81.5%</strong></td>
-<td align="left">[0.082, 0.367]</td>
-<td align="right">8.75e-04</td>
-<td align="left">#2906: Il segnale raffigurato indica che mancano 180 chilometri per l&#39;area di serv...</td>
-</tr>
-<tr>
-<td align="left"><code>segnale raffigurato indica una</code></td>
-<td align="right">58</td>
-<td align="right">11</td>
-<td align="right">47</td>
-<td align="left"><strong>FALSO 81.0%</strong></td>
-<td align="left">[0.109, 0.308]</td>
-<td align="right">1.08e-06</td>
-<td align="left">#589: Il segnale raffigurato indica una banchina cedevole</td>
-</tr>
-<tr>
-<td align="left"><code>di indicazione</code></td>
-<td align="right">20</td>
-<td align="right">4</td>
-<td align="right">16</td>
-<td align="left"><strong>FALSO 80.0%</strong></td>
-<td align="left">[0.081, 0.416]</td>
-<td align="right">7.02e-03</td>
-<td align="left">#1173: Il segnale raffigurato è un segnale di indicazione</td>
-</tr>
-<tr>
-<td align="left"><code>di posizione</code></td>
-<td align="right">20</td>
-<td align="right">4</td>
-<td align="right">16</td>
-<td align="left"><strong>FALSO 80.0%</strong></td>
-<td align="left">[0.081, 0.416]</td>
-<td align="right">7.02e-03</td>
-<td align="left">#6411: L&#39;illuminazione interna dello specchio retrovisore si accende con l&#39;accensi...</td>
-</tr>
-<tr>
-<td align="left"><code>10</code></td>
-<td align="right">24</td>
-<td align="right">5</td>
-<td align="right">19</td>
-<td align="left"><strong>FALSO 79.2%</strong></td>
-<td align="left">[0.092, 0.405]</td>
-<td align="right">3.95e-03</td>
-<td align="left">#879: Il segnale raffigurato indica che non è consentito superare la velocità di ...</td>
-</tr>
-<tr>
-<td align="left"><code>indica una</code></td>
-<td align="right">95</td>
-<td align="right">20</td>
-<td align="right">75</td>
-<td align="left"><strong>FALSO 79.0%</strong></td>
-<td align="left">[0.141, 0.303]</td>
-<td align="right">5.53e-09</td>
-<td align="left">#589: Il segnale raffigurato indica una banchina cedevole</td>
-</tr>
-<tr>
-<td align="left"><code>riservata</code></td>
-<td align="right">70</td>
-<td align="right">15</td>
-<td align="right">55</td>
-<td align="left"><strong>FALSO 78.6%</strong></td>
-<td align="left">[0.134, 0.324]</td>
-<td align="right">8.87e-07</td>
-<td align="left">#127: La strada è riservata alla circolazione dei soli autoveicoli e motocicli</td>
-</tr>
-<tr>
-<td align="left"><code>solo se</code></td>
-<td align="right">54</td>
-<td align="right">12</td>
-<td align="right">42</td>
-<td align="left"><strong>FALSO 77.8%</strong></td>
-<td align="left">[0.132, 0.349]</td>
-<td align="right">3.00e-05</td>
-<td align="left">#419: Il conducente di un veicolo deve rispettare gli agenti del traffico solo se...</td>
+<td align="left"><code>solo</code> / <code>solo se</code> / <code>soltanto</code></td>
+<td align="left">only / only if</td>
+<td align="left"><strong>~71–78% FALSO</strong></td>
+<td align="left">Narrows a general rule to one fake condition</td>
 </tr>
 <tr>
 <td align="left"><code>contemporaneamente</code></td>
-<td align="right">36</td>
-<td align="right">8</td>
-<td align="right">28</td>
-<td align="left"><strong>FALSO 77.8%</strong></td>
-<td align="left">[0.117, 0.381]</td>
-<td align="right">7.15e-04</td>
-<td align="left">#3562: Il segnale raffigurato indica quanti veicoli possono transitare contemporan...</td>
+<td align="left">at the same time</td>
+<td align="left"><strong>~78% FALSO</strong></td>
+<td align="left">Often misstates intersection priority order</td>
 </tr>
 <tr>
-<td align="left"><code>ma</code></td>
-<td align="right">106</td>
-<td align="right">24</td>
-<td align="right">82</td>
-<td align="left"><strong>FALSO 77.4%</strong></td>
-<td align="left">[0.157, 0.315]</td>
-<td align="right">6.32e-09</td>
-<td align="left">#36: L&#39;attraversamento pedonale è una parte della carreggiata in cui è consentit...</td>
+<td align="left"><code>qualunque</code> / <code>qualsiasi</code></td>
+<td align="left">any / whatsoever</td>
+<td align="left"><strong>~70–78% FALSO</strong></td>
+<td align="left">Overgeneralizes across vehicle types or situations</td>
+</tr>
+<tr>
+<td align="left"><code>purché</code></td>
+<td align="left">provided that</td>
+<td align="left"><strong>~75% FALSO</strong></td>
+<td align="left">Attaches a bogus condition onto an otherwise valid rule</td>
+</tr>
+<tr>
+<td align="left"><code>è obbligatorio</code></td>
+<td align="left">it is mandatory</td>
+<td align="left"><strong>~71% FALSO</strong></td>
+<td align="left">Turns optional precautions or signs into fake mandates</td>
+</tr>
+<tr>
+<td align="left"><code>sempre</code> / <code>tutti</code></td>
+<td align="left">always / all</td>
+<td align="left"><strong>~65% FALSO</strong></td>
+<td align="left">Sweeping generalizations that miss legal exceptions</td>
 </tr>
 </tbody></table>
-<h3 id="segnali-vero-pi-forti-strongest-vero-cues-p-15">Segnali VERO più forti / Strongest VERO Cues (p < 0.01, n >= 15)</h3>
+<p><em>Short-sentence clue:</em> Very brief, blunt sentences (especially single-line sign labels) frequently misidentify a sign or chop off a required condition, so they lean <strong>FALSO</strong>.</p>
+<h3 id="green-flag-words-that-usually-mean-vero">Green-Flag Words That Usually Mean VERO</h3>
 <table>
 <thead>
 <tr>
-<th align="left">Frase / Phrase</th>
-<th align="right">Occorrenze (<code>n</code>)</th>
-<th align="right">VERO</th>
-<th align="right">FALSO</th>
-<th align="left">Bias</th>
-<th align="left">IC 95% Wilson (VERO)</th>
-<th align="right">Fisher <code>p</code></th>
-<th align="left">Esempio / Example</th>
+<th align="left">Italian Phrase</th>
+<th align="left">English Meaning</th>
+<th align="left">Observed Lean</th>
+<th align="left">Why It&#39;s Usually True</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><code>segnale raffigurato si può</code></td>
-<td align="right">17</td>
-<td align="right">17</td>
-<td align="right">0</td>
-<td align="left"><strong>VERO 100.0%</strong></td>
-<td align="left">[0.816, 1.000]</td>
-<td align="right">1.50e-05</td>
-<td align="left">#712: Dopo il segnale raffigurato si può trovare un dispositivo acustico che avve...</td>
-</tr>
-<tr>
-<td align="left"><code>pannello che</code></td>
-<td align="right">16</td>
-<td align="right">16</td>
-<td align="right">0</td>
-<td align="left"><strong>VERO 100.0%</strong></td>
-<td align="left">[0.806, 1.000]</td>
-<td align="right">3.00e-05</td>
-<td align="left">#1141: Il segnale raffigurato è integrato dal pannello che indica la lunghezza del...</td>
-</tr>
-<tr>
-<td align="left"><code>richiede</code></td>
-<td align="right">16</td>
-<td align="right">16</td>
-<td align="right">0</td>
-<td align="left"><strong>VERO 100.0%</strong></td>
-<td align="left">[0.806, 1.000]</td>
-<td align="right">3.00e-05</td>
-<td align="left">#84: L&#39;intersezione (incrocio) a raso richiede di fare attenzione ai veicoli pro...</td>
-</tr>
-<tr>
-<td align="left"><code>moderare la velocità per</code></td>
-<td align="right">15</td>
-<td align="right">15</td>
-<td align="right">0</td>
-<td align="left"><strong>VERO 100.0%</strong></td>
-<td align="left">[0.796, 1.000]</td>
-<td align="right">6.01e-05</td>
-<td align="left">#553: In presenza del segnale raffigurato è necessario moderare la velocità per e...</td>
-</tr>
-<tr>
 <td align="left"><code>moderare la velocità</code></td>
-<td align="right">36</td>
-<td align="right">35</td>
-<td align="right">1</td>
-<td align="left"><strong>VERO 97.2%</strong></td>
-<td align="left">[0.858, 0.995]</td>
-<td align="right">9.95e-10</td>
-<td align="left">#553: In presenza del segnale raffigurato è necessario moderare la velocità per e...</td>
+<td align="left">moderate / reduce speed</td>
+<td align="left"><strong>~97% VERO</strong></td>
+<td align="left">Matches standard <em>Codice della Strada</em> safety phrasing</td>
 </tr>
 <tr>
 <td align="left"><code>si può trovare</code></td>
-<td align="right">23</td>
-<td align="right">22</td>
-<td align="right">1</td>
-<td align="left"><strong>VERO 95.7%</strong></td>
-<td align="left">[0.790, 0.992]</td>
-<td align="right">5.55e-06</td>
-<td align="left">#102: In un passaggio a livello si può trovare la croce di S. Andrea</td>
-</tr>
-<tr>
-<td align="left"><code>raffigurato si può</code></td>
-<td align="right">22</td>
-<td align="right">21</td>
-<td align="right">1</td>
-<td align="left"><strong>VERO 95.5%</strong></td>
-<td align="left">[0.782, 0.992]</td>
-<td align="right">1.07e-05</td>
-<td align="left">#712: Dopo il segnale raffigurato si può trovare un dispositivo acustico che avve...</td>
+<td align="left">you may find</td>
+<td align="left"><strong>~96% VERO</strong></td>
+<td align="left">Describes what drivers can expect after a warning sign</td>
 </tr>
 <tr>
 <td align="left"><code>potrebbero</code></td>
-<td align="right">17</td>
-<td align="right">16</td>
-<td align="right">1</td>
-<td align="left"><strong>VERO 94.1%</strong></td>
-<td align="left">[0.730, 0.990]</td>
-<td align="right">2.71e-04</td>
-<td align="left">#373: Entrando in un centro abitato, bisogna continuare a mantenere la concentraz...</td>
-</tr>
-<tr>
-<td align="left"><code>il segnale raffigurato invita</code></td>
-<td align="right">17</td>
-<td align="right">16</td>
-<td align="right">1</td>
-<td align="left"><strong>VERO 94.1%</strong></td>
-<td align="left">[0.730, 0.990]</td>
-<td align="right">2.71e-04</td>
-<td align="left">#775: Il segnale raffigurato invita a fare attenzione, prima di attraversare, per...</td>
-</tr>
-<tr>
-<td align="left"><code>la visibilità</code></td>
-<td align="right">17</td>
-<td align="right">16</td>
-<td align="right">1</td>
-<td align="left"><strong>VERO 94.1%</strong></td>
-<td align="left">[0.730, 0.990]</td>
-<td align="right">2.71e-04</td>
-<td align="left">#425: I montanti interni degli autoveicoli condizionano la visibilità</td>
+<td align="left">could / might</td>
+<td align="left"><strong>~94% VERO</strong></td>
+<td align="left">Cautious wording about possible hazards</td>
 </tr>
 <tr>
 <td align="left"><code>invita</code></td>
-<td align="right">32</td>
-<td align="right">29</td>
-<td align="right">3</td>
-<td align="left"><strong>VERO 90.6%</strong></td>
-<td align="left">[0.758, 0.968]</td>
-<td align="right">2.44e-06</td>
-<td align="left">#775: Il segnale raffigurato invita a fare attenzione, prima di attraversare, per...</td>
+<td align="left">warns / invites you to</td>
+<td align="left"><strong>~91% VERO</strong></td>
+<td align="left">Accurate description of warning and advisory signs</td>
 </tr>
 <tr>
-<td align="left"><code>raffigurato invita</code></td>
-<td align="right">29</td>
-<td align="right">26</td>
-<td align="right">3</td>
-<td align="left"><strong>VERO 89.7%</strong></td>
-<td align="left">[0.736, 0.964]</td>
-<td align="right">1.47e-05</td>
-<td align="left">#775: Il segnale raffigurato invita a fare attenzione, prima di attraversare, per...</td>
-</tr>
-<tr>
-<td align="left"><code>la velocità per</code></td>
-<td align="right">19</td>
-<td align="right">17</td>
-<td align="right">2</td>
-<td align="left"><strong>VERO 89.5%</strong></td>
-<td align="left">[0.686, 0.971]</td>
-<td align="right">7.18e-04</td>
-<td align="left">#553: In presenza del segnale raffigurato è necessario moderare la velocità per e...</td>
-</tr>
-<tr>
-<td align="left"><code>attenzione ai</code></td>
-<td align="right">19</td>
-<td align="right">17</td>
-<td align="right">2</td>
-<td align="left"><strong>VERO 89.5%</strong></td>
-<td align="left">[0.686, 0.971]</td>
-<td align="right">7.18e-04</td>
-<td align="left">#84: L&#39;intersezione (incrocio) a raso richiede di fare attenzione ai veicoli pro...</td>
-</tr>
-<tr>
-<td align="left"><code>prestare</code></td>
-<td align="right">18</td>
-<td align="right">16</td>
-<td align="right">2</td>
-<td align="left"><strong>VERO 88.9%</strong></td>
-<td align="left">[0.672, 0.969]</td>
-<td align="right">1.30e-03</td>
-<td align="left">#805: In presenza del segnale raffigurato, il conducente deve prestare maggiore a...</td>
+<td align="left"><code>prestare (maggiore) attenzione</code></td>
+<td align="left">pay (greater) attention</td>
+<td align="left"><strong>~89% VERO</strong></td>
+<td align="left">Standard safety guidance near crossings, trams, or stops</td>
 </tr>
 <tr>
 <td align="left"><code>altri utenti della strada</code></td>
-<td align="right">24</td>
-<td align="right">21</td>
-<td align="right">3</td>
-<td align="left"><strong>VERO 87.5%</strong></td>
-<td align="left">[0.690, 0.957]</td>
-<td align="right">2.71e-04</td>
-<td align="left">#371: Entrati in un centro abitato, bisogna tenere conto che gli altri utenti del...</td>
+<td align="left">other road users</td>
+<td align="left"><strong>~88% VERO</strong></td>
+<td align="left">Accurate defensive-driving reminders</td>
 </tr>
 <tr>
-<td align="left"><code>orizzontale</code></td>
-<td align="right">16</td>
-<td align="right">14</td>
-<td align="right">2</td>
-<td align="left"><strong>VERO 87.5%</strong></td>
-<td align="left">[0.640, 0.965]</td>
-<td align="right">4.14e-03</td>
-<td align="left">#764: Il segnale raffigurato può essere posto sia in senso orizzontale che in sen...</td>
+<td align="left"><code>particolare</code> / <code>prudenza</code></td>
+<td align="left">particular / caution</td>
+<td align="left"><strong>~77–86% VERO</strong></td>
+<td align="left">Realistic hazard descriptions rarely invented as distractors</td>
 </tr>
 <tr>
-<td align="left"><code>valutare</code></td>
-<td align="right">16</td>
-<td align="right">14</td>
-<td align="right">2</td>
-<td align="left"><strong>VERO 87.5%</strong></td>
-<td align="left">[0.640, 0.965]</td>
-<td align="right">4.14e-03</td>
-<td align="left">#450: Le persone anziane che attraversano la carreggiata sono esposte a maggiori ...</td>
+<td align="left"><code>salvo diversa segnalazione</code></td>
+<td align="left">unless otherwise indicated</td>
+<td align="left"><strong>~81% VERO</strong></td>
+<td align="left">Legal qualifier included so a general rule stays accurate</td>
 </tr>
 <tr>
-<td align="left"><code>altri utenti</code></td>
-<td align="right">30</td>
-<td align="right">26</td>
-<td align="right">4</td>
-<td align="left"><strong>VERO 86.7%</strong></td>
-<td align="left">[0.703, 0.947]</td>
-<td align="right">5.75e-05</td>
-<td align="left">#371: Entrati in un centro abitato, bisogna tenere conto che gli altri utenti del...</td>
-</tr>
-<tr>
-<td align="left"><code>raffigurato può essere posto</code></td>
-<td align="right">15</td>
-<td align="right">13</td>
-<td align="right">2</td>
-<td align="left"><strong>VERO 86.7%</strong></td>
-<td align="left">[0.621, 0.963]</td>
-<td align="right">7.33e-03</td>
-<td align="left">#764: Il segnale raffigurato può essere posto sia in senso orizzontale che in sen...</td>
-</tr>
-<tr>
-<td align="left"><code>particolare</code></td>
-<td align="right">35</td>
-<td align="right">30</td>
-<td align="right">5</td>
-<td align="left"><strong>VERO 85.7%</strong></td>
-<td align="left">[0.706, 0.937]</td>
-<td align="right">2.14e-05</td>
-<td align="left">#677: Su strada a due corsie e a doppio senso di circolazione, in presenza del se...</td>
-</tr>
-<tr>
-<td align="left"><code>abbinato</code></td>
-<td align="right">21</td>
-<td align="right">18</td>
-<td align="right">3</td>
-<td align="left"><strong>VERO 85.7%</strong></td>
-<td align="left">[0.654, 0.950]</td>
-<td align="right">1.47e-03</td>
-<td align="left">#778: Il segnale (A) può essere abbinato al segnale (B) (908)</td>
-</tr>
-<tr>
-<td align="left"><code>utenti</code></td>
-<td align="right">34</td>
-<td align="right">29</td>
-<td align="right">5</td>
-<td align="left"><strong>VERO 85.3%</strong></td>
-<td align="left">[0.699, 0.935]</td>
-<td align="right">3.71e-05</td>
-<td align="left">#371: Entrati in un centro abitato, bisogna tenere conto che gli altri utenti del...</td>
-</tr>
-<tr>
-<td align="left"><code>particolarmente</code></td>
-<td align="right">27</td>
-<td align="right">23</td>
-<td align="right">4</td>
-<td align="left"><strong>VERO 85.2%</strong></td>
-<td align="left">[0.675, 0.941]</td>
-<td align="right">3.03e-04</td>
-<td align="left">#496: Alla guida di un veicolo, in vicinanza di una piazzola di fermata di autobu...</td>
-</tr>
-<tr>
-<td align="left"><code>può essere integrato</code></td>
-<td align="right">19</td>
-<td align="right">16</td>
-<td align="right">3</td>
-<td align="left"><strong>VERO 84.2%</strong></td>
-<td align="left">[0.624, 0.945]</td>
-<td align="right">4.38e-03</td>
-<td align="left">#607: Il segnale raffigurato può essere integrato con pannello con la scritta TOR...</td>
+<td align="left"><code>consigliabile</code> / <code>opportuno</code> / <code>di norma</code></td>
+<td align="left">advisable / appropriate / normally</td>
+<td align="left"><strong>~65–78% VERO</strong></td>
+<td align="left">Measured, non-absolute phrasing typical of real rules</td>
 </tr>
 </tbody></table>
-<h2 id="3-falsi-miti-da-evitare-folklore-myths-near-5050">3. Falsi Miti da Evitare / Folklore Myths Near 50:50</h2>
-<p><strong>IT:</strong> Molti consigli informali suggeriscono di diffidare automaticamente della parola &#39;non&#39;, di &#39;è vietato&#39;, di &#39;è consentito&#39; o della congiunzione &#39;se&#39;. I dati su 6.963 domande smentiscono queste regole popolari: tutte queste forme cadono praticamente al 50% (lancio di moneta) e non devono mai influenzare la risposta da sole.</p>
-<p><strong>EN:</strong> Popular study folklore warns students to guess FALSO whenever they see &#39;non&#39;, &#39;è vietato&#39;, or &#39;se&#39;, or to trust &#39;è consentito&#39;. Across all 6,963 items, these myths perform identically to a 50:50 coin flip and offer zero standalone predictive edge.</p>
+<p><em>Long-sentence clue:</em> Longer, carefully qualified sentences with caveats lean <strong>VERO</strong> because Italian traffic law needs extra clauses to stay legally exact.</p>
+<hr>
+<h2 id="4-popular-myths-that-do-not-work">4. Popular Myths That Do Not Work</h2>
+<p>Common exam folklore claims that words like <code>non</code>, <code>se</code>, or <code>è vietato</code> point to a specific answer. Across all 6,963 official questions, they are virtually <strong>50:50 coin flips</strong>:</p>
 <table>
 <thead>
 <tr>
-<th align="left">Espressione / Phrase</th>
-<th align="right"><code>n</code></th>
-<th align="right">VERO</th>
-<th align="right">FALSO</th>
-<th align="right"><code>P(VERO)</code></th>
-<th align="right">Fisher <code>p</code></th>
+<th align="left">Myth Word</th>
+<th align="left">English</th>
+<th align="left">Real % VERO</th>
+<th align="left">Verdict</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left"><code>non</code></td>
-<td align="right">827</td>
-<td align="right">399</td>
-<td align="right">428</td>
-<td align="right">0.482</td>
-<td align="right">0.267</td>
+<td align="left">not</td>
+<td align="left"><strong>48%</strong></td>
+<td align="left">Coin flip — read the full sentence</td>
 </tr>
 <tr>
 <td align="left"><code>se</code></td>
-<td align="right">703</td>
-<td align="right">362</td>
-<td align="right">341</td>
-<td align="right">0.515</td>
-<td align="right">0.450</td>
-</tr>
-<tr>
-<td align="left"><code>anche</code></td>
-<td align="right">236</td>
-<td align="right">132</td>
-<td align="right">104</td>
-<td align="right">0.559</td>
-<td align="right">0.074</td>
-</tr>
-<tr>
-<td align="left"><code>consente</code></td>
-<td align="right">235</td>
-<td align="right">123</td>
-<td align="right">112</td>
-<td align="right">0.523</td>
-<td align="right">0.507</td>
-</tr>
-<tr>
-<td align="left"><code>possono</code></td>
-<td align="right">204</td>
-<td align="right">97</td>
-<td align="right">107</td>
-<td align="right">0.475</td>
-<td align="right">0.478</td>
-</tr>
-<tr>
-<td align="left"><code>è consentito</code></td>
-<td align="right">200</td>
-<td align="right">101</td>
-<td align="right">99</td>
-<td align="right">0.505</td>
-<td align="right">0.943</td>
-</tr>
-<tr>
-<td align="left"><code>vieta</code></td>
-<td align="right">190</td>
-<td align="right">82</td>
-<td align="right">108</td>
-<td align="right">0.432</td>
-<td align="right">0.056</td>
-</tr>
-<tr>
-<td align="left"><code>preavvisa</code></td>
-<td align="right">79</td>
-<td align="right">36</td>
-<td align="right">43</td>
-<td align="right">0.456</td>
-<td align="right">0.431</td>
+<td align="left">if</td>
+<td align="left"><strong>51%</strong></td>
+<td align="left">Coin flip — check the condition</td>
 </tr>
 <tr>
 <td align="left"><code>è vietato</code></td>
-<td align="right">72</td>
-<td align="right">37</td>
-<td align="right">35</td>
-<td align="right">0.514</td>
-<td align="right">0.906</td>
+<td align="left">it is prohibited</td>
+<td align="left"><strong>51%</strong></td>
+<td align="left">Coin flip — verify the sign or rule</td>
 </tr>
 <tr>
-<td align="left"><code>in prossimità</code></td>
-<td align="right">62</td>
-<td align="right">35</td>
-<td align="right">27</td>
-<td align="right">0.565</td>
-<td align="right">0.372</td>
+<td align="left"><code>è consentito</code></td>
+<td align="left">it is permitted</td>
+<td align="left"><strong>51%</strong></td>
+<td align="left">Coin flip — verify what is allowed</td>
 </tr>
 <tr>
-<td align="left"><code>qualora</code></td>
-<td align="right">31</td>
-<td align="right">16</td>
-<td align="right">15</td>
-<td align="right">0.516</td>
-<td align="right">1.000</td>
+<td align="left"><code>possono</code></td>
+<td align="left">may / can</td>
+<td align="left"><strong>48%</strong></td>
+<td align="left">Coin flip — verify who or what</td>
 </tr>
 <tr>
-<td align="left"><code>tutte</code></td>
-<td align="right">28</td>
-<td align="right">11</td>
-<td align="right">17</td>
-<td align="right">0.393</td>
-<td align="right">0.263</td>
-</tr>
-<tr>
-<td align="left"><code>sufficiente</code></td>
-<td align="right">21</td>
-<td align="right">11</td>
-<td align="right">10</td>
-<td align="right">0.524</td>
-<td align="right">1.000</td>
-</tr>
-<tr>
-<td align="left"><code>prescrive</code></td>
-<td align="right">21</td>
-<td align="right">11</td>
-<td align="right">10</td>
-<td align="right">0.524</td>
-<td align="right">1.000</td>
+<td align="left"><code>anche</code></td>
+<td align="left">also / even</td>
+<td align="left"><strong>56%</strong></td>
+<td align="left">Weak lean only — do not rely on it</td>
 </tr>
 </tbody></table>
-<h2 id="4-struttura-e-presentazione-della-domanda-sentence-structure-presentation-patterns">4. Struttura e Presentazione della Domanda / Sentence Structure & Presentation Patterns</h2>
-<p><strong>IT:</strong> Anche la forma della frase trasmette informazione: le frasi brevi (&lt; 70 caratteri) risultano più spesso FALSE, spesso perché enunciano una definizione tagliata o una falsa attribuzione secca di un segnale. Le frasi lunghe (&gt;= 130 caratteri) sono più spesso VERE perché includono le precisazioni legali richieste per rendere corretta la norma.</p>
-<p><strong>EN:</strong> Sentence shape also carries signal: short items (&lt; 70 chars) lean FALSO because truncated definitions and blunt mislabeled signs need fewer words, whereas long items (&gt;= 130 chars) lean VERO because statutory accuracy requires extra qualifying clauses and exceptions.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Caratteristica / Feature</th>
-<th align="left">Categoria / Bucket</th>
-<th align="right"><code>n</code></th>
-<th align="right"><code>P(VERO)</code></th>
-<th align="left">IC 95% Wilson</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>sentence_length</code></td>
-<td align="left"><code>70-129 chars</code></td>
-<td align="right">4187</td>
-<td align="right">0.505</td>
-<td align="left">[0.490, 0.520]</td>
-</tr>
-<tr>
-<td align="left"><code>negation_count</code></td>
-<td align="left"><code>0 negations</code></td>
-<td align="right">5805</td>
-<td align="right">0.502</td>
-<td align="left">[0.489, 0.515]</td>
-</tr>
-<tr>
-<td align="left"><code>double_negation</code></td>
-<td align="left"><code>absent</code></td>
-<td align="right">6949</td>
-<td align="right">0.502</td>
-<td align="left">[0.490, 0.514]</td>
-</tr>
-<tr>
-<td align="left"><code>numeric_or_unit</code></td>
-<td align="left"><code>absent</code></td>
-<td align="right">5991</td>
-<td align="right">0.508</td>
-<td align="left">[0.495, 0.521]</td>
-</tr>
-<tr>
-<td align="left"><code>parenthetical</code></td>
-<td align="left"><code>absent</code></td>
-<td align="right">6454</td>
-<td align="right">0.499</td>
-<td align="left">[0.487, 0.511]</td>
-</tr>
-<tr>
-<td align="left"><code>conditional_or_exception</code></td>
-<td align="left"><code>absent</code></td>
-<td align="right">6132</td>
-<td align="right">0.500</td>
-<td align="left">[0.488, 0.513]</td>
-</tr>
-<tr>
-<td align="left"><code>image_presence</code></td>
-<td align="left"><code>with_image</code></td>
-<td align="right">3827</td>
-<td align="right">0.485</td>
-<td align="left">[0.469, 0.501]</td>
-</tr>
-<tr>
-<td align="left"><code>negation_count</code></td>
-<td align="left"><code>1 negation</code></td>
-<td align="right">1048</td>
-<td align="right">0.493</td>
-<td align="left">[0.463, 0.524]</td>
-</tr>
-<tr>
-<td align="left"><code>sentence_length</code></td>
-<td align="left"><code>&gt;=130 chars</code></td>
-<td align="right">1440</td>
-<td align="right">0.572</td>
-<td align="left">[0.546, 0.598]</td>
-</tr>
-<tr>
-<td align="left"><code>conditional_or_exception</code></td>
-<td align="left"><code>present</code></td>
-<td align="right">831</td>
-<td align="right">0.504</td>
-<td align="left">[0.470, 0.538]</td>
-</tr>
-<tr>
-<td align="left"><code>sentence_length</code></td>
-<td align="left"><code>&lt;70 chars</code></td>
-<td align="right">1336</td>
-<td align="right">0.412</td>
-<td align="left">[0.386, 0.438]</td>
-</tr>
-<tr>
-<td align="left"><code>image_presence</code></td>
-<td align="left"><code>text_only</code></td>
-<td align="right">3136</td>
-<td align="right">0.520</td>
-<td align="left">[0.503, 0.538]</td>
-</tr>
-<tr>
-<td align="left"><code>parenthetical</code></td>
-<td align="left"><code>present</code></td>
-<td align="right">509</td>
-<td align="right">0.528</td>
-<td align="left">[0.485, 0.572]</td>
-</tr>
-<tr>
-<td align="left"><code>numeric_or_unit</code></td>
-<td align="left"><code>present</code></td>
-<td align="right">972</td>
-<td align="right">0.457</td>
-<td align="left">[0.426, 0.488]</td>
-</tr>
-<tr>
-<td align="left"><code>negation_count</code></td>
-<td align="left"><code>&gt;=2 negations</code></td>
-<td align="right">110</td>
-<td align="right">0.518</td>
-<td align="left">[0.426, 0.609]</td>
-</tr>
-<tr>
-<td align="left"><code>double_negation</code></td>
-<td align="left"><code>present</code></td>
-<td align="right">14</td>
-<td align="right">0.071</td>
-<td align="left">[0.013, 0.315]</td>
-</tr>
-</tbody></table>
-<h2 id="5-zona-pericolo-le-eccezioni-anti-euristica-danger-zone-anti-heuristic-exceptions">5. Zona Pericolo: Le Eccezioni Anti-Euristica / Danger Zone: Anti-Heuristic Exceptions</h2>
-<p><strong>IT:</strong> Questa è la sezione più preziosa per evitare autogol: raccoglie le 265 occorrenze in cui una domanda contiene un segnale forte (come &#39;in ogni caso&#39;, &#39;solo&#39;, &#39;purché&#39;, &#39;sempre&#39;, &#39;qualunque&#39;, &#39;consigliabile&#39;, &#39;salvo&#39;) ma la risposta ufficiale è l&#39;OPPOSTO della regola euristica. Studiare queste eccezioni neutralizza la principale causa d&#39;errore di chi applica scorciatoie.</p>
-<p><strong>EN:</strong> This is the highest-leverage protection against heuristic traps: it catalogs the 265 instances where a question contains a strong cue (e.g. &#39;in ogni caso&#39;, &#39;solo&#39;, &#39;purché&#39;, &#39;sempre&#39;, &#39;qualunque&#39;, &#39;consigliabile&#39;, &#39;salvo&#39;) yet the official answer is the OPPOSITE of the statistical majority. Memorizing these exceptions stops shortcuts from backfiring.</p>
-<h3 id="eccezioni-in-ogni-caso-vero-solitamente-falso-905-2-eccezioni">Eccezioni `in ogni caso` → **VERO** (solitamente FALSO 90.5% | 2 eccezioni)</h3>
-<ul>
-<li><strong>#5293</strong> (Ch 16, img 0, <strong>VERO</strong>): La sosta e la fermata sono vietate in ogni caso sulle piste ciclabili e agli sbocchi di esse</li>
-<li><strong>#5538</strong> (Ch 17, img 302, <strong>VERO</strong>): Il pannello in figura deve essere applicato in ogni caso in cui il carico sporge posteriormente, anche se di poco (302)</li>
-</ul>
-<h3 id="eccezioni-qualunque-vero-solitamente-falso-778-4-eccezioni">Eccezioni `qualunque` → **VERO** (solitamente FALSO 77.8% | 4 eccezioni)</h3>
-<ul>
-<li><strong>#710</strong> (Ch 2, img 8, <strong>VERO</strong>): Il segnale raffigurato preannuncia un attraversamento ferroviario protetto da barriere o semibarriere, qualunque sia il numero dei binari</li>
-<li><strong>#4161</strong> (Ch 11, img 0, <strong>VERO</strong>): Nel caso in cui, a un passaggio a livello, ci si trova ancora sui binari col proprio veicolo quando le barriere cominciano a chiudersi, occorre mantenere la calma e sgomberare in qualunque modo la sede ferroviaria</li>
-<li><strong>#4162</strong> (Ch 11, img 0, <strong>VERO</strong>): Nel caso in cui, a un passaggio a livello, ci si trova ancora sui binari col proprio veicolo quando le barriere cominciano a chiudersi, occorre sgomberare in qualunque modo la sede ferroviaria, se necessario anche sfondando le barriere</li>
-<li><strong>#6672</strong> (Ch 19, img 0, <strong>VERO</strong>): La visiera del casco deve garantire la perfetta visione con qualunque condizione di luce o illuminazione</li>
-</ul>
-<h3 id="eccezioni-solo-vero-solitamente-falso-756-58-eccezioni">Eccezioni `solo` → **VERO** (solitamente FALSO 75.6% | 58 eccezioni)</h3>
-<ul>
-<li><strong>#41</strong> (Ch 1, img 0, <strong>VERO</strong>): Nelle strade extraurbane principali possono circolare solo alcune categorie di veicoli a motore</li>
-<li><strong>#89</strong> (Ch 1, img 0, <strong>VERO</strong>): Una zona a traffico limitato è un&#39;area in cui può essere limitata la circolazione dei veicoli solo in alcune ore</li>
-<li><strong>#90</strong> (Ch 1, img 0, <strong>VERO</strong>): Una zona a traffico limitato è un&#39;area nella quale può essere limitata la circolazione solo di particolari categorie di veicoli</li>
-<li><strong>#91</strong> (Ch 1, img 0, <strong>VERO</strong>): In una zona a traffico limitato possono circolare solo i veicoli autorizzati</li>
-<li><strong>#205</strong> (Ch 1, img 0, <strong>VERO</strong>): Il marciapiede consente la sosta dei veicoli solo in presenza di apposite strisce di parcheggio</li>
-<li><strong>#759</strong> (Ch 2, img 10, <strong>VERO</strong>): Il segnale raffigurato indica che la sede ferroviaria ha un solo binario</li>
-<li><strong>#814</strong> (Ch 2, img 14, <strong>VERO</strong>): In presenza del segnale raffigurato si può sorpassare a destra il tram fermo al centro della strada per la salita e discesa dei passeggeri, solo se esiste l&#39;apposito salvagente</li>
-<li><strong>#1299</strong> (Ch 3, img 59, <strong>VERO</strong>): In presenza del segnale raffigurato è consentito l&#39;uso del clacson solo in caso di pericolo immediato</li>
-<li><strong>#1597</strong> (Ch 3, img 947, <strong>VERO</strong>): Il segnale (A) con il pannello (B) vieta la sosta solo nei giorni lavorativi (947)</li>
-<li><strong>#1859</strong> (Ch 4, img 99, <strong>VERO</strong>): Il segnale raffigurato consente solo di proseguire diritto o svoltare a destra</li>
-<li><strong>#1880</strong> (Ch 4, img 100, <strong>VERO</strong>): Il segnale raffigurato consente solo di proseguire diritto o svoltare a sinistra</li>
-<li><strong>#2007</strong> (Ch 4, img 107, <strong>VERO</strong>): Il segnale raffigurato indica che la circolazione è consentita solo con catene o pneumatici invernali</li>
-<li><strong>#2008</strong> (Ch 4, img 107, <strong>VERO</strong>): Il segnale raffigurato consente il transito solo ai veicoli muniti di catene o pneumatici invernali</li>
-<li><strong>#2036</strong> (Ch 4, img 110, <strong>VERO</strong>): Il segnale raffigurato è posto in corrispondenza di un itinerario che si può percorrere solo con le biciclette</li>
-<li><strong>#2044</strong> (Ch 4, img 111, <strong>VERO</strong>): Il segnale raffigurato è posto in corrispondenza della fine di un itinerario percorribile solo con biciclette</li>
-<li><em>(+ altre 43 eccezioni presenti in <code>question_analytics.json</code>)</em></li>
-</ul>
-<h3 id="eccezioni-purch-vero-solitamente-falso-750-15-eccezioni">Eccezioni `purché` → **VERO** (solitamente FALSO 75.0% | 15 eccezioni)</h3>
-<ul>
-<li><strong>#1663</strong> (Ch 3, img 90, <strong>VERO</strong>): Il segnale raffigurato consente la fermata, purché il veicolo non sia di intralcio</li>
-<li><strong>#2398</strong> (Ch 6, img 501, <strong>VERO</strong>): La striscia di mezzo in figura consente il sorpasso senza superarla, purché non vi siano motivi che lo vietino (501)</li>
-<li><strong>#2676</strong> (Ch 7, img 154, <strong>VERO</strong>): La luce gialla fissa obbliga a fermarsi prima del punto di arresto, purché lo si possa fare senza creare pericolo</li>
-<li><strong>#4385</strong> (Ch 13, img 0, <strong>VERO</strong>): È opportuno che il conducente di un veicolo, quando in un centro abitato si imbatte in un corteo, imbocchi, se possibile, una strada laterale, purché la manovra possa essere fatta in maniera corretta</li>
-<li><strong>#5111</strong> (Ch 15, img 0, <strong>VERO</strong>): E&#39; consentito il sorpasso nelle intersezioni se la strada è a precedenza purché a due carreggiate separate e le corsie siano delimitate dall&#39;apposita segnaletica orizzontale</li>
-<li><strong>#5314</strong> (Ch 16, img 0, <strong>VERO</strong>): Salvo diversa segnalazione il conducente, in caso di sosta nei centri abitati, deve collocare il veicolo il più vicino possibile al margine destro della carreggiata, parallelamente ad esso e secondo il senso di marcia, purché esista il marciapiede rialzato</li>
-<li><strong>#5323</strong> (Ch 16, img 0, <strong>VERO</strong>): Nelle strade urbane a senso unico di marcia, la sosta è consentita anche lungo il margine sinistro della carreggiata, purché rimanga uno spazio sufficiente al transito almeno di una fila di veicoli</li>
-<li><strong>#5324</strong> (Ch 16, img 0, <strong>VERO</strong>): Nelle strade urbane a senso unico di marcia, la sosta è consentita anche lungo il margine sinistro della carreggiata, purché rimanga uno spazio non inferiore a tre metri di larghezza per il transito dei veicoli</li>
-<li><strong>#5511</strong> (Ch 17, img 0, <strong>VERO</strong>): Sui veicoli è consentito il trasporto di animali domestici anche in numero superiore ad uno, purché custoditi in gabbia o nel vano posteriore, appositamente diviso da rete</li>
-<li><strong>#5552</strong> (Ch 17, img 0, <strong>VERO</strong>): Il traino per situazione di emergenza di un veicolo da parte di un altro deve avvenire attraverso un solido collegamento, come fune, catena, cavo, barra rigida, purché idoneamente segnalati</li>
-<li><strong>#5553</strong> (Ch 17, img 0, <strong>VERO</strong>): Il traino per incombente situazione di emergenza di un veicolo in avaria deve avvenire attraverso un solido collegamento, purché idoneamente segnalato per rendere i veicoli chiaramente avvistabili dagli altri utenti della strada</li>
-<li><strong>#6743</strong> (Ch 20, img 0, <strong>VERO</strong>): Con la patente di categoria A2 si possono condurre i motocicli (con o senza carrozzetta) di potenza fino a 35 kW, rapporto potenza/peso non superiore a 0,2 kW/kg purché non siano derivati da una versione dello stesso modello che sviluppi oltre il doppio d</li>
-<li><strong>#6782</strong> (Ch 20, img 0, <strong>VERO</strong>): La patente di categoria B abilita a condurre le autovetture trainanti un rimorchio non leggero (massa oltre 750 chilogrammi) purché la massa massima autorizzata del complesso non superi 3,5 tonnellate</li>
-<li><strong>#6798</strong> (Ch 20, img 0, <strong>VERO</strong>): La patente di categoria B con codice armonizzato 96, consente di guidare le autovetture trainanti un rimorchio non leggero (oltre 750 chilogrammi), purché la massa massima autorizzata del complesso non sia superiore a 4.250 chilogrammi</li>
-<li><strong>#6801</strong> (Ch 20, img 0, <strong>VERO</strong>): Il codice armonizzato 96, apposto sulla patente di categoria B, abilita alla guida di autoveicoli trainanti un rimorchio non leggero (oltre 750 chilogrammi), purché la massa massima autorizzata del complesso non sia superiore a 4.250 chilogrammi</li>
-</ul>
-<h3 id="eccezioni-soltanto-vero-solitamente-falso-710-9-eccezioni">Eccezioni `soltanto` → **VERO** (solitamente FALSO 71.0% | 9 eccezioni)</h3>
-<ul>
-<li><strong>#1610</strong> (Ch 3, img 946, <strong>VERO</strong>): Il segnale (A), integrato con il pannello (B), vieta la sosta soltanto nei giorni festivi (946)</li>
-<li><strong>#1760</strong> (Ch 4, img 94, <strong>VERO</strong>): Il segnale raffigurato indica che si può svoltare soltanto a sinistra</li>
-<li><strong>#1784</strong> (Ch 4, img 95, <strong>VERO</strong>): Il segnale raffigurato indica che si può svoltare soltanto a destra</li>
-<li><strong>#2658</strong> (Ch 7, img 154, <strong>VERO</strong>): Quando è accesa la luce verde del semaforo in figura si può impegnare l&#39;incrocio, soltanto avendo la certezza di poterlo sgomberare prima dell&#39;accensione della luce rossa</li>
-<li><strong>#2795</strong> (Ch 7, img 158, <strong>VERO</strong>): Il semaforo in figura, con luce verde accesa, consente soltanto ai conducenti di biciclette di attraversare l&#39;incrocio</li>
-<li><strong>#2814</strong> (Ch 7, img 161, <strong>VERO</strong>): Delle tre luci del semaforo in figura se ne accende soltanto una, mentre le altre sono spente</li>
-<li><strong>#5220</strong> (Ch 16, img 0, <strong>VERO</strong>): In una zona in cui la sosta è regolamentata con parchimetro, non occorre utilizzarlo se ci si ferma soltanto per far salire o scendere un passeggero</li>
-<li><strong>#6197</strong> (Ch 24, img 0, <strong>VERO</strong>): Per risparmiare carburante e salvaguardare l&#39;ambiente dall&#39;inquinamento atmosferico, è consigliabile azionare il climatizzatore il meno possibile e soltanto quando serve effettivamente</li>
-<li><strong>#6986</strong> (Ch 25, img 0, <strong>VERO</strong>): Con freni squilibrati può avvenire che, in frenata, si blocchino soltanto le ruote di un lato</li>
-</ul>
-<h3 id="eccezioni-qualsiasi-vero-solitamente-falso-704-8-eccezioni">Eccezioni `qualsiasi` → **VERO** (solitamente FALSO 70.4% | 8 eccezioni)</h3>
-<ul>
-<li><strong>#786</strong> (Ch 2, img 13, <strong>VERO</strong>): I pannelli raffigurati sono posti prima di qualsiasi tipo di passaggio a livello</li>
-<li><strong>#1363</strong> (Ch 3, img 64, <strong>VERO</strong>): Il segnale raffigurato vieta il transito ai motocicli di qualsiasi cilindrata</li>
-<li><strong>#1627</strong> (Ch 3, img 85, <strong>VERO</strong>): Il segnale raffigurato vieta qualsiasi volontaria fermata del veicolo</li>
-<li><strong>#2484</strong> (Ch 6, img 596, <strong>VERO</strong>): In presenza delle strisce di guida in figura il veicolo A può andare in qualsiasi direzione</li>
-<li><strong>#5416</strong> (Ch 17, img 0, <strong>VERO</strong>): In caso di ingombro della carreggiata per caduta del carico o per qualsiasi altra causa, il conducente deve rimuovere l&#39;ingombro, per quanto possibile</li>
-<li><strong>#6459</strong> (Ch 17, img 0, <strong>VERO</strong>): Il massimo rapporto di traino per un rimorchio sprovvisto di qualsiasi dispositivo di frenatura è di 0,5</li>
-<li><strong>#6485</strong> (Ch 17, img 0, <strong>VERO</strong>): Prima di effettuare qualsiasi manovra con il rimorchio agganciato è bene accertarsi che non vi siano cose e/o persone nel raggio di manovra del complesso</li>
-<li><strong>#6616</strong> (Ch 19, img 0, <strong>VERO</strong>): Le cinture di sicurezza devono essere utilizzate in qualsiasi situazione di marcia</li>
-</ul>
-<h3 id="eccezioni-obbligatorio-vero-solitamente-falso-705-23-eccezioni">Eccezioni `è obbligatorio` → **VERO** (solitamente FALSO 70.5% | 23 eccezioni)</h3>
-<ul>
-<li><strong>#1093</strong> (Ch 2, img 34, <strong>VERO</strong>): Il segnale raffigurato è obbligatorio sulle strade extraurbane</li>
-<li><strong>#1260</strong> (Ch 3, img 57, <strong>VERO</strong>): In presenza del segnale raffigurato è obbligatorio mantenere una distanza di almeno 70 metri dal veicolo che precede</li>
-<li><strong>#1824</strong> (Ch 4, img 97, <strong>VERO</strong>): Il segnale raffigurato precede un incrocio ove è obbligatorio svoltare a sinistra</li>
-<li><strong>#2106</strong> (Ch 4, img 118, <strong>VERO</strong>): Il segnale raffigurato segnala un varco doganale al quale è obbligatorio fermarsi</li>
-<li><strong>#2114</strong> (Ch 4, img 119, <strong>VERO</strong>): Il segnale raffigurato segnala posto di blocco stradale istituito da organi di polizia al quale è obbligatorio fermarsi</li>
-<li><strong>#2123</strong> (Ch 4, img 120, <strong>VERO</strong>): Il segnale raffigurato segnala una stazione autostradale alla quale è obbligatorio fermarsi</li>
-<li><strong>#2125</strong> (Ch 4, img 120, <strong>VERO</strong>): Il segnale raffigurato è posto in corrispondenza degli accessi autostradali controllati dove è obbligatorio fermarsi</li>
-<li><strong>#4526</strong> (Ch 13, img 0, <strong>VERO</strong>): Agli incroci è obbligatorio dare la precedenza ai veicoli circolanti su rotaie (tram e treni), salvo diversa segnalazione</li>
-<li><strong>#5427</strong> (Ch 17, img 0, <strong>VERO</strong>): Fuori dei centri abitati, di notte, quando mancano o sono insufficienti le luci posteriori di posizione o di emergenza, è obbligatorio presegnalare il veicolo, fermo sulla carreggiata, con il segnale triangolare mobile di pericolo</li>
-<li><strong>#5428</strong> (Ch 17, img 0, <strong>VERO</strong>): Fuori dei centri abitati, di notte, è obbligatorio presegnalare con il segnale triangolare mobile di pericolo ogni carico caduto accidentalmente dal veicolo sulla carreggiata</li>
-<li><strong>#5429</strong> (Ch 17, img 0, <strong>VERO</strong>): Fuori dei centri abitati, è obbligatorio anche di giorno presegnalare un veicolo fermo sulla carreggiata mediante il segnale triangolare di pericolo quando non può essere visto nettamente a 100 metri di distanza</li>
-<li><strong>#5430</strong> (Ch 17, img 0, <strong>VERO</strong>): Fuori dei centri abitati è obbligatorio, anche di giorno, presegnalare un carico accidentalmente caduto sulla carreggiata mediante il segnale triangolare mobile di pericolo, quando l&#39;ingombro non può essere visto nettamente a 100 metri di distanza</li>
-<li><strong>#5479</strong> (Ch 17, img 0, <strong>VERO</strong>): Durante la marcia sulle autostrade e strade extraurbane principali è obbligatorio l&#39;uso dei proiettori anabbaglianti anche di giorno</li>
-<li><strong>#5671</strong> (Ch 18, img 0, <strong>VERO</strong>): Nelle autostrade e strade extraurbane, è obbligatorio accendere i fari anabbaglianti anche di giorno o, in alternativa, le luci di marcia diurna</li>
-<li><strong>#5675</strong> (Ch 18, img 0, <strong>VERO</strong>): Durante la marcia nei centri abitati, è obbligatorio tenere accese le luci anabbaglianti da mezz&#39;ora dopo il tramonto del sole a mezz&#39;ora prima del suo sorgere</li>
-<li><em>(+ altre 8 eccezioni presenti in <code>question_analytics.json</code>)</em></li>
-</ul>
-<h3 id="eccezioni-tutti-vero-solitamente-falso-650-36-eccezioni">Eccezioni `tutti` → **VERO** (solitamente FALSO 65.0% | 36 eccezioni)</h3>
-<ul>
-<li><strong>#136</strong> (Ch 1, img 0, <strong>VERO</strong>): Non tutti i tipi di veicoli possono circolare in autostrada</li>
-<li><strong>#1383</strong> (Ch 3, img 66, <strong>VERO</strong>): Il segnale raffigurato vieta il transito a tutti gli autoveicoli</li>
-<li><strong>#1479</strong> (Ch 3, img 75, <strong>VERO</strong>): Il segnale raffigurato si riferisce a tutti i veicoli di larghezza superiore a 2,30 metri</li>
-<li><strong>#1497</strong> (Ch 3, img 77, <strong>VERO</strong>): Il segnale raffigurato vieta il transito a tutti i veicoli di lunghezza complessiva superiore a 10 metri</li>
-<li><strong>#1618</strong> (Ch 3, img 85, <strong>VERO</strong>): Il segnale raffigurato vieta la fermata volontaria di tutti i veicoli</li>
-<li><strong>#1625</strong> (Ch 3, img 85, <strong>VERO</strong>): Il segnale raffigurato vieta la fermata a tutti i veicoli</li>
-<li><strong>#1704</strong> (Ch 3, img 151, <strong>VERO</strong>): Il segnale raffigurato indica che possono transitare tutti i veicoli esclusi quelli delle categorie rappresentate in figura</li>
-<li><strong>#2869</strong> (Ch 7, img 0, <strong>VERO</strong>): Il suono prolungato del fischietto da parte dell&#39;agente preposto al traffico significa che tutti i veicoli si devono arrestare, in condizioni di sicurezza</li>
-<li><strong>#3459</strong> (Ch 8, img 273, <strong>VERO</strong>): Il segnale raffigurato interessa tutti i veicoli che hanno degli impianti igienico-sanitari</li>
-<li><strong>#3702</strong> (Ch 10, img 123, <strong>VERO</strong>): Il pannello integrativo rappresentato in figura B indica le ore di tutti i giorni nelle quali vale il segnale (123)</li>
-<li><strong>#3932</strong> (Ch 10, img 962, <strong>VERO</strong>): Il segnale in figura indica che possono parcheggiare tutti i veicoli tranne gli autobus (962)</li>
-<li><strong>#4142</strong> (Ch 11, img 0, <strong>VERO</strong>): I limiti massimi di velocità vigenti sulle autostrade e sulle strade extraurbane non sono identici in tutti gli stati d&#39;Europa</li>
-<li><strong>#4313</strong> (Ch 13, img 676, <strong>VERO</strong>): Il veicolo S, muovendosi in retromarcia per immettersi nella circolazione, deve dare la precedenza a tutti i veicoli in transito</li>
-<li><strong>#4329</strong> (Ch 13, img 0, <strong>VERO</strong>): Chi guida un veicolo, anche se ad elevate prestazioni, deve dare, di norma, la precedenza nei crocevia a tutti i veicoli, che provengono da destra</li>
-<li><strong>#4528</strong> (Ch 13, img 0, <strong>VERO</strong>): E&#39; obbligatorio dare la precedenza a tutti i veicoli circolanti sulle strade quando si effettua l&#39;inversione del senso di marcia</li>
-<li><em>(+ altre 21 eccezioni presenti in <code>question_analytics.json</code>)</em></li>
-</ul>
-<h3 id="eccezioni-sempre-vero-solitamente-falso-646-28-eccezioni">Eccezioni `sempre` → **VERO** (solitamente FALSO 64.6% | 28 eccezioni)</h3>
-<ul>
-<li><strong>#251</strong> (Ch 1, img 0, <strong>VERO</strong>): La potenza dei quadricicli non leggeri è sempre inferiore o uguale a 15 kW</li>
-<li><strong>#413</strong> (Ch 1, img 0, <strong>VERO</strong>): Il conducente di un veicolo non deve fare sempre affidamento sul comportamento degli altri, che può non essere corretto</li>
-<li><strong>#1094</strong> (Ch 2, img 34, <strong>VERO</strong>): Sulle strade extraurbane il segnale è sempre obbligatorio</li>
-<li><strong>#1628</strong> (Ch 3, img 85, <strong>VERO</strong>): In presenza del segnale raffigurato è sempre disposta la rimozione forzata del veicolo</li>
-<li><strong>#2639</strong> (Ch 6, img 568, <strong>VERO</strong>): La striscia trasversale continua in figura indica il punto in cui dobbiamo sempre arrestarci ad un incrocio, se il vigile lo impone (568)</li>
-<li><strong>#3955</strong> (Ch 11, img 0, <strong>VERO</strong>): Il conducente deve sempre mantenere il controllo del veicolo</li>
-<li><strong>#3956</strong> (Ch 11, img 0, <strong>VERO</strong>): Il conducente deve sempre essere in grado di arrestare il veicolo in condizioni di sicurezza</li>
-<li><strong>#4155</strong> (Ch 11, img 0, <strong>VERO</strong>): Nei veicoli dotati di servofreno, se si percorre una lunga discesa con il cambio in folle e a motore spento, diventa sempre più difficoltoso arrestare il veicolo</li>
-<li><strong>#4300</strong> (Ch 12, img 0, <strong>VERO</strong>): La distanza di sicurezza va sempre mantenuta, anche prima di iniziare un sorpasso</li>
-<li><strong>#4422</strong> (Ch 13, img 0, <strong>VERO</strong>): In caso di traffico intenso il conducente deve mantenere sempre la distanza di sicurezza dal veicolo che lo precede</li>
-<li><strong>#5257</strong> (Ch 16, img 0, <strong>VERO</strong>): Durante la fermata il conducente deve essere sempre presente e pronto a riprendere la marcia</li>
-<li><strong>#5258</strong> (Ch 16, img 0, <strong>VERO</strong>): Durante la fermata il conducente deve sempre adottare le opportune cautele atte ad evitare incidenti</li>
-<li><strong>#5292</strong> (Ch 16, img 0, <strong>VERO</strong>): La sosta e la fermata sono sempre vietate sugli attraversamenti pedonali</li>
-<li><strong>#5326</strong> (Ch 16, img 0, <strong>VERO</strong>): Nelle zone nelle quali gli spazi di sosta sono delimitati da segnaletica orizzontale, il conducente deve sempre sistemare il proprio veicolo entro uno degli appositi spazi(stalli), senza invadere quelli contigui</li>
-<li><strong>#5662</strong> (Ch 17, img 302, <strong>VERO</strong>): Il pannello raffigurato deve essere sistemato all&#39;estremità del carico sporgente dal veicolo, in modo che sia sempre ben visibile</li>
-<li><em>(+ altre 13 eccezioni presenti in <code>question_analytics.json</code>)</em></li>
-</ul>
-<h3 id="eccezioni-consigliabile-falso-solitamente-vero-778-4-eccezioni">Eccezioni `consigliabile` → **FALSO** (solitamente VERO 77.8% | 4 eccezioni)</h3>
-<ul>
-<li><strong>#5435</strong> (Ch 17, img 0, <strong>FALSO</strong>): Fuori dei centri abitati, di notte, quando mancano o sono insufficienti le luci posteriori di posizione o di emergenza, è consigliabile presegnalare il veicolo fermo sulla carreggiata, con il segnale triangolare mobile di pericolo</li>
-<li><strong>#5460</strong> (Ch 17, img 0, <strong>FALSO</strong>): Sulle autostrade e strade extraurbane principali è consigliabile evitare la circolazione di veicoli a tenuta non stagna e con carico scoperto, se trasportano materiali che possono disperdersi</li>
-<li><strong>#5638</strong> (Ch 17, img 0, <strong>FALSO</strong>): Per garantire una maggiore sicurezza durante la guida di un veicolo con rimorchio, è consigliabile concentrare il carico massimo in corrispondenza del gancio di traino</li>
-<li><strong>#6502</strong> (Ch 17, img 0, <strong>FALSO</strong>): Per garantire una maggiore sicurezza durante la guida di un veicolo con rimorchio, è consigliabile concentrare il carico massimo in corrispondenza del gancio di traino</li>
-</ul>
-<h3 id="eccezioni-salvo-falso-solitamente-vero-720-14-eccezioni">Eccezioni `salvo` → **FALSO** (solitamente VERO 72.0% | 14 eccezioni)</h3>
-<ul>
-<li><strong>#1603</strong> (Ch 3, img 84, <strong>FALSO</strong>): Il segnale raffigurato, nei centri urbani, prescrive il divieto di sosta dalle ore 20.00 alle ore 8.00, salvo diversa indicazione</li>
-<li><strong>#1635</strong> (Ch 3, img 85, <strong>FALSO</strong>): Il segnale raffigurato vale solo nei giorni feriali, salvo diversa indicazione</li>
-<li><strong>#4074</strong> (Ch 11, img 0, <strong>FALSO</strong>): Salvo diversa segnalazione, il limite massimo di velocità consentito sulle strade urbane è di 80 km/h</li>
-<li><strong>#4075</strong> (Ch 11, img 0, <strong>FALSO</strong>): Salvo diversa segnalazione, il limite massimo di velocità consentito per i quadricicli non leggeri è di 70 km/h.</li>
-<li><strong>#4123</strong> (Ch 11, img 0, <strong>FALSO</strong>): Salvo diversa segnalazione, il limite massimo di velocità sulle strade extraurbane principali è di 100 km/h</li>
-<li><strong>#4124</strong> (Ch 11, img 0, <strong>FALSO</strong>): Salvo diversa segnalazione, il limite massimo di velocità nei centri abitati è di 60 km/h, valido fino ad un chilometro dopo l&#39;uscita del paese</li>
-<li><strong>#4458</strong> (Ch 13, img 0, <strong>FALSO</strong>): In una carreggiata a doppio senso di circolazione per svoltare a sinistra bisogna dare la precedenza ai veicoli che arrivano da sinistra, salvo diversa segnalazione</li>
-<li><strong>#6375</strong> (Ch 11, img 0, <strong>FALSO</strong>): Nel caso in cui, a un passaggio a livello, ci si trova ancora sui binari col proprio veicolo quando le barriere cominciano a chiudersi, occorre scendere e abbandonare rapidamente il veicolo per mettersi in salvo</li>
-<li><strong>#6892</strong> (Ch 20, img 0, <strong>FALSO</strong>): Se si commettono contemporaneamente più violazioni che comportano perdita di punti sulla patente, possono essere decurtati al massimo 10 punti, salvo che si tratti di infrazioni che comportano la revoca della patente</li>
-<li><strong>#6931</strong> (Ch 20, img 0, <strong>FALSO</strong>): La patente di guida di categoria B, salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, vale otto anni se rilasciata o confermata a chi ha una età compresa fra i 50 e i 70 anni</li>
-<li><strong>#6932</strong> (Ch 20, img 0, <strong>FALSO</strong>): La patente di guida di categoria BE, salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, vale cinque anni se rilasciata o confermata a chi non ha superato i 50 anni di età</li>
-<li><strong>#6934</strong> (Ch 20, img 0, <strong>FALSO</strong>): La patente di guida di categoria B, salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, vale cinque anni se rilasciata o confermata a chi non ha superato i 50 anni di età</li>
-<li><strong>#6935</strong> (Ch 20, img 0, <strong>FALSO</strong>): La patente di guida di categoria B, salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, vale dieci anni in ogni caso di rilascio o di conferma</li>
-<li><strong>#6936</strong> (Ch 20, img 0, <strong>FALSO</strong>): La patente di guida di categoria B, salvo diversa limitazione riportata sul documento stesso, non ha scadenza di validità fino al compimento dei 50 anni di età</li>
-</ul>
-<h3 id="eccezioni-opportuno-falso-solitamente-vero-671-28-eccezioni">Eccezioni `opportuno` → **FALSO** (solitamente VERO 67.1% | 28 eccezioni)</h3>
-<ul>
-<li><strong>#364</strong> (Ch 1, img 0, <strong>FALSO</strong>): Per una maggiore sicurezza, quando nei centri urbani si viaggia in fila con altri veicoli, è opportuno tenere sempre accese le luci di emergenza</li>
-<li><strong>#366</strong> (Ch 1, img 0, <strong>FALSO</strong>): Quando si viaggia dietro in fila con altri veicoli, è opportuno spostarsi il più possibile a sinistra, per creare una corsia libera a destra</li>
-<li><strong>#367</strong> (Ch 1, img 0, <strong>FALSO</strong>): Quando si viaggia in fila con altri veicoli, è opportuno spostarsi al centro della carreggiata, per controllare la situazione del traffico</li>
-<li><strong>#4380</strong> (Ch 13, img 0, <strong>FALSO</strong>): In un centro abitato, quando un pedone, fuori delle strisce di attraversamento, non accenni a darci la precedenza, è opportuno nelle ore notturne, procedere con gli abbaglianti accesi così che possa accorgersi di noi</li>
-<li><strong>#4381</strong> (Ch 13, img 0, <strong>FALSO</strong>): In un centro abitato, quando un pedone, fuori delle strisce di attraversamento, non accenni a darci la precedenza, è opportuno cercare di richiamare la sua attenzione con qualsiasi mezzo, perché ci dia la precedenza</li>
-<li><strong>#4391</strong> (Ch 13, img 0, <strong>FALSO</strong>): È opportuno che il conducente di un veicolo, quando in un centro abitato si imbatte in un corteo, accenda le luci di profondità per vedere meglio ed evitare incidenti</li>
-<li><strong>#4392</strong> (Ch 13, img 0, <strong>FALSO</strong>): È opportuno che il conducente di un veicolo, quando in un centro abitato si imbatte in un corteo, se proprio ha molta fretta, passi rapidamente usando il clacson in maniera continua</li>
-<li><strong>#4400</strong> (Ch 13, img 0, <strong>FALSO</strong>): Quando ad un incrocio urbano, al segnale di via libera, il veicolo che precede tarda a riprendere la marcia, è opportuno suonare insistentemente per sollecitare il conducente a rimettersi in moto</li>
-<li><strong>#4401</strong> (Ch 13, img 0, <strong>FALSO</strong>): Quando ad un incrocio urbano, al segnale di via libera, il veicolo che precede tarda a riprendere la marcia, è opportuno richiamare con il clacson l&#39;attenzione degli automobilisti che seguono</li>
-<li><strong>#4402</strong> (Ch 13, img 0, <strong>FALSO</strong>): Quando ad un incrocio urbano, al segnale di via libera, il veicolo che precede tarda a riprendere la marcia, è opportuno tirare il freno a mano e scendere per cercare un agente del traffico che prenda i dovuti provvedimenti</li>
-<li><strong>#4403</strong> (Ch 13, img 0, <strong>FALSO</strong>): Quando ad un incrocio urbano, al segnale di via libera, il veicolo che precede tarda a riprendere la marcia, è opportuno cercare di sgombrare al più presto la carreggiata, anche invertendo il senso di marcia</li>
-<li><strong>#5835</strong> (Ch 21, img 0, <strong>FALSO</strong>): In presenza di tratti di strada ghiacciati è opportuno marciare molto vicino alla barriera laterale</li>
-<li><strong>#5836</strong> (Ch 21, img 0, <strong>FALSO</strong>): In presenza di tratti di strada ghiacciati è opportuno non usare le catene, ma gomme chiodate sulle ruote anteriori</li>
-<li><strong>#5837</strong> (Ch 21, img 0, <strong>FALSO</strong>): In presenza di tratti di strada ghiacciati è opportuno frenare energicamente ogni volta che si incrocia un altro veicolo</li>
-<li><strong>#5838</strong> (Ch 21, img 0, <strong>FALSO</strong>): In presenza di tratti di strada ghiacciati è opportuno procedere con il cambio in folle</li>
-<li><em>(+ altre 13 eccezioni presenti in <code>question_analytics.json</code>)</em></li>
-</ul>
-<h3 id="eccezioni-di-norma-falso-solitamente-vero-650-21-eccezioni">Eccezioni `di norma` → **FALSO** (solitamente VERO 65.0% | 21 eccezioni)</h3>
-<ul>
-<li><strong>#12</strong> (Ch 1, img 552, <strong>FALSO</strong>): Nella strada rappresentata, per ogni senso di marcia, la corsia di centro è dedicata, di norma, alla marcia ordinaria</li>
-<li><strong>#13</strong> (Ch 1, img 552, <strong>FALSO</strong>): Nella strada rappresentata, per ogni senso di marcia, la corsia di destra è dedicata, di norma, al sorpasso</li>
-<li><strong>#15</strong> (Ch 1, img 552, <strong>FALSO</strong>): Nella strada rappresentata, per ogni senso di marcia, la corsia di sinistra è dedicata, di norma, alla marcia ordinaria</li>
-<li><strong>#23</strong> (Ch 1, img 562, <strong>FALSO</strong>): La strada rappresentata, di norma, ha due carreggiate a doppio senso di circolazione</li>
-<li><strong>#26</strong> (Ch 1, img 562, <strong>FALSO</strong>): Nelle carreggiate laterali della strada rappresentata è consentita, di norma, l&#39;inversione di marcia</li>
-<li><strong>#80</strong> (Ch 1, img 0, <strong>FALSO</strong>): L&#39;intersezione (incrocio) a livelli sfalsati è, di norma, regolata da semafori</li>
-<li><strong>#210</strong> (Ch 1, img 0, <strong>FALSO</strong>): Il marciapiede è una parte della strada dove, di norma, è consentita la sosta dei ciclomotori</li>
-<li><strong>#416</strong> (Ch 1, img 0, <strong>FALSO</strong>): Il conducente di un veicolo di grandi dimensioni ha, di norma, la precedenza sul conducente di un veicolo più piccolo</li>
-<li><strong>#618</strong> (Ch 2, img 4, <strong>FALSO</strong>): Il segnale raffigurato è posto, di norma, a 5 metri dall&#39;inizio della curva</li>
-<li><strong>#771</strong> (Ch 2, img 10, <strong>FALSO</strong>): Il segnale raffigurato si trova, di norma, a 150 metri dai binari</li>
-<li><strong>#1203</strong> (Ch 3, img 54, <strong>FALSO</strong>): Il segnale raffigurato consente, di norma, di entrare nella strada per effettuare la sosta e le operazioni di carico e scarico</li>
-<li><strong>#1948</strong> (Ch 4, img 103, <strong>FALSO</strong>): Il segnale raffigurato è, di norma, preceduto dal segnale ROTATORIA</li>
-<li><strong>#2153</strong> (Ch 5, img 40, <strong>FALSO</strong>): Il segnale raffigurato è posto, di norma, 150 metri prima dell&#39;incrocio</li>
-<li><strong>#2181</strong> (Ch 5, img 41, <strong>FALSO</strong>): Il segnale raffigurato è posto, di norma, 150 metri prima dell&#39;incrocio</li>
-<li><strong>#2221</strong> (Ch 5, img 44, <strong>FALSO</strong>): Il segnale raffigurato si trova, di norma, a non più di 50 metri dall&#39;incrocio</li>
-<li><em>(+ altre 6 eccezioni presenti in <code>question_analytics.json</code>)</em></li>
-</ul>
-<h3 id="eccezioni-contemporaneamente-vero-solitamente-falso-778-8-eccezioni">Eccezioni `contemporaneamente` → **VERO** (solitamente FALSO 77.8% | 8 eccezioni)</h3>
-<ul>
-<li><strong>#2230</strong> (Ch 5, img 45, <strong>VERO</strong>): Il segnale raffigurato preannuncia che la circolazione non può svolgersi contemporaneamente nei due sensi</li>
-<li><strong>#4558</strong> (Ch 13, img 0, <strong>VERO</strong>): Se ad un incrocio giungono contemporaneamente da strade diverse due veicoli, l&#39;obbligo di dare la precedenza spetta, di norma, al conducente del veicolo che arriva da sinistra</li>
-<li><strong>#4559</strong> (Ch 13, img 0, <strong>VERO</strong>): Se ad un incrocio giungono contemporaneamente da strade diverse due veicoli, entrambi hanno l&#39;obbligo di moderare la velocità, per evitare incidenti</li>
-<li><strong>#4741</strong> (Ch 14, img 637, <strong>VERO</strong>): Nell&#39;attraversare l&#39;incrocio in figura i veicoli C e A passano contemporaneamente dopo il veicolo L</li>
-<li><strong>#4765</strong> (Ch 14, img 638, <strong>VERO</strong>): Secondo le norme di precedenza nell&#39;incrocio rappresentato in figura i veicoli D e N passano contemporaneamente dopo che è passato il veicolo R</li>
-<li><strong>#4810</strong> (Ch 14, img 647, <strong>VERO</strong>): Secondo le norme di precedenza nell&#39;incrocio rappresentato in figura i veicoli L e H passano contemporaneamente per primi</li>
-<li><strong>#4901</strong> (Ch 14, img 639, <strong>VERO</strong>): Nell&#39;incrocio rappresentato nella figura i veicoli T e B possono transitare contemporaneamente</li>
-<li><strong>#6885</strong> (Ch 20, img 0, <strong>VERO</strong>): Se si commettono contemporaneamente più violazioni che comportano perdita di punti sulla patente, possono essere decurtati al massimo 15 punti, salvo che si tratti di infrazioni che comportano la sospensione della patente</li>
-</ul>
-<h2 id="6-le-mutazioni-del-ministero-coppie-minime-ministry-distractor-mutations-minimal-pairs">6. Le Mutazioni del Ministero (Coppie Minime) / Ministry Distractor Mutations (Minimal Pairs)</h2>
-<p><strong>IT:</strong> Raggruppando il database in 618 blocchi tematici contigui, abbiamo individuato 372 blocchi misti VERO+FALSO (coprendo 6600 domande) ed estratto 314 coppie minime pulite in cui il Ministero trasforma una regola VERA in un trabocchetto FALSO cambiando una sola breve espressione.</p>
-<p><strong>EN:</strong> By clustering the bank into 618 contiguous topic blocks, we found 372 mixed VERO+FALSO blocks (6600 questions) and extracted 314 clean minimal pairs where the Ministry turns a TRUE rule into a FALSE trap by editing a single short span.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Famiglia di mutazione / Mutation Family</th>
-<th align="right">Coppie minime / Pairs</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>other_factual_edit</code></td>
-<td align="right">90</td>
-</tr>
-<tr>
-<td align="left"><code>terminology_swap</code></td>
-<td align="right">42</td>
-</tr>
-<tr>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="right">41</td>
-</tr>
-<tr>
-<td align="left"><code>direction_polarity_swap</code></td>
-<td align="right">40</td>
-</tr>
-<tr>
-<td align="left"><code>numeric_threshold_swap</code></td>
-<td align="right">30</td>
-</tr>
-<tr>
-<td align="left"><code>negation_flip</code></td>
-<td align="right">30</td>
-</tr>
-<tr>
-<td align="left"><code>intersection_vehicle_order</code></td>
-<td align="right">22</td>
-</tr>
-<tr>
-<td align="left"><code>quantifier_scope_swap</code></td>
-<td align="right">19</td>
-</tr>
-</tbody></table>
-<h3 id="top-25-mutazioni-vero-falso-pi-ricorrenti-top-25-recurring-vero-falso-mutations">Top 25 Mutazioni VERO → FALSO più ricorrenti / Top 25 Recurring VERO → FALSO Mutations</h3>
-<table>
-<thead>
-<tr>
-<th align="right">N</th>
-<th align="left">Famiglia / Family</th>
-<th align="left">VERO (Originale)</th>
-<th align="left">FALSO (Trappola)</th>
-<th align="left">Esempio reale / Real Pair</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="right">8</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>prescrizione</code></td>
-<td align="left"><code>indicazione</code></td>
-<td align="left"><strong>V#1715:</strong> Il segnale raffigurato è un segnale di prescrizione... <br><strong>F#1717:</strong> Il segnale raffigurato è un segnale di indicazione...</td>
-</tr>
-<tr>
-<td align="right">5</td>
-<td align="left"><code>negation_flip</code></td>
-<td align="left"><code>*(omesso / omitted)*</code></td>
-<td align="left"><code>non</code></td>
-<td align="left"><strong>V#7119:</strong> Durante la guida, la percezione di un pericolo e la conseguente r... <br><strong>F#7147:</strong> Durante la guida, la percezione di un pericolo e la conseguente r...</td>
-</tr>
-<tr>
-<td align="right">5</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>prescrizione</code></td>
-<td align="left"><code>divieto</code></td>
-<td align="left"><strong>V#1727:</strong> Il segnale raffigurato è un segnale di prescrizione... <br><strong>F#1737:</strong> Il segnale raffigurato è un segnale di divieto...</td>
-</tr>
-<tr>
-<td align="right">4</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>pericolo</code></td>
-<td align="left"><code>prescrizione</code></td>
-<td align="left"><strong>V#536:</strong> Il segnale raffigurato è un segnale di pericolo... <br><strong>F#540:</strong> Il segnale raffigurato è un segnale di prescrizione...</td>
-</tr>
-<tr>
-<td align="right">4</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>prescrizione</code></td>
-<td align="left"><code>pericolo</code></td>
-<td align="left"><strong>V#1863:</strong> Il segnale raffigurato è un segnale di prescrizione... <br><strong>F#1869:</strong> Il segnale raffigurato è un segnale di pericolo...</td>
-</tr>
-<tr>
-<td align="right">3</td>
-<td align="left"><code>direction_polarity_swap</code></td>
-<td align="left"><code>aumenta</code></td>
-<td align="left"><code>diminuisce</code></td>
-<td align="left"><strong>V#4259:</strong> Lo spazio di frenatura aumenta se la strada è in discesa... <br><strong>F#4265:</strong> Lo spazio di frenatura diminuisce se la strada è in discesa...</td>
-</tr>
-<tr>
-<td align="right">3</td>
-<td align="left"><code>direction_polarity_swap</code></td>
-<td align="left"><code>sinistra</code></td>
-<td align="left"><code>destra</code></td>
-<td align="left"><strong>V#2863:</strong> Il vigile disposto con le braccia ad angolo retto come in figura ... <br><strong>F#2864:</strong> Il vigile disposto con le braccia ad angolo retto come in figura ...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>intersection_vehicle_order</code></td>
-<td align="left"><code>c</code></td>
-<td align="left"><code>a</code></td>
-<td align="left"><strong>V#4669:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig... <br><strong>F#4675:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>intersection_vehicle_order</code></td>
-<td align="left"><code>dopo il veicolo r</code></td>
-<td align="left"><code>per primo</code></td>
-<td align="left"><strong>V#4761:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig... <br><strong>F#4768:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>intersection_vehicle_order</code></td>
-<td align="left"><code>r</code></td>
-<td align="left"><code>a</code></td>
-<td align="left"><strong>V#4668:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig... <br><strong>F#4674:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>intersection_vehicle_order</code></td>
-<td align="left"><code>t</code></td>
-<td align="left"><code>a</code></td>
-<td align="left"><strong>V#4847:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig... <br><strong>F#4851:</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in fig...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>negation_flip</code></td>
-<td align="left"><code>dipende</code></td>
-<td align="left"><code>è indipendente</code></td>
-<td align="left"><strong>V#4268:</strong> Lo spazio totale di arresto dipende dall&#39;usura dei pneumatici... <br><strong>F#4270:</strong> Lo spazio totale di arresto è indipendente dall&#39;usura dei pneumat...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>negation_flip</code></td>
-<td align="left"><code>non</code></td>
-<td align="left"><code>*(omesso / omitted)*</code></td>
-<td align="left"><strong>V#7138:</strong> I nostri sensi non riescono a cogliere tutti gli stimoli presenti... <br><strong>F#7165:</strong> I nostri sensi riescono a cogliere tutti gli stimoli presenti nel...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>numeric_threshold_swap</code></td>
-<td align="left"><code>ha validità di dieci</code></td>
-<td align="left"><code>vale cinque</code></td>
-<td align="left"><strong>V#6924:</strong> La patente di guida di categoria BE, salvo diversa limitazione ri... <br><strong>F#6932:</strong> La patente di guida di categoria BE, salvo diversa limitazione ri...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>quantifier_scope_swap</code></td>
-<td align="left"><code>*(omesso / omitted)*</code></td>
-<td align="left"><code>soltanto</code></td>
-<td align="left"><strong>V#1872:</strong> Il segnale raffigurato indica che è consentito svoltare a destra... <br><strong>F#1866:</strong> Il segnale raffigurato indica che è consentito soltanto svoltare ...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>quantifier_scope_swap</code></td>
-<td align="left"><code>massimo</code></td>
-<td align="left"><code>minimo</code></td>
-<td align="left"><strong>V#1286:</strong> Il segnale raffigurato obbliga a rispettare un limite massimo di ... <br><strong>F#1283:</strong> Il segnale raffigurato obbliga a rispettare un limite minimo di v...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>quantifier_scope_swap</code></td>
-<td align="left"><code>periodica</code></td>
-<td align="left"><code>ogni cinque anni</code></td>
-<td align="left"><strong>V#285:</strong> Le autocaravan sono soggette a revisione periodica... <br><strong>F#290:</strong> Le autocaravan sono soggette a revisione ogni cinque anni...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>l&#39;obbligo</code></td>
-<td align="left"><code>il divieto</code></td>
-<td align="left"><strong>V#1743:</strong> Il segnale raffigurato indica l&#39;obbligo di svoltare a sinistra... <br><strong>F#1762:</strong> Il segnale raffigurato indica il divieto di svoltare a sinistra...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>obbligo</code></td>
-<td align="left"><code>indicazione</code></td>
-<td align="left"><strong>V#1838:</strong> Il segnale raffigurato è un segnale di obbligo... <br><strong>F#1848:</strong> Il segnale raffigurato è un segnale di indicazione...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>pericolo</code></td>
-<td align="left"><code>obbligo</code></td>
-<td align="left"><strong>V#577:</strong> Il segnale raffigurato è un segnale di pericolo... <br><strong>F#581:</strong> Il segnale raffigurato è un segnale di obbligo...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>sign_category_swap</code></td>
-<td align="left"><code>pericolo</code></td>
-<td align="left"><code>precedenza</code></td>
-<td align="left"><strong>V#577:</strong> Il segnale raffigurato è un segnale di pericolo... <br><strong>F#583:</strong> Il segnale raffigurato è un segnale di precedenza...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>terminology_swap</code></td>
-<td align="left"><code>passaggio obbligatorio</code></td>
-<td align="left"><code>direzione obbligatoria</code></td>
-<td align="left"><strong>V#1912:</strong> Il segnale raffigurato indica passaggio obbligatorio a sinistra... <br><strong>F#1918:</strong> Il segnale raffigurato indica direzione obbligatoria a sinistra...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>terminology_swap</code></td>
-<td align="left"><code>rugoso</code></td>
-<td align="left"><code>coperto di ghiaccio</code></td>
-<td align="left"><strong>V#6231:</strong> La forza aderente aumenta se l&#39;asfalto è rugoso... <br><strong>F#6235:</strong> La forza aderente aumenta se l&#39;asfalto è coperto di ghiaccio...</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left"><code>terminology_swap</code></td>
-<td align="left"><code>rugoso</code></td>
-<td align="left"><code>coperto dal fango</code></td>
-<td align="left"><strong>V#6231:</strong> La forza aderente aumenta se l&#39;asfalto è rugoso... <br><strong>F#6236:</strong> La forza aderente aumenta se l&#39;asfalto è coperto dal fango...</td>
-</tr>
-<tr>
-<td align="right">1</td>
-<td align="left"><code>direction_polarity_swap</code></td>
-<td align="left"><code>*(omesso / omitted)*</code></td>
-<td align="left"><code>sulla destra</code></td>
-<td align="left"><strong>V#914:</strong> Il segnale raffigurato preannuncia un restringimento della carreg... <br><strong>F#926:</strong> Il segnale raffigurato preannuncia un restringimento sulla destra...</td>
-</tr>
-</tbody></table>
-<h3 id="esempi-affiancati-per-famiglia-side-by-side-family-examples">Esempi affiancati per famiglia / Side-by-Side Family Examples</h3>
-<ul>
-<li><strong><code>negation_flip</code></strong> (Ch 23, img 0, sim=0.97):<ul>
-<li><strong>VERO (#7119):</strong> Durante la guida, la percezione di un pericolo e la conseguente reazione del conducente sono influenzate dalle condizioni ambientali</li>
-<li><strong>FALSO (#7147):</strong> Durante la guida, la percezione di un pericolo e la conseguente reazione del conducente non sono influenzate dalle condizioni ambientali</li>
+<hr>
+<h2 id="5-watch-out-when-shortcuts-backfire">5. Watch Out: When Shortcuts Backfire</h2>
+<p>Even strong red-flag and green-flag words have predictable exceptions. Knowing these few patterns stops shortcuts from costing you easy points:</p>
+<h3 id="when-extreme-words-in-ogni-caso-qualsiasi-solo-sempre-are-true">When Extreme Words (`in ogni caso`, `qualsiasi`, `solo`, `sempre`) Are TRUE</h3>
+<ol>
+<li><strong>Absolute safety &amp; no-exception rules:</strong><ul>
+<li><strong>VERO (<code>#5293</code>):</strong> <em>&quot;La sosta e la fermata sono vietate <strong>in ogni caso</strong> sulle piste ciclabili e agli sbocchi di esse&quot;</em> — <em>&quot;Parking and brief stops are prohibited <strong>in every case</strong> on cycle tracks and at their exits&quot;</em></li>
+<li><strong>VERO (<code>#6616</code>):</strong> <em>&quot;Le cinture di sicurezza devono essere utilizzate in <strong>qualsiasi</strong> situazione di marcia&quot;</em> — <em>&quot;Safety belts must be used in <strong>any</strong> driving situation&quot;</em></li>
 </ul>
 </li>
-<li><strong><code>other_factual_edit</code></strong> (Ch 17, img 0, sim=0.97):<ul>
-<li><strong>VERO (#5427):</strong> Fuori dei centri abitati, di notte, quando mancano o sono insufficienti le luci posteriori di posizione o di emergenza, è obbligatorio presegnalare il veicolo, fermo sulla carreggiata, con il segnale triangolare mobile di pericolo</li>
-<li><strong>FALSO (#5435):</strong> Fuori dei centri abitati, di notte, quando mancano o sono insufficienti le luci posteriori di posizione o di emergenza, è consigliabile presegnalare il veicolo fermo sulla carreggiata, con il segnale triangolare mobile di pericolo</li>
+<li><strong>Strict single-rule signs or narrow permissions:</strong><ul>
+<li><strong>VERO (<code>#1299</code>):</strong> <em>&quot;In presenza del segnale raffigurato è consentito l&#39;uso del clacson <strong>solo</strong> in caso di pericolo immediato&quot;</em> — <em>&quot;Where the depicted sign applies, the horn may be used <strong>only</strong> in case of immediate danger&quot;</em></li>
+<li><strong>VERO (<code>#205</code>):</strong> <em>&quot;Il marciapiede consente la sosta dei veicoli <strong>solo</strong> in presenza di apposite strisce di parcheggio&quot;</em> — <em>&quot;The sidewalk allows vehicles to park <strong>only</strong> where there are specific parking markings&quot;</em></li>
 </ul>
 </li>
-<li><strong><code>numeric_threshold_swap</code></strong> (Ch 17, img 0, sim=0.97):<ul>
-<li><strong>VERO (#5554):</strong> Qualora, in situazione di emergenza, il conducente traini con il suo veicolo un altro veicolo senza rispettare le prescrizioni relative alla solidità del collegamento è punito con la sottrazione di 2 punti dalla patente</li>
-<li><strong>FALSO (#5558):</strong> Qualora, in situazione di emergenza, il conducente traini con il suo veicolo un altro veicolo senza rispettare le prescrizioni relative alla solidità del collegamento è punito con la sottrazione di 4 punti dalla patente</li>
+</ol>
+<h3 id="when-cautious-words-consigliabile-opportuno-salvo-are-false">When Cautious Words (`consigliabile`, `opportuno`, `salvo`) Are FALSE</h3>
+<ol>
+<li><strong>A legal obligation downgraded to &quot;advisable&quot;:</strong><ul>
+<li><strong>FALSO (<code>#5435</code>):</strong> <em>&quot;Fuori dei centri abitati, di notte... è <strong>consigliabile</strong> presegnalare il veicolo fermo sulla carreggiata, con il segnale triangolare mobile di pericolo&quot;</em> — <strong>FALSO</strong> because setting out the warning triangle is <strong>mandatory</strong>, not optional.</li>
 </ul>
 </li>
-<li><strong><code>direction_polarity_swap</code></strong> (Ch 7, img 386, sim=0.96):<ul>
-<li><strong>VERO (#2859):</strong> Il vigile disposto con le braccia ad angolo retto come in figura consente la svolta a sinistra ai veicoli che arrivano dalla sua sinistra</li>
-<li><strong>FALSO (#2866):</strong> Il vigile disposto con le braccia ad angolo retto come in figura consente la svolta a sinistra ai veicoli che arrivano dalla sua destra</li>
+<li><strong>Unsafe behavior wrapped in polite wording (<code>opportuno</code>):</strong><ul>
+<li>Statements claiming it is <em>opportuno</em> to flash high beams at pedestrians, honk continuously at slow drivers or parades, or coast in neutral on icy roads are <strong>FALSO</strong>.</li>
 </ul>
 </li>
-<li><strong><code>quantifier_scope_swap</code></strong> (Ch 4, img 99, sim=0.95):<ul>
-<li><strong>VERO (#1872):</strong> Il segnale raffigurato indica che è consentito svoltare a destra</li>
-<li><strong>FALSO (#1866):</strong> Il segnale raffigurato indica che è consentito soltanto svoltare a destra</li>
+<li><strong>A wrong speed or validity number hidden behind <code>Salvo diversa segnalazione</code>:</strong><ul>
+<li><strong>FALSO (<code>#4074</code>):</strong> <em>&quot;Salvo diversa segnalazione, il limite massimo di velocità consentito sulle strade urbane è di <strong>80 km/h</strong>&quot;</em> — <em>&quot;Unless otherwise indicated, the maximum speed limit allowed on urban roads is <strong>80 km/h</strong>&quot;</em> (<strong>FALSO</strong> — default urban limit is <strong>50 km/h</strong>).</li>
+<li><strong>FALSO (<code>#4123</code>):</strong> <em>&quot;Salvo diversa segnalazione, il limite massimo di velocità sulle strade extraurbane principali è di <strong>100 km/h</strong>&quot;</em> — <em>&quot;Unless otherwise indicated, the maximum speed limit on main extra-urban roads is <strong>100 km/h</strong>&quot;</em> (<strong>FALSO</strong> — default limit is <strong>110 km/h</strong>).</li>
 </ul>
 </li>
-<li><strong><code>intersection_vehicle_order</code></strong> (Ch 14, img 659, sim=0.95):<ul>
-<li><strong>VERO (#4701):</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in figura il veicolo R non deve dare la precedenza ad alcun veicolo</li>
-<li><strong>FALSO (#4703):</strong> Secondo le norme di precedenza nell&#39;incrocio rappresentato in figura il veicolo C non deve dare la precedenza ad alcun veicolo</li>
+</ol>
+<hr>
+<h2 id="6-how-to-practice-traps-in-the-app">6. How to Practice Traps in the App</h2>
+<ul>
+<li><strong>Drill targeted traps:</strong> Click <strong>Traps only (1020)</strong> in Practice mode (or combine it with any single chapter) to focus exclusively on the highest-trap questions.</li>
+<li><strong>Keep the <code>Trap icon</code> toggle spoiler-free:</strong> The neutral <code>⚠ TRAP</code> badge reminds you to slow down before answering without revealing <em>which</em> word is the trick; it turns off automatically in Mock Test mode.</li>
+<li><strong>Learn from the flip card &amp; Opposite Twin:</strong> Use <strong>Peek (<code>T</code>)</strong> or <strong>IT + EN</strong> to confirm exact Italian wording, then expand <strong>Compare Opposite Twin</strong> after answering to see the exact one-phrase change that flipped <strong>VERO</strong> into <strong>FALSO</strong>.</li>
 </ul>
-</li>
-<li><strong><code>terminology_swap</code></strong> (Ch 3, img 83, sim=0.93):<ul>
-<li><strong>VERO (#1569):</strong> Il segnale raffigurato indica la fine del divieto di sorpasso per veicoli merci di massa a pieno carico superiore a 3,5 tonnellate</li>
-<li><strong>FALSO (#1573):</strong> Il segnale raffigurato indica la fine del divieto di sorpasso per autobus di massa a pieno carico superiore a 3,5 tonnellate</li>
-</ul>
-</li>
-<li><strong><code>sign_category_swap</code></strong> (Ch 2, img 1, sim=0.88):<ul>
-<li><strong>VERO (#536):</strong> Il segnale raffigurato è un segnale di pericolo</li>
-<li><strong>FALSO (#540):</strong> Il segnale raffigurato è un segnale di prescrizione</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-profilo-per-capitolo-e-nota-sui-titoli-chapter-by-chapter-profile-label-audit">7. Profilo per Capitolo e Nota sui Titoli / Chapter-by-Chapter Profile & Label Audit</h2>
-<p><strong>IT:</strong> Nota importante sui dati dell&#39;app: in <code>output/chapters.json</code> 16 etichette su 25 (capitoli 6–10 e 15–25) risultano sfasate rispetto al contenuto reale delle domande (ad esempio il capitolo 15 contiene domande sul sorpasso ma è etichettato &#39;Fermata, sosta, arresto&#39;). Nella tabella seguente mostriamo i titoli reali verificati sul contenuto, i tassi VERO/FALSO e la densità di domande classificate come &#39;trap&#39; o &#39;moderate&#39;. Non abbiamo modificato <code>output/chapters.json</code> in questa fase.</p>
-<p><strong>EN:</strong> Important dataset note: in <code>output/chapters.json</code>, 16 of 25 chapter titles (chapters 6–10 and 15–25) are misaligned with their actual question content (for example, Chapter 15 contains overtaking questions while labeled &#39;Stopping/Parking&#39;). The table below displays the verified actual topic per chapter, true/false balance, and trap density. <code>output/chapters.json</code> was left untouched in this phase.</p>
-<table>
-<thead>
-<tr>
-<th align="right">Ch</th>
-<th align="left">Argomento Reale (IT)</th>
-<th align="left">Actual Topic (EN)</th>
-<th align="right"><code>n</code></th>
-<th align="right"><code>P(VERO)</code></th>
-<th align="right">Trap</th>
-<th align="right">Moderate</th>
-<th align="left">Etichetta <code>chapters.json</code> OK?</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="right">1</td>
-<td align="left">Definizioni generali e doveri nell&#39;uso della strada</td>
-<td align="left">General road definitions and duties</td>
-<td align="right">492</td>
-<td align="right">0.500</td>
-<td align="right">26</td>
-<td align="right">179</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">2</td>
-<td align="left">Segnali di pericolo</td>
-<td align="left">Danger warning signs</td>
-<td align="right">613</td>
-<td align="right">0.485</td>
-<td align="right">23</td>
-<td align="right">181</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">3</td>
-<td align="left">Segnali di divieto</td>
-<td align="left">Prohibition signs</td>
-<td align="right">492</td>
-<td align="right">0.492</td>
-<td align="right">40</td>
-<td align="right">248</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">4</td>
-<td align="left">Segnali di obbligo</td>
-<td align="left">Mandatory signs</td>
-<td align="right">427</td>
-<td align="right">0.471</td>
-<td align="right">34</td>
-<td align="right">196</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">5</td>
-<td align="left">Segnali di precedenza</td>
-<td align="left">Priority / right-of-way signs</td>
-<td align="right">242</td>
-<td align="right">0.492</td>
-<td align="right">9</td>
-<td align="right">92</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">6</td>
-<td align="left">Segnaletica orizzontale e segni sugli ostacoli</td>
-<td align="left">Road markings and obstacle markers</td>
-<td align="right">260</td>
-<td align="right">0.504</td>
-<td align="right">19</td>
-<td align="right">132</td>
-<td align="left">NO (<code>Segnalazioni semaforiche e degli agenti del traffico</code>)</td>
-</tr>
-<tr>
-<td align="right">7</td>
-<td align="left">Segnalazioni semaforiche e degli agenti del traffico</td>
-<td align="left">Traffic lights and traffic officer signals</td>
-<td align="right">253</td>
-<td align="right">0.466</td>
-<td align="right">10</td>
-<td align="right">95</td>
-<td align="left">NO (<code>Segnali di indicazione</code>)</td>
-</tr>
-<tr>
-<td align="right">8</td>
-<td align="left">Segnali di indicazione</td>
-<td align="left">Direction and information signs</td>
-<td align="right">548</td>
-<td align="right">0.473</td>
-<td align="right">12</td>
-<td align="right">173</td>
-<td align="left">NO (<code>Pannelli integrativi</code>)</td>
-</tr>
-<tr>
-<td align="right">9</td>
-<td align="left">Segnali complementari, temporanei e di cantiere</td>
-<td align="left">Complementary, temporary, and roadwork signs</td>
-<td align="right">181</td>
-<td align="right">0.475</td>
-<td align="right">4</td>
-<td align="right">40</td>
-<td align="left">NO (<code>Segnali orizzontali</code>)</td>
-</tr>
-<tr>
-<td align="right">10</td>
-<td align="left">Pannelli integrativi dei segnali</td>
-<td align="left">Supplementary sign panels</td>
-<td align="right">262</td>
-<td align="right">0.477</td>
-<td align="right">28</td>
-<td align="right">156</td>
-<td align="left">NO (<code>Sorpasso</code>)</td>
-</tr>
-<tr>
-<td align="right">11</td>
-<td align="left">Limiti di velocità, pericolo e intralcio alla circolazione</td>
-<td align="left">Speed limits, hazard, and traffic obstruction</td>
-<td align="right">256</td>
-<td align="right">0.555</td>
-<td align="right">40</td>
-<td align="right">123</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">12</td>
-<td align="left">Distanza di sicurezza</td>
-<td align="left">Safe following distance</td>
-<td align="right">135</td>
-<td align="right">0.489</td>
-<td align="right">21</td>
-<td align="right">70</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">13</td>
-<td align="left">Norme sulla circolazione dei veicoli</td>
-<td align="left">General vehicle circulation rules</td>
-<td align="right">372</td>
-<td align="right">0.522</td>
-<td align="right">38</td>
-<td align="right">149</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">14</td>
-<td align="left">Ordine di precedenza agli incroci</td>
-<td align="left">Intersection right-of-way diagrams</td>
-<td align="right">402</td>
-<td align="right">0.510</td>
-<td align="right">18</td>
-<td align="right">243</td>
-<td align="left">SÌ / YES</td>
-</tr>
-<tr>
-<td align="right">15</td>
-<td align="left">Norme sul sorpasso</td>
-<td align="left">Overtaking rules</td>
-<td align="right">156</td>
-<td align="right">0.526</td>
-<td align="right">5</td>
-<td align="right">45</td>
-<td align="left">NO (<code>Fermata, sosta, arresto</code>)</td>
-</tr>
-<tr>
-<td align="right">16</td>
-<td align="left">Fermata, sosta, arresto e partenza</td>
-<td align="left">Stopping, parking, halting, and pulling out</td>
-<td align="right">191</td>
-<td align="right">0.576</td>
-<td align="right">16</td>
-<td align="right">87</td>
-<td align="left">NO (<code>Uso delle luci e dei dispositivi acustici, spie e simboli</code>)</td>
-</tr>
-<tr>
-<td align="right">17</td>
-<td align="left">Norme varie (ingombro, carichi, rimorchi, autostrade)</td>
-<td align="left">Miscellaneous rules (obstructions, loads, trailers, highways)</td>
-<td align="right">331</td>
-<td align="right">0.523</td>
-<td align="right">33</td>
-<td align="right">125</td>
-<td align="left">NO (<code>Incidenti stradali e comportamenti in caso di incidente</code>)</td>
-</tr>
-<tr>
-<td align="right">18</td>
-<td align="left">Uso delle luci, dispositivi acustici, spie e simboli</td>
-<td align="left">Lights, horns, dashboard warning lights and symbols</td>
-<td align="right">176</td>
-<td align="right">0.511</td>
-<td align="right">7</td>
-<td align="right">58</td>
-<td align="left">NO (<code>Documenti di circolazione e assicurazione</code>)</td>
-</tr>
-<tr>
-<td align="right">19</td>
-<td align="left">Dispositivi di equipaggiamento (cinture, casco, airbag)</td>
-<td align="left">Safety equipment (seatbelts, helmets, airbags, child seats)</td>
-<td align="right">135</td>
-<td align="right">0.519</td>
-<td align="right">13</td>
-<td align="right">53</td>
-<td align="left">NO (<code>Patenti di guida, sistema sanzionatorio, punti patente</code>)</td>
-</tr>
-<tr>
-<td align="right">20</td>
-<td align="left">Patenti di guida, documenti, sanzioni e punti</td>
-<td align="left">Driver&#39;s licenses, documents, penalties, and points</td>
-<td align="right">232</td>
-<td align="right">0.487</td>
-<td align="right">48</td>
-<td align="right">129</td>
-<td align="left">NO (<code>Elementi costitutivi del veicolo, manutenzione e uso</code>)</td>
-</tr>
-<tr>
-<td align="right">21</td>
-<td align="left">Incidenti stradali e comportamenti in caso di incidente</td>
-<td align="left">Road accidents and post-accident conduct</td>
-<td align="right">129</td>
-<td align="right">0.519</td>
-<td align="right">20</td>
-<td align="right">42</td>
-<td align="left">NO (<code>Comportamenti sicuri e guida in relazione alle condizioni fisiche e psicofisiche</code>)</td>
-</tr>
-<tr>
-<td align="right">22</td>
-<td align="left">Condizioni psicofisiche, alcool, droga e primo soccorso</td>
-<td align="left">Physical/mental fitness, alcohol, drugs, and first aid</td>
-<td align="right">141</td>
-<td align="right">0.511</td>
-<td align="right">4</td>
-<td align="right">50</td>
-<td align="left">NO (<code>Prudenza e rispetto degli altri utenti della strada</code>)</td>
-</tr>
-<tr>
-<td align="right">23</td>
-<td align="left">Responsabilità civile, penale, amministrativa e RCA</td>
-<td align="left">Civil, criminal, administrative liability and RCA insurance</td>
-<td align="right">149</td>
-<td align="right">0.470</td>
-<td align="right">8</td>
-<td align="right">58</td>
-<td align="left">NO (<code>Quiz vari 1</code>)</td>
-</tr>
-<tr>
-<td align="right">24</td>
-<td align="left">Limitazione dei consumi, ambiente e inquinamento</td>
-<td align="left">Fuel efficiency, environment, and pollution</td>
-<td align="right">103</td>
-<td align="right">0.592</td>
-<td align="right">4</td>
-<td align="right">25</td>
-<td align="left">NO (<code>Quiz vari 2</code>)</td>
-</tr>
-<tr>
-<td align="right">25</td>
-<td align="left">Elementi costitutivi del veicolo, manutenzione e stabilità</td>
-<td align="left">Vehicle components, maintenance, tires, and stability</td>
-<td align="right">285</td>
-<td align="right">0.523</td>
-<td align="right">15</td>
-<td align="right">103</td>
-<td align="left">NO (<code>Quiz vari 3</code>)</td>
-</tr>
-</tbody></table>
-<h2 id="8-prossimo-passo-piano-pilota-layer-3-costi-e-tempi-next-step-layer-3-llm-pilot-plan">8. Prossimo Passo: Piano Pilota Layer 3 (Costi e Tempi) / Next Step: Layer 3 LLM Pilot Plan</h2>
-<p><strong>IT:</strong> Le analisi di Layer 1 e Layer 2 sono state eseguite al 100% in locale a costo zero. Se vuoi aggiungere il Layer 3 (etichettatura strutturata con modello multimodale sulle 411 immagini + test cieco su tutte le domande per scovare trabocchetti logici e visivi non visibili dalle sole parole), si consiglia un pilota calibrato su 100 domande stratificate (con ~50 immagini) prima di elaborare l&#39;intero archivio. La tabella stima costi orientativi (prezzi API di riferimento approssimativi).</p>
-<p><strong>EN:</strong> Layers 1 and 2 ran 100% locally at $0 API cost. If you want to proceed to Layer 3 (one-time multimodal captioning of the 411 images + blind-answering and structured trap tagging to catch logical and visual traps beyond surface wording), we recommend a calibrated 100-question stratified pilot (~50 images) before scaling to all 6,963 items. Approximate reference API cost estimates follow:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Modello / Model</th>
-<th align="right">Input / 1M</th>
-<th align="right">Output / 1M</th>
-<th align="right">Stima Pilota 100 dom.</th>
-<th align="right">Stima Completa (6.963 × 2 + 411 img)</th>
-<th align="left">Note / Notes</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Gemini 2.5 Flash-Lite (ref)</td>
-<td align="right">$0.10</td>
-<td align="right">$0.40</td>
-<td align="right">$0.019</td>
-<td align="right">$1.02</td>
-<td align="left">Fastest &amp; lowest cost; good for initial 100-question blind + tag pilot.</td>
-</tr>
-<tr>
-<td align="left">Gemini 2.5 Flash (ref)</td>
-<td align="right">$0.30</td>
-<td align="right">$2.50</td>
-<td align="right">$0.091</td>
-<td align="right">$4.80</td>
-<td align="left">Strong multimodal sign vision &amp; Italian nuance; recommended for 411 image captions.</td>
-</tr>
-<tr>
-<td align="left">GPT-4.1-mini (ref)</td>
-<td align="right">$0.40</td>
-<td align="right">$1.60</td>
-<td align="right">$0.077</td>
-<td align="right">$4.06</td>
-<td align="left">Strong structured JSON adherence and cross-check baseline.</td>
-</tr>
-<tr>
-<td align="left">Claude Haiku 4.5 (ref)</td>
-<td align="right">$1.00</td>
-<td align="right">$5.00</td>
-<td align="right">$0.218</td>
-<td align="right">$11.51</td>
-<td align="left">High instruction reliability; best reserved for auditing borderline/trap subsets.</td>
-</tr>
-</tbody></table>
+<blockquote>
+<p><strong>Want the underlying statistics and full exception catalog?</strong> Read the <a href="./patente-heuristics-methodology.html">Research &amp; Methodology Report</a> for the full corpus methodology, statistical tables, chapter audit, and all 265 anti-heuristic exceptions.</p>
+</blockquote>
 
 </main>
 </div>

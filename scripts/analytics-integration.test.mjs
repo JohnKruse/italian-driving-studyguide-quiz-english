@@ -131,11 +131,17 @@ test('pick-domanda, normalize-domanda, and get-analytics services handle filteri
 
 test('standalone built playbook and glossary HTML exist and contain all cue anchor IDs', () => {
   const playbookHtmlPath = join(ROOT, 'public/docs/patente-heuristics-playbook.html');
+  const methodologyHtmlPath = join(ROOT, 'public/docs/patente-heuristics-methodology.html');
   const glossaryHtmlPath = join(ROOT, 'public/docs/patente-glossary.html');
   assert.ok(existsSync(playbookHtmlPath), 'Missing public/docs/patente-heuristics-playbook.html');
+  assert.ok(existsSync(methodologyHtmlPath), 'Missing public/docs/patente-heuristics-methodology.html');
   assert.ok(existsSync(glossaryHtmlPath), 'Missing public/docs/patente-glossary.html');
 
   const playbookHtml = readFileSync(playbookHtmlPath, 'utf-8');
+  assert.ok(
+    playbookHtml.includes('patente-heuristics-methodology.html'),
+    'Playbook HTML missing link to patente-heuristics-methodology.html',
+  );
   const cuesMeta = JSON.parse(readFileSync(join(ROOT, 'src/services/cues-meta.json'), 'utf-8'));
   const anchors = new Set(Object.values(cuesMeta).map((entry) => entry.anchor));
   for (const anchor of anchors) {
@@ -144,4 +150,51 @@ test('standalone built playbook and glossary HTML exist and contain all cue anch
       `Playbook HTML missing heading anchor id="${anchor}"`,
     );
   }
+});
+
+test('review-mode service handles wrong-only vs always and mock exam modes', async () => {
+  const reviewMod = await importBundledModule('src/services/review-mode.js');
+  const {
+    REVIEW_MODE_ALWAYS,
+    REVIEW_MODE_WRONG_ONLY,
+    normalizeReviewMode,
+    shouldShowReasoningAfterAnswer,
+  } = reviewMod;
+
+  assert.equal(normalizeReviewMode(REVIEW_MODE_ALWAYS), 'always');
+  assert.equal(normalizeReviewMode(REVIEW_MODE_WRONG_ONLY), 'wrong-only');
+  assert.equal(normalizeReviewMode(null), 'always');
+  assert.equal(normalizeReviewMode(undefined), 'always');
+  assert.equal(normalizeReviewMode('unexpected'), 'always');
+
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: true, reviewMode: 'always', isCorrect: true }),
+    false,
+  );
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: true, reviewMode: 'always', isCorrect: false }),
+    false,
+  );
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: true, reviewMode: 'wrong-only', isCorrect: false }),
+    false,
+  );
+
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: false, reviewMode: 'always', isCorrect: true }),
+    true,
+  );
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: false, reviewMode: 'always', isCorrect: false }),
+    true,
+  );
+
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: false, reviewMode: 'wrong-only', isCorrect: true }),
+    false,
+  );
+  assert.equal(
+    shouldShowReasoningAfterAnswer({ isMock: false, reviewMode: 'wrong-only', isCorrect: false }),
+    true,
+  );
 });

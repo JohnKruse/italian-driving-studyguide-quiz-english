@@ -6,7 +6,7 @@ import {
     Flex,
     Heading,
     Image,
-    Stack,
+    SimpleGrid,
     Text,
     theme,
 } from '@chakra-ui/react';
@@ -38,11 +38,18 @@ function SplashPage({ onStartQuiz }) {
                     post-answer rule heuristics are included directly inside the quiz — no
                     translation extension required.
                 </Text>
-                <Stack className='splash-actions' direction={{ base: 'column', sm: 'row' }} spacing={3} wrap='wrap'>
+                <SimpleGrid
+                    className='splash-actions'
+                    columns={{ base: 1, sm: 2 }}
+                    spacing={3}
+                    w='full'
+                    maxW='26rem'
+                >
                     <Button
                         colorScheme='teal'
                         size='lg'
                         className='splash-btn'
+                        w='full'
                         onClick={onStartQuiz}
                     >
                         Practice Quiz
@@ -56,6 +63,7 @@ function SplashPage({ onStartQuiz }) {
                         size='lg'
                         variant='outline'
                         className='splash-btn'
+                        w='full'
                     >
                         Study Guide ↗
                     </Button>
@@ -68,6 +76,7 @@ function SplashPage({ onStartQuiz }) {
                         size='lg'
                         variant='outline'
                         className='splash-btn'
+                        w='full'
                     >
                         Trap Playbook ↗
                     </Button>
@@ -78,12 +87,13 @@ function SplashPage({ onStartQuiz }) {
                         rel='noreferrer'
                         colorScheme='teal'
                         size='lg'
-                        variant='ghost'
+                        variant='outline'
                         className='splash-btn'
+                        w='full'
                     >
                         Glossary ↗
                     </Button>
-                </Stack>
+                </SimpleGrid>
                 <Text className='splash-hint'>
                     Download offline HTML:{' '}
                     <a
@@ -138,7 +148,7 @@ function App() {
                             className='header-logo'
                         />
                     </Flex>
-                    <Stack direction='row' spacing={2} wrap='wrap'>
+                    <Flex gap={2} wrap='wrap' align='center'>
                         <Button
                             as='a'
                             href='/docs/italian-drivers-license-study-guide.html'
@@ -182,7 +192,7 @@ function App() {
                         >
                             Download Guide
                         </Button>
-                    </Stack>
+                    </Flex>
                 </Flex>
                 <Box as='main' className='app-main'>
                     {view === 'splash' ? (

@@ -9,6 +9,7 @@ import {
   Heading,
   Stack,
   Text,
+  useToast,
 } from '@chakra-ui/react';
 import {
   FiAlertTriangle,
@@ -23,6 +24,11 @@ import {
   getTrickMeta,
   loadQuestionDetails,
 } from '../../services/get-analytics';
+import {
+  REVIEW_MODE_ALWAYS,
+  REVIEW_MODE_WRONG_ONLY,
+  shouldShowReasoningAfterAnswer,
+} from '../../services/review-mode';
 
 function Domanda({
   id,
@@ -39,10 +45,12 @@ function Domanda({
   isMock = false,
   showTrapIcon = true,
   langMode = 'peek',
+  reviewMode = REVIEW_MODE_ALWAYS,
   onSuccess,
   onError,
   onMockSubmit = null,
 }) {
+  const toast = useToast();
   const [answeredChoice, setAnsweredChoice] = useState(null);
   const [peekEn, setPeekEn] = useState(false);
   const [details, setDetails] = useState(null);
@@ -76,12 +84,33 @@ function Domanda({
       if (answeredChoice !== null) {
         return;
       }
+      const isCorrect = answer === value;
+      if (!shouldShowReasoningAfterAnswer({ isMock, reviewMode, isCorrect })) {
+        toast({
+          title: 'Correct — Esatto',
+          status: 'success',
+          duration: 800,
+          position: 'top',
+        });
+        onSuccess();
+        return;
+      }
       setAnsweredChoice(value);
-      if (answer !== value) {
+      if (!isCorrect) {
         onError(id);
       }
     },
-    [answer, answeredChoice, id, isMock, onError, onMockSubmit],
+    [
+      answer,
+      answeredChoice,
+      id,
+      isMock,
+      onError,
+      onMockSubmit,
+      onSuccess,
+      reviewMode,
+      toast,
+    ],
   );
 
   useEffect(() => {
@@ -290,6 +319,7 @@ Domanda.propTypes = {
   isMock: PropTypes.bool,
   showTrapIcon: PropTypes.bool,
   langMode: PropTypes.oneOf(['it', 'peek', 'it-en']),
+  reviewMode: PropTypes.oneOf([REVIEW_MODE_ALWAYS, REVIEW_MODE_WRONG_ONLY]),
   onSuccess: PropTypes.func.isRequired,
   onError: PropTypes.func.isRequired,
   onMockSubmit: PropTypes.func,

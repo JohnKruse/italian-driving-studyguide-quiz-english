@@ -14,7 +14,7 @@ import {
   Tag,
   Text,
 } from '@chakra-ui/react';
-import { FiExternalLink, FiRepeat } from 'react-icons/fi';
+import { FiCheckCircle, FiExternalLink, FiRepeat, FiXCircle } from 'react-icons/fi';
 import {
   getCueMeta,
   getQuestionById,
@@ -100,13 +100,36 @@ function TrapInsightsCard({
       fontSize='md'
     >
       <Stack spacing={3}>
+        <Flex
+          align='center'
+          gap={2}
+          pb={2}
+          borderBottomWidth='1px'
+          borderColor={isCorrect ? 'green.200' : 'red.200'}
+          _dark={{ borderColor: isCorrect ? 'green.700' : 'red.700' }}
+        >
+          <Box
+            as={isCorrect ? FiCheckCircle : FiXCircle}
+            boxSize={6}
+            color={isCorrect ? 'green.600' : 'red.600'}
+            _dark={{ color: isCorrect ? 'green.300' : 'red.300' }}
+            flexShrink={0}
+          />
+          <Text
+            fontSize='xl'
+            fontWeight='bold'
+            lineHeight='shorter'
+            color={isCorrect ? 'green.700' : 'red.700'}
+            _dark={{ color: isCorrect ? 'green.200' : 'red.200' }}
+          >
+            {isCorrect ? 'Correct (Esatto)' : 'Incorrect (Sbagliato)'}
+          </Text>
+        </Flex>
+
         <Flex align='center' justify='space-between' wrap='wrap' gap={2}>
           <Flex align='center' wrap='wrap' gap={2}>
-            <Badge colorScheme={isCorrect ? 'green' : 'red'} fontSize='0.8em' px={2} py={0.5}>
-              {isCorrect ? 'Esatto / Correct' : 'Sbagliato / Incorrect'}
-            </Badge>
-            <Badge colorScheme={answer === 1 ? 'teal' : 'pink'} fontSize='0.8em' px={2} py={0.5}>
-              Official: {answer === 1 ? 'VERO' : 'FALSO'}
+            <Badge colorScheme={answer === 1 ? 'teal' : 'pink'} fontSize='xs' px={2} py={0.5}>
+              Official answer: {answer === 1 ? 'VERO' : 'FALSO'}
             </Badge>
             {score !== null && (
               <Tag size='sm' colorScheme={score >= 50 ? 'orange' : score >= 25 ? 'yellow' : 'gray'}>
@@ -114,13 +137,15 @@ function TrapInsightsCard({
               </Tag>
             )}
           </Flex>
-          <Flex wrap='wrap' gap={1.5}>
-            {trapTags.map((tag) => (
-              <Tag key={tag} size='sm' variant='subtle' colorScheme='purple'>
-                {formatTagLabel(tag)}
-              </Tag>
-            ))}
-          </Flex>
+          {trapTags.length > 0 && (
+            <Flex wrap='wrap' gap={1.5}>
+              {trapTags.map((tag) => (
+                <Tag key={tag} size='sm' variant='subtle' colorScheme='purple'>
+                  {formatTagLabel(tag)}
+                </Tag>
+              ))}
+            </Flex>
+          )}
         </Flex>
 
         {antiHeuristic && (
